@@ -1,1 +1,5 @@
 /data/save/
+gamelog.txt
+stderr.log
+stdout.log
+errorlog.txt
