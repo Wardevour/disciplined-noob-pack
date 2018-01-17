@@ -32633,109 +32633,68 @@ class Incident < MemHack::Compound
     field(:id, 0) {
         number 32, true
     }
-    field(:unk_4, 4) {
+    field(:subtype, 4) {
         number 32, true
     }
-    field(:unk_sub0, 8) {
-        compound(:Incident_TUnkSub0) {
-            field(:witnesses, 0) {
-                stl_vector(4) {
-                    number 32, true, -1
-                }
-            }
-            def witnesses_tg ; witnesses.map { |i| df.world.units.all.binsearch(i) } ; end
-            field(:unk_v44_1, 24) {
-                number 32, true
-            }
-            field(:unk_v44_2, 28) {
-                number 32, true
-            }
-            field(:victim, 32) {
-                number 32, true, -1
-            }
-            def victim_tg ; df.world.units.all.binsearch(victim) ; end
+    field(:witnesses, 8) {
+        stl_vector(4) {
+            number 32, true, -1
         }
     }
-    field(:victim_hfid, 48) {
+    def witnesses_tg ; witnesses.map { |i| df.world.units.all.binsearch(i) } ; end
+    field(:unk_v44_1, 32) {
+        number 32, true
+    }
+    field(:unk_v44_2, 36) {
+        number 32, true
+    }
+    field(:victim, 40) {
         number 32, true, -1
     }
-    def victim_hfid_tg ; df.world.history.figures.binsearch(victim_hfid) ; end
-    field(:unk_v44_4, 52) {
-        number 32, true
+    def victim_tg ; df.world.units.all.binsearch(victim) ; end
+    field(:victim_hf, 48) {
+        global :IncidentHfid
     }
-    field(:unk_v44_5, 56) {
-        number 32, true
+    field(:victim_race, 88) {
+        number 32, true, -1
     }
-    field(:unk_sub1, 64) {
-        compound(:Incident_TUnkSub1) {
-            field(:unk_v44_6, 0) {
-                stl_vector
-            }
-            field(:victim_race, 24) {
-                number 32, true, -1
-            }
-            def victim_race_tg ; df.world.raws.creatures.all[victim_race] ; end
-            field(:victim_caste, 28) {
-                number 32, true, -1
-            }
-            def victim_caste_tg ; df.world.raws.creatures.all[victim_race].caste[victim_caste] ; end
-            field(:unk_v40_1b, 32) {
-                number 32, true, -1
-            }
-            field(:unk_v40_1c, 36) {
-                number 32, true, -1
-            }
-            field(:killer, 40) {
-                number 32, true, -1
-            }
-            def killer_tg ; df.world.units.all.binsearch(killer) ; end
-        }
+    def victim_race_tg ; df.world.raws.creatures.all[victim_race] ; end
+    field(:victim_caste, 92) {
+        number 32, true, -1
     }
-    field(:unk_sub2, 112) {
-        compound(:Incident_TUnkSub2) {
-            field(:killer_hfid, 0) {
-                number 32, true, -1
-            }
-            def killer_hfid_tg ; df.world.history.figures.binsearch(killer_hfid) ; end
-            field(:unk_v44_8, 4) {
-                number 32, true
-            }
-            field(:unk_v44_9, 8) {
-                number 32, true
-            }
-            field(:unk_v44_10, 16) {
-                stl_vector
-            }
-            field(:killer_race, 40) {
-                number 32, true, -1
-            }
-            def killer_race_tg ; df.world.raws.creatures.all[killer_race] ; end
-            field(:killer_caste, 44) {
-                number 32, true, -1
-            }
-            def killer_caste_tg ; df.world.raws.creatures.all[killer_race].caste[killer_caste] ; end
-            field(:entity1, 48) {
-                number 32, true, -1
-            }
-            def entity1_tg ; df.world.entities.all.binsearch(entity1) ; end
-        }
+    def victim_caste_tg ; df.world.raws.creatures.all[victim_race].caste[victim_caste] ; end
+    field(:unk_v40_1b, 96) {
+        number 32, true, -1
     }
+    field(:unk_v40_1c, 100) {
+        number 32, true, -1
+    }
+    field(:killer, 104) {
+        number 32, true, -1
+    }
+    def killer_tg ; df.world.units.all.binsearch(killer) ; end
+    field(:killer_hf, 112) {
+        global :IncidentHfid
+    }
+    field(:killer_race, 152) {
+        number 32, true, -1
+    }
+    def killer_race_tg ; df.world.raws.creatures.all[killer_race] ; end
+    field(:killer_caste, 156) {
+        number 32, true, -1
+    }
+    def killer_caste_tg ; df.world.raws.creatures.all[killer_race].caste[killer_caste] ; end
+    field(:entity1, 160) {
+        number 32, true, -1
+    }
+    def entity1_tg ; df.world.entities.all.binsearch(entity1) ; end
     field(:unk_v40_2c, 168) {
-        number 32, true, -1
+        global :IncidentHfid
     }
-    field(:crime_id, 172) {
+    field(:crime_id, 208) {
         number 32, true, -1
     }
     def crime_tg ; df.world.crimes.all.binsearch(crime_id) ; end
-    field(:unk_v44_12, 176) {
-        number 32, true, -1
-    }
-    field(:unk_v44_14, 184) {
-        stl_vector
-    }
-    field(:unk_v44_15, 208) {
-        number 32, true, -1
-    }
     field(:site, 212) {
         number 32, true, -1
     }
@@ -32789,7 +32748,198 @@ class Incident < MemHack::Compound
         number 32, true
     }
     field(:unk_v42_1, 272) {
-        pointer {
+        compound(:Incident_TUnkV421) {
+            field(:t6, 0) {
+                pointer {
+                    global :IncidentSub6
+                }
+            }
+            field(:t7, 0) {
+                pointer {
+                    global :IncidentSub7
+                }
+            }
+            field(:t8, 0) {
+                pointer {
+                    global :IncidentSub8
+                }
+            }
+            field(:t9, 0) {
+                pointer {
+                    global :IncidentSub9
+                }
+            }
+            field(:t10, 0) {
+                pointer {
+                    global :IncidentSub10
+                }
+            }
+        }
+    }
+end
+
+class IncidentHfid < MemHack::Compound
+    sizeof 40
+
+    field(:hfid, 0) {
+        number 32, true, -1
+    }
+    def hfid_tg ; df.world.history.figures.binsearch(hfid) ; end
+    field(:unk_1, 4) {
+        number 32, true
+    }
+    field(:unk_2, 8) {
+        number 32, true
+    }
+    field(:unk_3, 16) {
+        stl_vector(4) {
+            number 32, true
+        }
+    }
+end
+
+class IncidentSub10 < MemHack::Compound
+    sizeof 24
+
+    field(:anon_1, 0) {
+        stl_vector(8) {
+            pointer {
+                global :IncidentHfid
+            }
+        }
+    }
+end
+
+class IncidentSub6 < MemHack::Compound
+    sizeof 56
+
+    field(:anon_1, 0) {
+        number 32, true
+    }
+    field(:anon_2, 8) {
+        stl_vector(8) {
+            pointer {
+                compound(:IncidentSub6_TAnon2) {
+                    sizeof 56
+
+                    field(:anon_1, 0) {
+                        number 32, true
+                    }
+                    field(:anon_2, 4) {
+                        number 32, true
+                    }
+                    field(:anon_3, 8) {
+                        global :IncidentHfid
+                    }
+                    field(:anon_4, 48) {
+                        number 32, true
+                    }
+                }
+            }
+        }
+    }
+    field(:anon_3, 32) {
+        number 32, true
+    }
+    field(:anon_4, 36) {
+        number 32, true
+    }
+    field(:anon_5, 40) {
+        number 32, true
+    }
+    field(:anon_6, 44) {
+        number 32, true
+    }
+    field(:anon_7, 48) {
+        number 32, true
+    }
+    field(:anon_8, 52) {
+        number 32, true
+    }
+end
+
+class IncidentSub7 < MemHack::Compound
+    sizeof 136
+
+    field(:anon_1, 0) {
+        number 32, true
+    }
+    field(:anon_2, 4) {
+        number 32, true
+    }
+    field(:anon_3, 8) {
+        global :IncidentHfid
+    }
+    field(:anon_4, 48) {
+        global :IncidentHfid
+    }
+    field(:anon_5, 88) {
+        number 32, true
+    }
+    field(:anon_6, 92) {
+        number 32, true
+    }
+    field(:anon_7, 96) {
+        number 32, true
+    }
+    field(:anon_8, 100) {
+        number 32, true
+    }
+    field(:anon_9, 104) {
+        stl_vector(4) {
+            number 32, true
+        }
+    }
+    field(:anon_10, 128) {
+        number 32, true
+    }
+end
+
+class IncidentSub8 < MemHack::Compound
+    sizeof 136
+
+    field(:anon_1, 0) {
+        number 32, true
+    }
+    field(:anon_2, 4) {
+        number 32, true
+    }
+    field(:anon_3, 8) {
+        global :IncidentHfid
+    }
+    field(:anon_4, 48) {
+        global :IncidentHfid
+    }
+    field(:anon_5, 88) {
+        number 32, true
+    }
+    field(:anon_6, 92) {
+        number 32, true
+    }
+    field(:anon_7, 96) {
+        number 32, true
+    }
+    field(:anon_8, 100) {
+        number 32, true
+    }
+    field(:anon_9, 104) {
+        stl_vector(4) {
+            number 32, true
+        }
+    }
+    field(:anon_10, 128) {
+        number 32, true
+    }
+end
+
+class IncidentSub9 < MemHack::Compound
+    sizeof 24
+
+    field(:anon_1, 0) {
+        stl_vector(8) {
+            pointer {
+                global :IncidentHfid
+            }
         }
     }
 end
