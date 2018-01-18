@@ -1,39 +1,38 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>DFHack Plugins &#8212; DFHack 0.44.05-alpha1 documentation</title>
+    
+    <title>DFHack Plugins &mdash; DFHack 0.44.05-alpha1 documentation</title>
+    
     <link rel="stylesheet" href="../_static/dfhack.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
         VERSION:     '0.44.05-alpha1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
+        HAS_SOURCE:  true
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../_static/dfhack-icon.ico"/>
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="DFHack 0.44.05-alpha1 documentation" href="../index.html" />
     <link rel="next" title="DFHack Scripts" href="Scripts.html" />
     <link rel="prev" title="DFHack Core" href="Core.html" />
    
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body>
-  
+  <body role="document">  
 
     <div class="document">
       <div class="documentwrapper">
@@ -201,12 +200,12 @@ hopefully organised in a way you will find useful.</p>
 </tr>
 </tbody>
 </table>
-<p>For more information, see <a class="reference internal" href="../plugins/stonesense/docs/Stonesense.html#stonesense"><span class="std std-ref">the full Stonesense README</span></a>.</p>
+<p>For more information, see <a class="reference internal" href="../plugins/stonesense/docs/Stonesense.html#stonesense"><span>the full Stonesense README</span></a>.</p>
 </div>
 <div class="section" id="blueprint">
 <span id="id2"></span><h3><a class="toc-backref" href="#id216">blueprint</a><a class="headerlink" href="#blueprint" title="Permalink to this headline">¶</a></h3>
 <p>Exports a portion of your fortress into QuickFort style blueprint files.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">blueprint</span> <span class="o">&lt;</span><span class="n">x</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">y</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">z</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">dig</span><span class="p">]</span> <span class="p">[</span><span class="n">build</span><span class="p">]</span> <span class="p">[</span><span class="n">place</span><span class="p">]</span> <span class="p">[</span><span class="n">query</span><span class="p">]</span>
+<div class="highlight-python"><div class="highlight"><pre>blueprint &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;name&gt; [dig] [build] [place] [query]
 </pre></div>
 </div>
 <p>Options (If only region and name are given, export all):</p>
@@ -218,17 +217,17 @@ hopefully organised in a way you will find useful.</p>
 </tr>
 <tr class="field-even field"><th class="field-name">name:</th><td class="field-body">Name of export files</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">dig:</th><td class="field-body">Export dig commands to “&lt;name&gt;-dig.csv”</td>
+<tr class="field-odd field"><th class="field-name">dig:</th><td class="field-body">Export dig commands to &#8220;&lt;name&gt;-dig.csv&#8221;</td>
 </tr>
-<tr class="field-even field"><th class="field-name">build:</th><td class="field-body">Export build commands to “&lt;name&gt;-build.csv”</td>
+<tr class="field-even field"><th class="field-name">build:</th><td class="field-body">Export build commands to &#8220;&lt;name&gt;-build.csv&#8221;</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">place:</th><td class="field-body">Export stockpile commands to “&lt;name&gt;-place.csv”</td>
+<tr class="field-odd field"><th class="field-name">place:</th><td class="field-body">Export stockpile commands to &#8220;&lt;name&gt;-place.csv&#8221;</td>
 </tr>
-<tr class="field-even field"><th class="field-name">query:</th><td class="field-body">Export query commands to “&lt;name&gt;-query.csv”</td>
+<tr class="field-even field"><th class="field-name">query:</th><td class="field-body">Export query commands to &#8220;&lt;name&gt;-query.csv&#8221;</td>
 </tr>
 </tbody>
 </table>
-<p>Goes very well with <a class="reference internal" href="#fortplan"><span class="std std-ref">fortplan</span></a>, for re-importing.</p>
+<p>Goes very well with <a class="reference internal" href="#fortplan"><span>fortplan</span></a>, for re-importing.</p>
 </div>
 <div class="section" id="remotefortressreader">
 <span id="id3"></span><h3><a class="toc-backref" href="#id217">remotefortressreader</a><a class="headerlink" href="#remotefortressreader" title="Permalink to this headline">¶</a></h3>
@@ -243,10 +242,10 @@ vampires, necromancers, werebeasts, zombies).</p>
 Without a cursor the whole map will be checked.</p>
 <p>By default cursed creatures will be only counted in case you just want to find
 out if you have any of them running around in your fort. Dead and passive
-creatures (ghosts who were put to rest, killed vampires, …) are ignored.
+creatures (ghosts who were put to rest, killed vampires, ...) are ignored.
 Undead skeletons, corpses, bodyparts and the like are all thrown into the curse
-category “zombie”. Anonymous zombies and resurrected body parts will show
-as “unnamed creature”.</p>
+category &#8220;zombie&#8221;. Anonymous zombies and resurrected body parts will show
+as &#8220;unnamed creature&#8221;.</p>
 <p>Options:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -256,7 +255,7 @@ as “unnamed creature”.</p>
 info (some vampires might use fake identities in-game, though).</td>
 </tr>
 <tr class="field-even field"><th class="field-name">nick:</th><td class="field-body">Set the type of curse as nickname (does not always show up
-in-game, some vamps don’t like nicknames).</td>
+in-game, some vamps don&#8217;t like nicknames).</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">all:</th><td class="field-body">Include dead and passive cursed creatures (can result in a quite
 long list after having FUN with necromancers).</td>
@@ -276,9 +275,9 @@ cursor).</dd>
 </dl>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>If you do a full search (with the option “all”) former ghosts will show up
-with the cursetype “unknown” because their ghostly flag is not set.</p>
-<p class="last">Please report any living/active creatures with cursetype “unknown” -
+<p>If you do a full search (with the option &#8220;all&#8221;) former ghosts will show up
+with the cursetype &#8220;unknown&#8221; because their ghostly flag is not set.</p>
+<p class="last">Please report any living/active creatures with cursetype &#8220;unknown&#8221; -
 this is most likely with mods which introduce new types of curses.</p>
 </div>
 </div>
@@ -290,7 +289,7 @@ revealing the map.</p>
 </div>
 <div class="section" id="pathable">
 <span id="id6"></span><h3><a class="toc-backref" href="#id220">pathable</a><a class="headerlink" href="#pathable" title="Permalink to this headline">¶</a></h3>
-<p>This plugin implements the back end of the <a class="reference internal" href="_auto/gui.html#gui-pathable"><span class="std std-ref">gui/pathable</span></a> script. It exports a
+<p>This plugin implements the back end of the <a class="reference internal" href="_auto/gui.html#gui-pathable"><span>gui/pathable</span></a> script. It exports a
 single Lua function, in <code class="docutils literal"><span class="pre">hack/lua/plugins/pathable.lua</span></code>:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">paintScreen(cursor[,skip_unrevealed])</span></code>: Paint each visible of the screen
@@ -316,7 +315,7 @@ the visible part of the map is scanned.</p>
 </tr>
 <tr class="field-even field"><th class="field-name">value:</th><td class="field-body">Show material value in the output. Most useful for gems.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">hell:</th><td class="field-body">Show the Z range of HFS tubes. Implies ‘all’.</td>
+<tr class="field-odd field"><th class="field-name">hell:</th><td class="field-body">Show the Z range of HFS tubes. Implies &#8216;all&#8217;.</td>
 </tr>
 </tbody>
 </table>
@@ -343,11 +342,11 @@ that is actually present.</p>
 <div class="section" id="revforget">
 <span id="revflood"></span><span id="revtoggle"></span><span id="unreveal"></span><span id="reveal"></span><span id="id9"></span><h3><a class="toc-backref" href="#id223">reveal</a><a class="headerlink" href="#revforget" title="Permalink to this headline">¶</a></h3>
 <p>This reveals the map. By default, HFS will remain hidden so that the demons
-don’t spawn. You can use <code class="docutils literal"><span class="pre">reveal</span> <span class="pre">hell</span></code> to reveal everything. With hell revealed,
-you won’t be able to unpause until you hide the map again. If you really want
+don&#8217;t spawn. You can use <code class="docutils literal"><span class="pre">reveal</span> <span class="pre">hell</span></code> to reveal everything. With hell revealed,
+you won&#8217;t be able to unpause until you hide the map again. If you really want
 to unpause with hell revealed, use <code class="docutils literal"><span class="pre">reveal</span> <span class="pre">demons</span></code>.</p>
 <p>Reveal also works in adventure mode, but any of its effects are negated once
-you move. When you use it this way, you don’t need to run <code class="docutils literal"><span class="pre">unreveal</span></code>.</p>
+you move. When you use it this way, you don&#8217;t need to run <code class="docutils literal"><span class="pre">unreveal</span></code>.</p>
 <p>Usage and related commands:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -392,7 +391,7 @@ and no longer want the data.</td>
 <div class="section" id="fix-unit-occupancy">
 <span id="id12"></span><h3><a class="toc-backref" href="#id225">fix-unit-occupancy</a><a class="headerlink" href="#fix-unit-occupancy" title="Permalink to this headline">¶</a></h3>
 <p>This plugin fixes issues with unit occupancy, notably phantom
-“unit blocking tile” messages (<a class="reference external" href="http://www.bay12games.com/dwarves/mantisbt/view.php?id=3499">Bug 3499</a>). It can be run manually, or
+&#8220;unit blocking tile&#8221; messages (<a class="reference external" href="http://www.bay12games.com/dwarves/mantisbt/view.php?id=3499">Bug 3499</a>). It can be run manually, or
 periodically when enabled with the built-in enable/disable commands:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -401,10 +400,10 @@ periodically when enabled with the built-in enable/disable commands:</p>
 <tr class="field-odd field"><th class="field-name">(no argument):</th><td class="field-body">Run the plugin once immediately, for the whole map.</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">-h, here, cursor:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Run immediately, only operate on the tile at the cursor</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Run immediately, only operate on the tile at the cursor</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">-n, dry, dry-run:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Run immediately, do not write changes to map</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Run immediately, do not write changes to map</td>
 </tr>
 <tr class="field-even field"><th class="field-name">interval &lt;X&gt;:</th><td class="field-body">Run the plugin every <code class="docutils literal"><span class="pre">X</span></code> ticks (when enabled).
 The default is 1200 ticks, or 1 day.
@@ -416,7 +415,7 @@ Ticks are only counted when the game is unpaused.</td>
 <div class="section" id="fixveins">
 <span id="id13"></span><h3><a class="toc-backref" href="#id226">fixveins</a><a class="headerlink" href="#fixveins" title="Permalink to this headline">¶</a></h3>
 <p>Removes invalid references to mineral inclusions and restores missing ones.
-Use this if you broke your embark with tools like <a class="reference internal" href="#tiletypes"><span class="std std-ref">tiletypes</span></a>, or if you
+Use this if you broke your embark with tools like <a class="reference internal" href="#tiletypes"><span>tiletypes</span></a>, or if you
 accidentally placed a construction on top of a valuable mineral floor.</p>
 </div>
 <div class="section" id="petcapremover">
@@ -438,13 +437,13 @@ case of multiple births.</p>
 <tr class="field-odd field"><th class="field-name">petcapRemover:</th><td class="field-body">cause pregnancies now and schedule the next check</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">petcapRemover every n:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">set how often in ticks the plugin checks for possible pregnancies</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">set how often in ticks the plugin checks for possible pregnancies</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">petcapRemover cap n:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">set the new cap to n. if n = 0, no cap</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">set the new cap to n. if n = 0, no cap</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">petcapRemover pregtime n:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">sets the pregnancy duration to n ticks. natural pregnancies are
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">sets the pregnancy duration to n ticks. natural pregnancies are
 300000 ticks for the current race and 200000 for everyone else</td>
 </tr>
 </tbody>
@@ -468,21 +467,21 @@ which do not show up in the engraving slab menu at all,
 even after using clear-missing. It works, but is
 potentially very dangerous - so use with care. Probably
 (almost certainly) it does not have the same effects like
-a proper burial. You’ve been warned.</td>
+a proper burial. You&#8217;ve been warned.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">fixmigrant:</th><td class="field-body">Remove the resident/merchant flag from the selected unit.
 Intended to fix bugged migrants/traders who stay at the
-map edge and don’t enter your fort. Only works for
-dwarves (or generally the player’s race in modded games).
-Do NOT abuse this for ‘real’ caravan merchants (if you
-really want to kidnap them, use ‘tweak makeown’ instead,
+map edge and don&#8217;t enter your fort. Only works for
+dwarves (or generally the player&#8217;s race in modded games).
+Do NOT abuse this for &#8216;real&#8217; caravan merchants (if you
+really want to kidnap them, use &#8216;tweak makeown&#8217; instead,
 otherwise they will have their clothes set to forbidden etc).</td>
 </tr>
 <tr class="field-even field"><th class="field-name">makeown:</th><td class="field-body">Force selected unit to become a member of your fort.
 Can be abused to grab caravan merchants and escorts, even if
-they don’t belong to the player’s race. Foreign sentients
-(humans, elves) can be put to work, but you can’t assign rooms
-to them and they don’t show up in DwarfTherapist because the
+they don&#8217;t belong to the player&#8217;s race. Foreign sentients
+(humans, elves) can be put to work, but you can&#8217;t assign rooms
+to them and they don&#8217;t show up in DwarfTherapist because the
 game treats them like pets. Grabbing draft animals from
 a caravan can result in weirdness (animals go insane or berserk
 and are not flagged as tame), but you are allowed to mark them
@@ -497,21 +496,21 @@ they are scuttled.</td>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">adamantine-cloth-wear:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Prevents adamantine clothing from wearing out while being worn (<a class="reference external" href="http://www.bay12games.com/dwarves/mantisbt/view.php?id=6481">Bug 6481</a>).</p>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first">Prevents adamantine clothing from wearing out while being worn (<a class="reference external" href="http://www.bay12games.com/dwarves/mantisbt/view.php?id=6481">Bug 6481</a>).</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">advmode-contained:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">Works around <a class="reference external" href="http://www.bay12games.com/dwarves/mantisbt/view.php?id=6202">Bug 6202</a>, custom reactions with container inputs
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first">Works around <a class="reference external" href="http://www.bay12games.com/dwarves/mantisbt/view.php?id=6202">Bug 6202</a>, custom reactions with container inputs
 in advmode. The issue is that the screen tries to force you to select
 the contents separately from the container. This forcefully skips child
 reagents.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">block-labors:</th><td class="field-body"><p class="first">Prevents labors that can’t be used from being toggled</p>
+<tr class="field-odd field"><th class="field-name">block-labors:</th><td class="field-body"><p class="first">Prevents labors that can&#8217;t be used from being toggled</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">burrow-name-cancel:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">Implements the “back” option when renaming a burrow,
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first">Implements the &#8220;back&#8221; option when renaming a burrow,
 which currently does nothing (<a class="reference external" href="http://www.bay12games.com/dwarves/mantisbt/view.php?id=1518">Bug 1518</a>)</p>
 </td>
 </tr>
@@ -519,11 +518,11 @@ which currently does nothing (<a class="reference external" href="http://www.bay
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">civ-view-agreement:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">Fixes overlapping text on the “view agreement” screen</p>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first">Fixes overlapping text on the &#8220;view agreement&#8221; screen</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">condition-material:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Fixes a crash in the work order contition material list (<a class="reference external" href="http://www.bay12games.com/dwarves/mantisbt/view.php?id=9905">Bug 9905</a>).</p>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first">Fixes a crash in the work order contition material list (<a class="reference external" href="http://www.bay12games.com/dwarves/mantisbt/view.php?id=9905">Bug 9905</a>).</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">craft-age-wear:</th><td class="field-body"><p class="first">Fixes the behavior of crafted items wearing out over time (<a class="reference external" href="http://www.bay12games.com/dwarves/mantisbt/view.php?id=6003">Bug 6003</a>).
@@ -532,14 +531,14 @@ wear  every 20 years.</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">embark-profile-name:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Allows the use of lowercase letters when saving embark profiles</p>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first">Allows the use of lowercase letters when saving embark profiles</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">eggs-fertile:</th><td class="field-body"><p class="first">Displays a fertility indicator on nestboxes</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">farm-plot-select:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Adds “Select all” and “Deselect all” options to farm plot menus</p>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first">Adds &#8220;Select all&#8221; and &#8220;Deselect all&#8221; options to farm plot menus</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">fast-heat:</th><td class="field-body"><p class="first">Further improves temperature update performance by ensuring that 1 degree
@@ -562,7 +561,7 @@ the current item (fully, in case of a stack), and scroll down one line.</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">import-priority-category:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Allows changing the priority of all goods in a
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first">Allows changing the priority of all goods in a
 category when discussing an import agreement with the liaison</p>
 </td>
 </tr>
@@ -570,25 +569,25 @@ category when discussing an import agreement with the liaison</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">kitchen-prefs-color:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Changes color of enabled items to green in kitchen preferences</p>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first">Changes color of enabled items to green in kitchen preferences</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">kitchen-prefs-empty:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">Fixes a layout issue with empty kitchen tabs (<a class="reference external" href="http://www.bay12games.com/dwarves/mantisbt/view.php?id=9000">Bug 9000</a>)</p>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first">Fixes a layout issue with empty kitchen tabs (<a class="reference external" href="http://www.bay12games.com/dwarves/mantisbt/view.php?id=9000">Bug 9000</a>)</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">max-wheelbarrow:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Allows assigning more than 3 wheelbarrows to a stockpile</p>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first">Allows assigning more than 3 wheelbarrows to a stockpile</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">military-color-assigned:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">Color squad candidates already assigned to other squads in yellow/green
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first">Color squad candidates already assigned to other squads in yellow/green
 to make them stand out more in the list.</p>
 <img alt="../_images/tweak-mil-color.png" src="../_images/tweak-mil-color.png" />
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">military-stable-assign:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Preserve list order and cursor position when assigning to squad,
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first">Preserve list order and cursor position when assigning to squad,
 i.e. stop the rightmost list of the Positions page of the military
 screen from constantly resetting to the top.</p>
 </td>
@@ -603,11 +602,11 @@ screen from constantly resetting to the top.</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">title-start-rename:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Adds a safe rename option to the title screen “Start Playing” menu</p>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first">Adds a safe rename option to the title screen &#8220;Start Playing&#8221; menu</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">tradereq-pet-gender:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first last">Displays pet genders on the trade request screen</p>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first last">Displays pet genders on the trade request screen</p>
 </td>
 </tr>
 </tbody>
@@ -615,7 +614,7 @@ screen from constantly resetting to the top.</p>
 </div>
 <div class="section" id="fix-armory">
 <span id="id16"></span><h3><a class="toc-backref" href="#id229">fix-armory</a><a class="headerlink" href="#fix-armory" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference internal" href="Binpatches.html#binpatches-needs-patch"><span class="std std-ref">This plugin requires a binpatch</span></a>, which has not
+<p><a class="reference internal" href="Binpatches.html#binpatches-needs-patch"><span>This plugin requires a binpatch</span></a>, which has not
 been available since DF 0.34.11</p>
 </div>
 </div>
@@ -663,13 +662,13 @@ existing DF screens, they deliberately use red instead of green for the key.</p>
 <span id="id18"></span><h3><a class="toc-backref" href="#id230">automelt</a><a class="headerlink" href="#automelt" title="Permalink to this headline">¶</a></h3>
 <p>When automelt is enabled for a stockpile, any meltable items placed
 in it will be designated to be melted.
-This plugin adds an option to the <code class="kbd docutils literal"><span class="pre">q</span></code> menu when <a class="reference internal" href="Core.html#enable"><span class="std std-ref">enabled</span></a>.</p>
+This plugin adds an option to the <code class="kbd docutils literal"><span class="pre">q</span></code> menu when <a class="reference internal" href="Core.html#enable"><span>enabled</span></a>.</p>
 </div>
 <div class="section" id="autotrade">
 <span id="id19"></span><h3><a class="toc-backref" href="#id231">autotrade</a><a class="headerlink" href="#autotrade" title="Permalink to this headline">¶</a></h3>
 <p>When autotrade is enabled for a stockpile, any items placed in it will be
 designated to be taken to the Trade Depot whenever merchants are on the map.
-This plugin adds an option to the <code class="kbd docutils literal"><span class="pre">q</span></code> menu when <a class="reference internal" href="Core.html#enable"><span class="std std-ref">enabled</span></a>.</p>
+This plugin adds an option to the <code class="kbd docutils literal"><span class="pre">q</span></code> menu when <a class="reference internal" href="Core.html#enable"><span>enabled</span></a>.</p>
 </div>
 <div class="section" id="command-prompt">
 <span id="id20"></span><h3><a class="toc-backref" href="#id232">command-prompt</a><a class="headerlink" href="#command-prompt" title="Permalink to this headline">¶</a></h3>
@@ -679,14 +678,14 @@ This plugin adds an option to the <code class="kbd docutils literal"><span class
 <p>If called with an entry, it starts with that text filled in.
 Most useful for developers, who can set a keybinding to open
 a laungage interpreter for lua or Ruby by starting with the
-<a class="reference internal" href="_auto/base.html#lua"><span class="std std-ref">:lua</span></a> or <a class="reference internal" href="#rb"><span class="std std-ref">:rb</span></a> commands.</p>
-<p>Otherwise somewhat similar to <a class="reference internal" href="_auto/gui.html#gui-quickcmd"><span class="std std-ref">gui/quickcmd</span></a>.</p>
+<a class="reference internal" href="_auto/base.html#lua"><span>:lua</span></a> or <a class="reference internal" href="#rb"><span>:rb</span></a> commands.</p>
+<p>Otherwise somewhat similar to <a class="reference internal" href="_auto/gui.html#gui-quickcmd"><span>gui/quickcmd</span></a>.</p>
 <img alt="../_images/command-prompt.png" src="../_images/command-prompt.png" />
 </div>
 <div class="section" id="hotkeys">
 <span id="id21"></span><h3><a class="toc-backref" href="#id233">hotkeys</a><a class="headerlink" href="#hotkeys" title="Permalink to this headline">¶</a></h3>
 <p>Opens an in-game screen showing which DFHack keybindings are
-active in the current context.  See also <a class="reference internal" href="_auto/base.html#hotkey-notes"><span class="std std-ref">hotkey-notes</span></a>.</p>
+active in the current context.  See also <a class="reference internal" href="_auto/base.html#hotkey-notes"><span>hotkey-notes</span></a>.</p>
 <img alt="../_images/hotkeys.png" src="../_images/hotkeys.png" />
 <p><p><strong>Keybinding: </strong><span class="kbd">Ctrl</span><span class="kbd">F1</span></p>
 <p><strong>Keybinding: </strong><span class="kbd">Alt</span><span class="kbd">F1</span></p>
@@ -702,9 +701,9 @@ Best used as <code class="docutils literal"><span class="pre">:rb</span> <span c
 <p>An in-game equivalent to the popular program Dwarf Therapist.</p>
 <p>To activate, open the unit screen and press <code class="kbd docutils literal"><span class="pre">l</span></code>.</p>
 <img alt="../_images/manipulator.png" src="../_images/manipulator.png" />
-<p>The far left column displays the unit’s Happiness (color-coded based on its
+<p>The far left column displays the unit&#8217;s Happiness (color-coded based on its
 value), Name, Profession/Squad, and the right half of the screen displays each
-dwarf’s labor settings and skill levels (0-9 for Dabbling through Professional,
+dwarf&#8217;s labor settings and skill levels (0-9 for Dabbling through Professional,
 A-E for Great through Grand Master, and U-Z for Legendary through Legendary+5).</p>
 <p>Cells with teal backgrounds denote skills not controlled by labors, e.g.
 military and social skills.</p>
@@ -731,8 +730,8 @@ direction (descending for happiness or labors/skills, ascending for name,
 profession or squad) and right-click to sort it in the opposite direction.</li>
 <li>Left-click on a labor cell to toggle that labor. Right-click to move the
 cursor onto that cell instead of toggling it.</li>
-<li>Left-click on a unit’s name, profession or squad to view its properties.</li>
-<li>Right-click on a unit’s name, profession or squad to zoom to it.</li>
+<li>Left-click on a unit&#8217;s name, profession or squad to view its properties.</li>
+<li>Right-click on a unit&#8217;s name, profession or squad to zoom to it.</li>
 </ul>
 <p>Pressing <code class="kbd docutils literal"><span class="pre">Esc</span></code> normally returns to the unit screen, but <code class="kbd docutils literal"><span class="pre">Shift</span></code><code class="kbd docutils literal"><span class="pre">Esc</span></code> would exit
 directly to the main dwarf mode screen.</p>
@@ -761,7 +760,7 @@ filtering automatically.</p>
 <p>Pressing <code class="kbd docutils literal"><span class="pre">Enter</span></code>, <code class="kbd docutils literal"><span class="pre">Esc</span></code> or the arrow keys will return you to browsing the now
 filtered list, which still functions as normal. You can clear the filter
 by either going back into search mode and backspacing to delete it, or
-pressing the “shifted” version of the search hotkey while browsing the
+pressing the &#8220;shifted&#8221; version of the search hotkey while browsing the
 list (e.g. if the hotkey is <code class="kbd docutils literal"><span class="pre">s</span></code>, then hitting <code class="kbd docutils literal"><span class="pre">Shift</span></code><code class="kbd docutils literal"><span class="pre">s</span></code> will clear any
 filter).</p>
 <p>Leaving any screen automatically clears the filter.</p>
@@ -773,7 +772,7 @@ Pressing <code class="kbd docutils literal"><span class="pre">Alt</span></code><
 <p>In the stockpile screen the option only appears if the cursor is in the
 rightmost list:</p>
 <img alt="../_images/search-stockpile.png" src="../_images/search-stockpile.png" />
-<p>Note that the ‘Permit XXX’/’Forbid XXX’ keys conveniently operate only
+<p>Note that the &#8216;Permit XXX&#8217;/&#8217;Forbid XXX&#8217; keys conveniently operate only
 on items actually shown in the rightmost list, so it is possible to select
 only fat or tallow by forbidding fats, then searching for fat/tallow, and
 using Permit Fats again while the list is filtered.</p>
@@ -781,12 +780,12 @@ using Permit Fats again while the list is filtered.</p>
 <div class="section" id="nopause">
 <span id="id24"></span><h3><a class="toc-backref" href="#id238">nopause</a><a class="headerlink" href="#nopause" title="Permalink to this headline">¶</a></h3>
 <p>Disables pausing (both manual and automatic) with the exception of pause forced
-by <a class="reference internal" href="#reveal"><span class="std std-ref">reveal</span></a> <code class="docutils literal"><span class="pre">hell</span></code>. This is nice for digging under rivers.</p>
+by <a class="reference internal" href="#reveal"><span>reveal</span></a> <code class="docutils literal"><span class="pre">hell</span></code>. This is nice for digging under rivers.</p>
 </div>
 <div class="section" id="embark-tools">
 <span id="id25"></span><h3><a class="toc-backref" href="#id239">embark-tools</a><a class="headerlink" href="#embark-tools" title="Permalink to this headline">¶</a></h3>
 <p>A collection of embark-related tools. Usage and available tools:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">embark</span><span class="o">-</span><span class="n">tools</span> <span class="n">enable</span><span class="o">/</span><span class="n">disable</span> <span class="n">tool</span> <span class="p">[</span><span class="n">tool</span><span class="p">]</span><span class="o">...</span>
+<div class="highlight-python"><div class="highlight"><pre>embark-tools enable/disable tool [tool]...
 </pre></div>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
@@ -814,15 +813,15 @@ you place one.</p>
 <p>Firstly, it moves the last used material for a given construction type to the top of
 the list, if there are any left. So if you build a wall with chalk blocks, the next
 time you place a wall the chalk blocks will be at the top of the list, regardless of
-distance (it only does this in “grouped” mode, as individual item lists could be huge).
+distance (it only does this in &#8220;grouped&#8221; mode, as individual item lists could be huge).
 This should mean you can place most constructions without having to search for your
 preferred material type.</p>
 <img alt="../_images/automaterial-mat.png" src="../_images/automaterial-mat.png" />
-<p>Pressing <code class="kbd docutils literal"><span class="pre">a</span></code> while highlighting any material will enable that material for “auto select”
+<p>Pressing <code class="kbd docutils literal"><span class="pre">a</span></code> while highlighting any material will enable that material for &#8220;auto select&#8221;
 for this construction type. You can enable multiple materials as autoselect. Now the next
 time you place this type of construction, the plugin will automatically choose materials
 for you from the kinds you enabled. If there is enough to satisfy the whole placement,
-you won’t be prompted with the material screen - the construction will be placed and you
+you won&#8217;t be prompted with the material screen - the construction will be placed and you
 will be back in the construction menu as if you did it manually.</p>
 <p>When choosing the construction placement, you will see a couple of options:</p>
 <img alt="../_images/automaterial-pos.png" src="../_images/automaterial-pos.png" />
@@ -839,7 +838,7 @@ enabled materials, you should be able to place complex constructions more conven
 furniture placement.  You can then place furniture and other buildings before
 the required materials are available, and the job will be unsuspended when
 the item is created.</p>
-<p>Very useful when combined with <a class="reference internal" href="#workflow"><span class="std std-ref">workflow</span></a> - you can set a constraint
+<p>Very useful when combined with <a class="reference internal" href="#workflow"><span>workflow</span></a> - you can set a constraint
 to always have one or two doors/beds/tables/chairs/etc available, and place
 as many as you like.  The plugins then take over and fulfill the orders,
 with minimal space dedicated to stockpiles.</p>
@@ -858,8 +857,8 @@ Replace with <code class="docutils literal"><span class="pre">disable</span></co
 </tr>
 <tr class="field-even field"><th class="field-name">confirm help:</th><td class="field-body">List available confirmation dialogues.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name" colspan="2">confirm enable option1 [option2…]:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Enable (or disable) specific confirmation dialogues.</td>
+<tr class="field-odd field"><th class="field-name" colspan="2">confirm enable option1 [option2...]:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Enable (or disable) specific confirmation dialogues.</td>
 </tr>
 </tbody>
 </table>
@@ -893,7 +892,7 @@ by moving the view manually.</p>
 </tbody>
 </table>
 <p>Usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mousequery</span> <span class="p">[</span><span class="n">plugin</span><span class="p">]</span> <span class="p">[</span><span class="n">rbutton</span><span class="p">]</span> <span class="p">[</span><span class="n">track</span><span class="p">]</span> <span class="p">[</span><span class="n">edge</span><span class="p">]</span> <span class="p">[</span><span class="n">live</span><span class="p">]</span> <span class="p">[</span><span class="n">enable</span><span class="o">|</span><span class="n">disable</span><span class="p">]</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">mousequery</span> <span class="p">[</span><span class="n">plugin</span><span class="p">]</span> <span class="p">[</span><span class="n">rbutton</span><span class="p">]</span> <span class="p">[</span><span class="n">track</span><span class="p">]</span> <span class="p">[</span><span class="n">edge</span><span class="p">]</span> <span class="p">[</span><span class="n">live</span><span class="p">]</span> <span class="p">[</span><span class="n">enable</span><span class="o">|</span><span class="n">disable</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -908,25 +907,25 @@ UI hints for construction status.</p>
 </div>
 <div class="section" id="title-version">
 <span id="id33"></span><h3><a class="toc-backref" href="#id247">title-version</a><a class="headerlink" href="#title-version" title="Permalink to this headline">¶</a></h3>
-<p>Displays the DFHack version on DF’s title screen when enabled.</p>
+<p>Displays the DFHack version on DF&#8217;s title screen when enabled.</p>
 </div>
 <div class="section" id="trackstop">
 <span id="id34"></span><h3><a class="toc-backref" href="#id248">trackstop</a><a class="headerlink" href="#trackstop" title="Permalink to this headline">¶</a></h3>
 <p>Adds a <code class="kbd docutils literal"><span class="pre">q</span></code> menu for track stops, which is completely blank by default.
-This allows you to view and/or change the track stop’s friction and dump
+This allows you to view and/or change the track stop&#8217;s friction and dump
 direction settings, using the keybindings from the track stop building interface.</p>
 </div>
 <div class="section" id="sort-items">
 <span id="id35"></span><h3><a class="toc-backref" href="#id249">sort-items</a><a class="headerlink" href="#sort-items" title="Permalink to this headline">¶</a></h3>
 <p>Sort the visible item list:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sort</span><span class="o">-</span><span class="n">items</span> <span class="n">order</span> <span class="p">[</span><span class="n">order</span><span class="o">...</span><span class="p">]</span>
+<div class="highlight-python"><div class="highlight"><pre>sort-items order [order...]
 </pre></div>
 </div>
 <p>Sort the item list using the given sequence of comparisons.
 The <code class="docutils literal"><span class="pre">&lt;</span></code> prefix for an order makes undefined values sort first.
 The <code class="docutils literal"><span class="pre">&gt;</span></code> prefix reverses the sort order for defined values.</p>
 <p>Item order examples:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">description</span> <span class="n">material</span> <span class="n">wear</span> <span class="nb">type</span> <span class="n">quality</span>
+<div class="highlight-python"><div class="highlight"><pre>description material wear type quality
 </pre></div>
 </div>
 <p>The orderings are defined in <code class="docutils literal"><span class="pre">hack/lua/plugins/sort/*.lua</span></code></p>
@@ -934,14 +933,14 @@ The <code class="docutils literal"><span class="pre">&gt;</span></code> prefix r
 <div class="section" id="sort-units">
 <span id="id36"></span><h3><a class="toc-backref" href="#id250">sort-units</a><a class="headerlink" href="#sort-units" title="Permalink to this headline">¶</a></h3>
 <p>Sort the visible unit list:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sort</span><span class="o">-</span><span class="n">units</span> <span class="n">order</span> <span class="p">[</span><span class="n">order</span><span class="o">...</span><span class="p">]</span>
+<div class="highlight-python"><div class="highlight"><pre>sort-units order [order...]
 </pre></div>
 </div>
 <p>Sort the unit list using the given sequence of comparisons.
 The <code class="docutils literal"><span class="pre">&lt;</span></code> prefix for an order makes undefined values sort first.
 The <code class="docutils literal"><span class="pre">&gt;</span></code> prefix reverses the sort order for defined values.</p>
 <p>Unit order examples:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="n">age</span> <span class="n">arrival</span> <span class="n">squad</span> <span class="n">squad_position</span> <span class="n">profession</span>
+<div class="highlight-python"><div class="highlight"><pre>name age arrival squad squad_position profession
 </pre></div>
 </div>
 <p>The orderings are defined in <code class="docutils literal"><span class="pre">hack/lua/plugins/sort/*.lua</span></code></p>
@@ -959,7 +958,7 @@ The <code class="docutils literal"><span class="pre">&gt;</span></code> prefix r
 <div class="section" id="stockpiles">
 <span id="stocksettings"></span><span id="id38"></span><h3><a class="toc-backref" href="#id252">stocksettings</a><a class="headerlink" href="#stockpiles" title="Permalink to this headline">¶</a></h3>
 <p>Offers the following commands to save and load stockpile settings.
-See <a class="reference internal" href="_auto/gui.html#gui-stockpiles"><span class="std std-ref">gui/stockpiles</span></a> for an in-game interface.</p>
+See <a class="reference internal" href="_auto/gui.html#gui-stockpiles"><span>gui/stockpiles</span></a> for an in-game interface.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -970,7 +969,7 @@ allowing you to copy/paste stockpiles easily.
 <p><strong>Keybinding: </strong><span class="kbd">Alt</span><span class="kbd">P</span></p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">savestock:</th><td class="field-body">Saves the currently highlighted stockpile’s settings to a file in your Dwarf
+<tr class="field-even field"><th class="field-name">savestock:</th><td class="field-body">Saves the currently highlighted stockpile&#8217;s settings to a file in your Dwarf
 Fortress folder. This file can be used to copy settings between game saves or
 players.  eg:  <code class="docutils literal"><span class="pre">savestock</span> <span class="pre">food_settings.dfstock</span></code></td>
 </tr>
@@ -990,11 +989,11 @@ divine metals, etc are not saved as they are different in every world.</p>
 </div>
 <div class="section" id="rename">
 <span id="id39"></span><h3><a class="toc-backref" href="#id253">rename</a><a class="headerlink" href="#rename" title="Permalink to this headline">¶</a></h3>
-<p>Allows renaming various things.  Use <a class="reference internal" href="_auto/gui.html#gui-rename"><span class="std std-ref">gui/rename</span></a> for an in-game interface.</p>
+<p>Allows renaming various things.  Use <a class="reference internal" href="_auto/gui.html#gui-rename"><span>gui/rename</span></a> for an in-game interface.</p>
 <p>Options:</p>
 <dl class="docutils">
 <dt><code class="docutils literal"><span class="pre">rename</span> <span class="pre">squad</span> <span class="pre">&lt;index&gt;</span> <span class="pre">&quot;name&quot;</span></code></dt>
-<dd>Rename squad by index to ‘name’.</dd>
+<dd>Rename squad by index to &#8216;name&#8217;.</dd>
 <dt><code class="docutils literal"><span class="pre">rename</span> <span class="pre">hotkey</span> <span class="pre">&lt;index&gt;</span> <span class="pre">\&quot;name\&quot;</span></code></dt>
 <dd>Rename hotkey by index. This allows assigning
 longer commands to the DF hotkeys.</dd>
@@ -1024,17 +1023,17 @@ black color in palette to non totally black. See <a class="reference external" h
 <tr class="field-odd field"><th class="field-name">light reload:</th><td class="field-body">Reload the settings file.</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">light sun &lt;x&gt;|cycle:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Set time to &lt;x&gt; (in hours) or set it to df time cycle.</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Set time to &lt;x&gt; (in hours) or set it to df time cycle.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">occlusionON, occlusionOFF:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Show debug occlusion info.</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Show debug occlusion info.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">disable:</th><td class="field-body">Disable any filter that is enabled.</td>
 </tr>
 </tbody>
 </table>
 <p>An image showing lava and dragon breath. Not pictured here: sunlight, shining items/plants,
-materials that color the light etc…</p>
+materials that color the light etc...</p>
 <img alt="../_images/rendermax.png" src="../_images/rendermax.png" />
 </div>
 </div>
@@ -1100,10 +1099,10 @@ it is enabled, including through other tools such as Dwarf Therapist</em></p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">enable autolabor:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Enables the plugin with default settings.  (Persistent per fortress)</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Enables the plugin with default settings.  (Persistent per fortress)</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">disable autolabor:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Disables the plugin.</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Disables the plugin.</td>
 </tr>
 </tbody>
 </table>
@@ -1116,7 +1115,7 @@ Other jobs are automatically assigned as described above.  Each of these setting
 never to the chief medical dwarf, and less often to the bookeeper and manager.</p>
 <p>Hunting is never assigned without a butchery, and fishing is never assigned without a fishery.</p>
 <p>For each labor a preference order is calculated based on skill, biased against masters of other
-trades and excluding those who can’t do the job.  The labor is then added to the best &lt;minimum&gt;
+trades and excluding those who can&#8217;t do the job.  The labor is then added to the best &lt;minimum&gt;
 dwarves for that labor.  We assign at least the minimum number of dwarfs, in order of preference,
 and then assign additional dwarfs that meet any of these conditions:</p>
 <ul class="simple">
@@ -1131,28 +1130,28 @@ and then assign additional dwarfs that meet any of these conditions:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">autolabor &lt;labor&gt; &lt;minimum&gt; [&lt;maximum&gt;]:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Set number of dwarves assigned to a labor.</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Set number of dwarves assigned to a labor.</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">autolabor &lt;labor&gt; haulers:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Set a labor to be handled by hauler dwarves.</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Set a labor to be handled by hauler dwarves.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">autolabor &lt;labor&gt; disable:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Turn off autolabor for a specific labor.</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Turn off autolabor for a specific labor.</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">autolabor &lt;labor&gt; reset:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Return a labor to the default handling.</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Return a labor to the default handling.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">autolabor reset-all:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Return all labors to the default handling.</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Return all labors to the default handling.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">autolabor list:</th><td class="field-body">List current status of all labors.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">autolabor status:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Show basic status information.</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Show basic status information.</td>
 </tr>
 </tbody>
 </table>
-<p>See <a class="reference internal" href="_auto/base.html#autolabor-artisans"><span class="std std-ref">autolabor-artisans</span></a> for a differently-tuned setup.</p>
+<p>See <a class="reference internal" href="_auto/base.html#autolabor-artisans"><span>autolabor-artisans</span></a> for a differently-tuned setup.</p>
 <p>Examples:</p>
 <dl class="docutils">
 <dt><code class="docutils literal"><span class="pre">autolabor</span> <span class="pre">MINE</span></code></dt>
@@ -1190,11 +1189,11 @@ as Dwarf Therapist</em></p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">enable labormanager:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Enables the plugin with default settings.
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Enables the plugin with default settings.
 (Persistent per fortress)</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">disable labormanager:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Disables the plugin.</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Disables the plugin.</td>
 </tr>
 </tbody>
 </table>
@@ -1204,9 +1203,9 @@ default settings.</p>
 priority by default than others). The way the plugin works is that, once
 it determines how many of each labor is needed, it then sorts them by
 adjusted priority. (Labors other than hauling have a bias added to them
-based on how long it’s been since they were last used, to prevent job
-starvation.) The labor with the highest priority is selected, the “best
-fit” dwarf for that labor is assigned to that labor, and then its
+based on how long it&#8217;s been since they were last used, to prevent job
+starvation.) The labor with the highest priority is selected, the &#8220;best
+fit&#8221; dwarf for that labor is assigned to that labor, and then its
 priority is <em>halved</em>. This process is repeated until either dwarfs or
 labors run out.</p>
 <p>Because there is no easy way to detect how many haulers are actually
@@ -1218,7 +1217,7 @@ pulling is always assigned to everyone. Any dwarfs for which there are
 no jobs will be assigned hauling, lever pulling, and cleaning labors. If
 you use animal trainers, note that labormanager will misbehave if you
 assign specific trainers to specific animals; results are only guaranteed
-if you use “any trainer”, and animal trainers will probably be
+if you use &#8220;any trainer&#8221;, and animal trainers will probably be
 overallocated in any case.</p>
 <p>Labormanager also sometimes assigns extra labors to currently busy
 dwarfs so that when they finish their current job, they will go off and
@@ -1234,7 +1233,7 @@ completely ignored by labormanager.</p>
 <p>The fitness algorithm for assigning jobs to dwarfs generally attempts to
 favor dwarfs who are more skilled over those who are less skilled. It
 also tries to avoid assigning female dwarfs with children to jobs that
-are “outside”, favors assigning “outside” jobs to dwarfs who are
+are &#8220;outside&#8221;, favors assigning &#8220;outside&#8221; jobs to dwarfs who are
 carrying a tool that could be used as a weapon, and tries to minimize
 how often dwarfs have to reequip.</p>
 <p>Labormanager automatically determines medical needs and reserves health
@@ -1247,8 +1246,8 @@ unless specifically enabled.</p>
 particular job is complicated and, in places, incomplete. In some
 situations, labormanager will detect that it cannot determine what labor
 is required. It will, by default, pause and print an error message on
-the dfhack console, followed by the message “LABORMANAGER: Game paused
-so you can investigate the above message.”. If this happens, please open
+the dfhack console, followed by the message &#8220;LABORMANAGER: Game paused
+so you can investigate the above message.&#8221;. If this happens, please open
 an issue on github, reporting the lines that immediately preceded this
 message. You can tell labormanager to ignore this error and carry on by
 typing <code class="docutils literal"><span class="pre">labormanager</span> <span class="pre">pause-on-error</span> <span class="pre">no</span></code>, but be warned that some job may go
@@ -1259,40 +1258,40 @@ undone in this situation.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">labormanager enable:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Turn plugin on.</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Turn plugin on.</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">labormanager disable:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Turn plugin off.</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Turn plugin off.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">labormanager priority &lt;labor&gt; &lt;value&gt;:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Set the priority value (see above) for labor &lt;labor&gt; to &lt;value&gt;.</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Set the priority value (see above) for labor &lt;labor&gt; to &lt;value&gt;.</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">labormanager reset &lt;labor&gt;:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Reset the priority value of labor &lt;labor&gt; to its default.</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Reset the priority value of labor &lt;labor&gt; to its default.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">labormanager reset-all:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Reset all priority values to their defaults.</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Reset all priority values to their defaults.</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">labormanager allow-fishing:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Allow dwarfs to fish. <em>Warning</em> This tends to result in most of the fort going fishing.</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Allow dwarfs to fish. <em>Warning</em> This tends to result in most of the fort going fishing.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">labormanager forbid-fishing:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Forbid dwarfs from fishing. Default behavior.</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Forbid dwarfs from fishing. Default behavior.</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">labormanager allow-hunting:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Allow dwarfs to hunt. <em>Warning</em> This tends to result in as many dwarfs going hunting as you have crossbows.</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Allow dwarfs to hunt. <em>Warning</em> This tends to result in as many dwarfs going hunting as you have crossbows.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">labormanager forbid-hunting:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Forbid dwarfs from hunting. Default behavior.</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Forbid dwarfs from hunting. Default behavior.</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">labormanager list:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Show current priorities and current allocation stats.</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Show current priorities and current allocation stats.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">labormanager pause-on-error yes:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Make labormanager pause if the labor inference engine fails. See above.</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Make labormanager pause if the labor inference engine fails. See above.</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">labormanager pause-on-error no:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Allow labormanager to continue past a labor inference engine failure.</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Allow labormanager to continue past a labor inference engine failure.</td>
 </tr>
 </tbody>
 </table>
@@ -1335,7 +1334,7 @@ in a workshop, or the unit/jobs screen.</dd>
 <span id="id46"></span><h3><a class="toc-backref" href="#id259">job-material</a><a class="headerlink" href="#job-material" title="Permalink to this headline">¶</a></h3>
 <p>Alter the material of the selected job.  Similar to <code class="docutils literal"><span class="pre">job</span> <span class="pre">item-material</span> <span class="pre">...</span></code></p>
 <p>Invoked as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">job</span><span class="o">-</span><span class="n">material</span> <span class="o">&lt;</span><span class="n">inorganic</span><span class="o">-</span><span class="n">token</span><span class="o">&gt;</span>
+<div class="highlight-python"><div class="highlight"><pre>job-material &lt;inorganic-token&gt;
 </pre></div>
 </div>
 <p><p><strong>Keybinding: </strong><span class="kbd">Shift</span><span class="kbd">A</span><span> -&gt; </span><code class="guilabel docutils literal"><span class="pre">&quot;job-material</span> <span class="pre">ALUNITE&quot;</span></code></p>
@@ -1365,13 +1364,13 @@ building, calling <code class="docutils literal"><span class="pre">job-duplicate
 <div class="section" id="autogems">
 <span id="id48"></span><h3><a class="toc-backref" href="#id261">autogems</a><a class="headerlink" href="#autogems" title="Permalink to this headline">¶</a></h3>
 <p>Creates a new Workshop Order setting, automatically cutting rough gems
-when <a class="reference internal" href="Core.html#enable"><span class="std std-ref">enabled</span></a>.</p>
+when <a class="reference internal" href="Core.html#enable"><span>enabled</span></a>.</p>
 </div>
 <div class="section" id="stockflow">
 <span id="id49"></span><h3><a class="toc-backref" href="#id262">stockflow</a><a class="headerlink" href="#stockflow" title="Permalink to this headline">¶</a></h3>
 <p>Allows the fortress bookkeeper to queue jobs through the manager,
 based on space or items available in stockpiles.</p>
-<p>Inspired by <a class="reference internal" href="#workflow"><span class="std std-ref">workflow</span></a>.</p>
+<p>Inspired by <a class="reference internal" href="#workflow"><span>workflow</span></a>.</p>
 <p>Usage:</p>
 <dl class="docutils">
 <dt><code class="docutils literal"><span class="pre">stockflow</span> <span class="pre">enable</span></code></dt>
@@ -1387,18 +1386,18 @@ based on space or items available in stockpiles.</p>
 </dl>
 <p>While enabled, the <code class="kbd docutils literal"><span class="pre">q</span></code> menu of each stockpile will have two new options:</p>
 <ul class="simple">
-<li><code class="kbd docutils literal"><span class="pre">j</span></code>:  Select a job to order, from an interface like the manager’s screen.</li>
+<li><code class="kbd docutils literal"><span class="pre">j</span></code>:  Select a job to order, from an interface like the manager&#8217;s screen.</li>
 <li><code class="kbd docutils literal"><span class="pre">J</span></code>:  Cycle between several options for how many such jobs to order.</li>
 </ul>
 <p>Whenever the bookkeeper updates stockpile records, new work orders will
-be placed on the manager’s queue for each such selection, reduced by the
+be placed on the manager&#8217;s queue for each such selection, reduced by the
 number of identical orders already in the queue.</p>
 <p>In fast mode, new work orders will be enqueued once per day, instead of
 waiting for the bookkeeper.</p>
 </div>
 <div class="section" id="workflow">
 <span id="id50"></span><h3><a class="toc-backref" href="#id263">workflow</a><a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h3>
-<p>Manage control of repeat jobs.  <a class="reference internal" href="_auto/gui.html#gui-workflow"><span class="std std-ref">gui/workflow</span></a> provides a simple
+<p>Manage control of repeat jobs.  <a class="reference internal" href="_auto/gui.html#gui-workflow"><span>gui/workflow</span></a> provides a simple
 front-end integrated in the game UI.</p>
 <p>Usage:</p>
 <dl class="docutils">
@@ -1441,7 +1440,7 @@ the frequency of jobs being toggled.</p>
 <div class="section" id="constraint-format">
 <h4><a class="toc-backref" href="#id265">Constraint format</a><a class="headerlink" href="#constraint-format" title="Permalink to this headline">¶</a></h4>
 <p>The constraint spec consists of 4 parts, separated with <code class="docutils literal"><span class="pre">/</span></code> characters:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ITEM</span><span class="p">[:</span><span class="n">SUBTYPE</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="n">GENERIC_MAT</span><span class="p">,</span><span class="o">...</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="n">SPECIFIC_MAT</span><span class="p">:</span><span class="o">...</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="n">LOCAL</span><span class="p">,</span><span class="o">&lt;</span><span class="n">quality</span><span class="o">&gt;</span><span class="p">]</span>
+<div class="highlight-python"><div class="highlight"><pre>ITEM[:SUBTYPE]/[GENERIC_MAT,...]/[SPECIFIC_MAT:...]/[LOCAL,&lt;quality&gt;]
 </pre></div>
 </div>
 <p>The first part is mandatory and specifies the item type and subtype,
@@ -1451,8 +1450,8 @@ For more information, see <a class="reference external" href="http://dwarffortre
 <ul>
 <li><p class="first">A generic material spec constrains the item material to one of
 the hard-coded generic classes, which currently include:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">PLANT</span> <span class="n">WOOD</span> <span class="n">CLOTH</span> <span class="n">SILK</span> <span class="n">LEATHER</span> <span class="n">BONE</span> <span class="n">SHELL</span> <span class="n">SOAP</span> <span class="n">TOOTH</span> <span class="n">HORN</span> <span class="n">PEARL</span> <span class="n">YARN</span>
-<span class="n">METAL</span> <span class="n">STONE</span> <span class="n">SAND</span> <span class="n">GLASS</span> <span class="n">CLAY</span> <span class="n">MILK</span>
+<div class="highlight-python"><div class="highlight"><pre>PLANT WOOD CLOTH SILK LEATHER BONE SHELL SOAP TOOTH HORN PEARL YARN
+METAL STONE SAND GLASS CLAY MILK
 </pre></div>
 </div>
 </li>
@@ -1469,47 +1468,47 @@ be used to ignore imported items or items below a certain quality.</p>
 <div class="section" id="constraint-examples">
 <h4><a class="toc-backref" href="#id266">Constraint examples</a><a class="headerlink" href="#constraint-examples" title="Permalink to this headline">¶</a></h4>
 <p>Keep metal bolts within 900-1000, and wood/bone within 150-200:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">workflow</span> <span class="n">amount</span> <span class="n">AMMO</span><span class="p">:</span><span class="n">ITEM_AMMO_BOLTS</span><span class="o">/</span><span class="n">METAL</span> <span class="mi">1000</span> <span class="mi">100</span>
-<span class="n">workflow</span> <span class="n">amount</span> <span class="n">AMMO</span><span class="p">:</span><span class="n">ITEM_AMMO_BOLTS</span><span class="o">/</span><span class="n">WOOD</span><span class="p">,</span><span class="n">BONE</span> <span class="mi">200</span> <span class="mi">50</span>
+<div class="highlight-python"><div class="highlight"><pre>workflow amount AMMO:ITEM_AMMO_BOLTS/METAL 1000 100
+workflow amount AMMO:ITEM_AMMO_BOLTS/WOOD,BONE 200 50
 </pre></div>
 </div>
 <p>Keep the number of prepared food &amp; drink stacks between 90 and 120:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">workflow</span> <span class="n">count</span> <span class="n">FOOD</span> <span class="mi">120</span> <span class="mi">30</span>
-<span class="n">workflow</span> <span class="n">count</span> <span class="n">DRINK</span> <span class="mi">120</span> <span class="mi">30</span>
+<div class="highlight-python"><div class="highlight"><pre>workflow count FOOD 120 30
+workflow count DRINK 120 30
 </pre></div>
 </div>
 <p>Make sure there are always 25-30 empty bins/barrels/bags:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">workflow</span> <span class="n">count</span> <span class="n">BIN</span> <span class="mi">30</span>
-<span class="n">workflow</span> <span class="n">count</span> <span class="n">BARREL</span> <span class="mi">30</span>
-<span class="n">workflow</span> <span class="n">count</span> <span class="n">BOX</span><span class="o">/</span><span class="n">CLOTH</span><span class="p">,</span><span class="n">SILK</span><span class="p">,</span><span class="n">YARN</span> <span class="mi">30</span>
+<div class="highlight-python"><div class="highlight"><pre>workflow count BIN 30
+workflow count BARREL 30
+workflow count BOX/CLOTH,SILK,YARN 30
 </pre></div>
 </div>
 <p>Make sure there are always 15-20 coal and 25-30 copper bars:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">workflow</span> <span class="n">count</span> <span class="n">BAR</span><span class="o">//</span><span class="n">COAL</span> <span class="mi">20</span>
-<span class="n">workflow</span> <span class="n">count</span> <span class="n">BAR</span><span class="o">//</span><span class="n">COPPER</span> <span class="mi">30</span>
+<div class="highlight-python"><div class="highlight"><pre>workflow count BAR//COAL 20
+workflow count BAR//COPPER 30
 </pre></div>
 </div>
 <p>Produce 15-20 gold crafts:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">workflow</span> <span class="n">count</span> <span class="n">CRAFTS</span><span class="o">//</span><span class="n">GOLD</span> <span class="mi">20</span>
+<div class="highlight-python"><div class="highlight"><pre>workflow count CRAFTS//GOLD 20
 </pre></div>
 </div>
 <p>Collect 15-20 sand bags and clay boulders:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">workflow</span> <span class="n">count</span> <span class="n">POWDER_MISC</span><span class="o">/</span><span class="n">SAND</span> <span class="mi">20</span>
-<span class="n">workflow</span> <span class="n">count</span> <span class="n">BOULDER</span><span class="o">/</span><span class="n">CLAY</span> <span class="mi">20</span>
+<div class="highlight-python"><div class="highlight"><pre>workflow count POWDER_MISC/SAND 20
+workflow count BOULDER/CLAY 20
 </pre></div>
 </div>
 <p>Make sure there are always 80-100 units of dimple dye:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">workflow</span> <span class="n">amount</span> <span class="n">POWDER_MISC</span><span class="o">//</span><span class="n">MUSHROOM_CUP_DIMPLE</span><span class="p">:</span><span class="n">MILL</span> <span class="mi">100</span> <span class="mi">20</span>
+<div class="highlight-python"><div class="highlight"><pre>workflow amount POWDER_MISC//MUSHROOM_CUP_DIMPLE:MILL 100 20
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">In order for this to work, you have to set the material of the PLANT input
-on the Mill Plants job to MUSHROOM_CUP_DIMPLE using the <a class="reference internal" href="#job"><span class="std std-ref">job item-material</span></a>
-command. Otherwise the plugin won’t be able to deduce the output material.</p>
+on the Mill Plants job to MUSHROOM_CUP_DIMPLE using the <a class="reference internal" href="#job"><span>job item-material</span></a>
+command. Otherwise the plugin won&#8217;t be able to deduce the output material.</p>
 </div>
 <p>Maintain 10-100 locally-made crafts of exceptional quality:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">workflow</span> <span class="n">count</span> <span class="n">CRAFTS</span><span class="o">///</span><span class="n">LOCAL</span><span class="p">,</span><span class="n">EXCEPTIONAL</span> <span class="mi">100</span> <span class="mi">90</span>
+<div class="highlight-python"><div class="highlight"><pre>workflow count CRAFTS///LOCAL,EXCEPTIONAL 100 90
 </pre></div>
 </div>
 </div>
@@ -1558,7 +1557,7 @@ if you want to keep that bloody entrance <code class="docutils literal"><span cl
 </div>
 <div class="section" id="autodump">
 <span id="id54"></span><h3><a class="toc-backref" href="#id270">autodump</a><a class="headerlink" href="#autodump" title="Permalink to this headline">¶</a></h3>
-<p>This plugin adds an option to the <code class="kbd docutils literal"><span class="pre">q</span></code> menu for stckpiles when <a class="reference internal" href="Core.html#enable"><span class="std std-ref">enabled</span></a>.
+<p>This plugin adds an option to the <code class="kbd docutils literal"><span class="pre">q</span></code> menu for stckpiles when <a class="reference internal" href="Core.html#enable"><span>enabled</span></a>.
 When autodump is enabled for a stockpile, any items placed in the stockpile will
 automatically be designated to be dumped.</p>
 <p>Alternatively, you can use it to quickly move all items designated to be dumped.
@@ -1571,7 +1570,7 @@ Be aware that any active dump item tasks still point at the item.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">destroy:</th><td class="field-body">Destroy instead of dumping. Doesn’t require a cursor.
+<tr class="field-odd field"><th class="field-name">destroy:</th><td class="field-body">Destroy instead of dumping. Doesn&#8217;t require a cursor.
 If called again before the game is resumed, cancels destroy.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">destroy-here:</th><td class="field-body">As <code class="docutils literal"><span class="pre">destroy</span></code>, but only the selected item in the <code class="kbd docutils literal"><span class="pre">k</span></code> list,
@@ -1607,9 +1606,9 @@ and rotten items are confistacted and dumped.</p>
 </tr>
 <tr class="field-even field"><th class="field-name">scattered:</th><td class="field-body">confiscated and dump all items scattered on the floor</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">x:</th><td class="field-body">confiscate/dump items with wear level ‘x’ and more</td>
+<tr class="field-odd field"><th class="field-name">x:</th><td class="field-body">confiscate/dump items with wear level &#8216;x&#8217; and more</td>
 </tr>
-<tr class="field-even field"><th class="field-name">X:</th><td class="field-body">confiscate/dump items with wear level ‘X’ and more</td>
+<tr class="field-even field"><th class="field-name">X:</th><td class="field-body">confiscate/dump items with wear level &#8216;X&#8217; and more</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">dryrun:</th><td class="field-body">a dry run. combine with other options to see what will happen
 without it actually happening.</td>
@@ -1620,7 +1619,7 @@ without it actually happening.</td>
 <dl class="docutils">
 <dt><code class="docutils literal"><span class="pre">cleanowned</span> <span class="pre">scattered</span> <span class="pre">X</span></code></dt>
 <dd>This will confiscate rotten and dropped food, garbage on the floors and any
-worn items with ‘X’ damage and above.</dd>
+worn items with &#8216;X&#8217; damage and above.</dd>
 </dl>
 </div>
 <div class="section" id="dwarfmonitor">
@@ -1631,8 +1630,8 @@ worn items with ‘X’ damage and above.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">enable &lt;mode&gt;:</th><td class="field-body">Start monitoring <code class="docutils literal"><span class="pre">mode</span></code>. <code class="docutils literal"><span class="pre">mode</span></code> can be “work”, “misery”,
-“weather”, or “all”.  This will enable all corresponding widgets,
+<tr class="field-odd field"><th class="field-name">enable &lt;mode&gt;:</th><td class="field-body">Start monitoring <code class="docutils literal"><span class="pre">mode</span></code>. <code class="docutils literal"><span class="pre">mode</span></code> can be &#8220;work&#8221;, &#8220;misery&#8221;,
+&#8220;weather&#8221;, or &#8220;all&#8221;.  This will enable all corresponding widgets,
 if applicable.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">disable &lt;mode&gt;:</th><td class="field-body">Stop monitoring <code class="docutils literal"><span class="pre">mode</span></code>, and disable corresponding widgets, if applicable.</td>
@@ -1669,16 +1668,16 @@ can be displayed on the main fortress mode screen:</p>
 positions and settings of all widgets displayed. This file should contain a
 JSON object with the key <code class="docutils literal"><span class="pre">widgets</span></code> containing an array of objects - see the
 included file in the <code class="docutils literal"><span class="pre">dfhack-config</span></code> folder for an example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;widgets&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;widget type (weather, misery, etc.)&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="n">X</span> <span class="n">coordinate</span><span class="p">,</span>
-            <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="n">Y</span> <span class="n">coordinate</span>
-            <span class="o">&lt;...</span><span class="n">additional</span> <span class="n">options</span><span class="o">...&gt;</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
+<div class="highlight-python"><div class="highlight"><pre>{
+    &quot;widgets&quot;: [
+        {
+            &quot;type&quot;: &quot;widget type (weather, misery, etc.)&quot;,
+            &quot;x&quot;: X coordinate,
+            &quot;y&quot;: Y coordinate
+            &lt;...additional options...&gt;
+        }
+    ]
+}
 </pre></div>
 </div>
 <p>X and Y coordinates begin at zero (in the upper left corner of the screen).
@@ -1744,7 +1743,7 @@ to the Animal Caretaker skill).</p>
 </div>
 <div class="section" id="worknow">
 <span id="id58"></span><h3><a class="toc-backref" href="#id274">workNow</a><a class="headerlink" href="#worknow" title="Permalink to this headline">¶</a></h3>
-<p>Don’t allow dwarves to idle if any jobs are available.</p>
+<p>Don&#8217;t allow dwarves to idle if any jobs are available.</p>
 <p>When workNow is active, every time the game pauses, DF will make dwarves
 perform any appropriate available jobs.  This includes when you one step
 through the game using the pause menu.  Usage:</p>
@@ -1770,7 +1769,7 @@ through the game using the pause menu.  Usage:</p>
 the plants and seeds of that type will be excluded from cookery.
 If the number rises above the limit + 20, then cooking will be allowed.</p>
 <p>The plugin needs a fortress to be loaded and will deactivate automatically otherwise.
-You have to reactivate with ‘seedwatch start’ after you load the game.</p>
+You have to reactivate with &#8216;seedwatch start&#8217; after you load the game.</p>
 <p>Options:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1809,12 +1808,12 @@ You have to reactivate with ‘seedwatch start’ after you load the game.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">set:</th><td class="field-body">Set zone or cage under cursor as default for future assigns.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">assign:</th><td class="field-body">Assign unit(s) to the pen or pit marked with the ‘set’ command.
+<tr class="field-even field"><th class="field-name">assign:</th><td class="field-body">Assign unit(s) to the pen or pit marked with the &#8216;set&#8217; command.
 If no filters are set a unit must be selected in the in-game ui.
 Can also be followed by a valid zone id which will be set
 instead.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">unassign:</th><td class="field-body">Unassign selected creature from it’s zone.</td>
+<tr class="field-odd field"><th class="field-name">unassign:</th><td class="field-body">Unassign selected creature from it&#8217;s zone.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">nick:</th><td class="field-body">Mass-assign nicknames, must be followed by the name you want
 to set.</td>
@@ -1872,9 +1871,9 @@ pitting, not for stealing animals (slaughter should work).</td>
 <tr class="field-even field"><th class="field-name">tamed:</th><td class="field-body">Creature is tame. Negatable.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">trained:</th><td class="field-body">Creature is trained. Finds war/hunting creatures as well as
-creatures who have a training level greater than ‘domesticated’.
+creatures who have a training level greater than &#8216;domesticated&#8217;.
 If you want to specifically search for war/hunting creatures use
-‘war’ or ‘hunting’ Negatable.</td>
+&#8216;war&#8217; or &#8216;hunting&#8217; Negatable.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">trainablewar:</th><td class="field-body">Creature can be trained for war (and is not already trained for
 war/hunt). Negatable.</td>
@@ -1896,47 +1895,47 @@ for war/hunt). Negatable.</td>
 </table>
 <div class="section" id="usage-with-single-units">
 <h4><a class="toc-backref" href="#id277">Usage with single units</a><a class="headerlink" href="#usage-with-single-units" title="Permalink to this headline">¶</a></h4>
-<p>One convenient way to use the zone tool is to bind the command ‘zone assign’ to
-a hotkey, maybe also the command ‘zone set’. Place the in-game cursor over
-a pen/pasture or pit, use ‘zone set’ to mark it. Then you can select units
-on the map (in ‘v’ or ‘k’ mode), in the unit list or from inside cages
-and use ‘zone assign’ to assign them to their new home. Allows pitting your
+<p>One convenient way to use the zone tool is to bind the command &#8216;zone assign&#8217; to
+a hotkey, maybe also the command &#8216;zone set&#8217;. Place the in-game cursor over
+a pen/pasture or pit, use &#8216;zone set&#8217; to mark it. Then you can select units
+on the map (in &#8216;v&#8217; or &#8216;k&#8217; mode), in the unit list or from inside cages
+and use &#8216;zone assign&#8217; to assign them to their new home. Allows pitting your
 own dwarves, by the way.</p>
 </div>
 <div class="section" id="usage-with-filters">
 <h4><a class="toc-backref" href="#id278">Usage with filters</a><a class="headerlink" href="#usage-with-filters" title="Permalink to this headline">¶</a></h4>
-<p>All filters can be used together with the ‘assign’ command.</p>
-<p>Restrictions: It’s not possible to assign units who are inside built cages
-or chained because in most cases that won’t be desirable anyways.
-It’s not possible to cage owned pets because in that case the owner
+<p>All filters can be used together with the &#8216;assign&#8217; command.</p>
+<p>Restrictions: It&#8217;s not possible to assign units who are inside built cages
+or chained because in most cases that won&#8217;t be desirable anyways.
+It&#8217;s not possible to cage owned pets because in that case the owner
 uncages them after a while which results in infinite hauling back and forth.</p>
-<p>Usually you should always use the filter ‘own’ (which implies tame) unless you
-want to use the zone tool for pitting hostiles. ‘own’ ignores own dwarves unless
-you specify ‘race DWARF’ (so it’s safe to use ‘assign all own’ to one big
-pasture if you want to have all your animals at the same place). ‘egglayer’ and
-‘milkable’ should be used together with ‘female’ unless you have a mod with
+<p>Usually you should always use the filter &#8216;own&#8217; (which implies tame) unless you
+want to use the zone tool for pitting hostiles. &#8216;own&#8217; ignores own dwarves unless
+you specify &#8216;race DWARF&#8217; (so it&#8217;s safe to use &#8216;assign all own&#8217; to one big
+pasture if you want to have all your animals at the same place). &#8216;egglayer&#8217; and
+&#8216;milkable&#8217; should be used together with &#8216;female&#8217; unless you have a mod with
 egg-laying male elves who give milk or whatever. Merchants and their animals are
-ignored unless you specify ‘merchant’ (pitting them should be no problem,
+ignored unless you specify &#8216;merchant&#8217; (pitting them should be no problem,
 but stealing and pasturing their animals is not a good idea since currently they
 are not properly added to your own stocks; slaughtering them should work).</p>
-<p>Most filters can be negated (e.g. ‘not grazer’ -&gt; race is not a grazer).</p>
+<p>Most filters can be negated (e.g. &#8216;not grazer&#8217; -&gt; race is not a grazer).</p>
 </div>
 <div class="section" id="mass-renaming">
 <h4><a class="toc-backref" href="#id279">Mass-renaming</a><a class="headerlink" href="#mass-renaming" title="Permalink to this headline">¶</a></h4>
-<p>Using the ‘nick’ command you can set the same nickname for multiple units.
-If used without ‘assign’, ‘all’ or ‘count’ it will rename all units in the
-current default target zone. Combined with ‘assign’, ‘all’ or ‘count’ (and
+<p>Using the &#8216;nick&#8217; command you can set the same nickname for multiple units.
+If used without &#8216;assign&#8217;, &#8216;all&#8217; or &#8216;count&#8217; it will rename all units in the
+current default target zone. Combined with &#8216;assign&#8217;, &#8216;all&#8217; or &#8216;count&#8217; (and
 further optional filters) it will rename units matching the filter conditions.</p>
 </div>
 <div class="section" id="cage-zones">
 <h4><a class="toc-backref" href="#id280">Cage zones</a><a class="headerlink" href="#cage-zones" title="Permalink to this headline">¶</a></h4>
-<p>Using the ‘tocages’ command you can assign units to a set of cages, for example
+<p>Using the &#8216;tocages&#8217; command you can assign units to a set of cages, for example
 a room next to your butcher shop(s). They will be spread evenly among available
 cages to optimize hauling to and butchering from them. For this to work you need
 to build cages and then place one pen/pasture activity zone above them, covering
-all cages you want to use. Then use ‘zone set’ (like with ‘assign’) and use
-‘zone tocages filter1 filter2 …’. ‘tocages’ overwrites ‘assign’ because it
-would make no sense, but can be used together with ‘nick’ or ‘remnick’ and all
+all cages you want to use. Then use &#8216;zone set&#8217; (like with &#8216;assign&#8217;) and use
+&#8216;zone tocages filter1 filter2 ...&#8217;. &#8216;tocages&#8217; overwrites &#8216;assign&#8217; because it
+would make no sense, but can be used together with &#8216;nick&#8217; or &#8216;remnick&#8217; and all
 the usual filters.</p>
 </div>
 <div class="section" id="examples">
@@ -1948,7 +1947,7 @@ pasture.</dd>
 <dt><code class="docutils literal"><span class="pre">zone</span> <span class="pre">assign</span> <span class="pre">all</span> <span class="pre">own</span> <span class="pre">caged</span> <span class="pre">grazer</span> <span class="pre">nick</span> <span class="pre">ineedgrass</span></code></dt>
 <dd>Assign all own grazers who are sitting in cages on stockpiles (e.g. after
 buying them from merchants) to the selected pasture and give them
-the nickname ‘ineedgrass’.</dd>
+the nickname &#8216;ineedgrass&#8217;.</dd>
 <dt><code class="docutils literal"><span class="pre">zone</span> <span class="pre">assign</span> <span class="pre">all</span> <span class="pre">own</span> <span class="pre">not</span> <span class="pre">grazer</span> <span class="pre">not</span> <span class="pre">race</span> <span class="pre">CAT</span></code></dt>
 <dd>Assign all own animals who are not grazers, excluding cats.</dd>
 <dt><code class="docutils literal"><span class="pre">zone</span> <span class="pre">assign</span> <span class="pre">count</span> <span class="pre">5</span> <span class="pre">own</span> <span class="pre">female</span> <span class="pre">milkable</span></code></dt>
@@ -1956,7 +1955,7 @@ the nickname ‘ineedgrass’.</dd>
 <dt><code class="docutils literal"><span class="pre">zone</span> <span class="pre">assign</span> <span class="pre">all</span> <span class="pre">own</span> <span class="pre">race</span> <span class="pre">DWARF</span> <span class="pre">maxage</span> <span class="pre">2</span></code></dt>
 <dd>Throw all useless kids into a pit :)</dd>
 <dt><code class="docutils literal"><span class="pre">zone</span> <span class="pre">nick</span> <span class="pre">donttouchme</span></code></dt>
-<dd>Nicknames all units in the current default zone or cage to ‘donttouchme’.
+<dd>Nicknames all units in the current default zone or cage to &#8216;donttouchme&#8217;.
 Mostly intended to be used for special pastures or cages which are not marked
 as rooms you want to protect from autobutcher.</dd>
 <dt><code class="docutils literal"><span class="pre">zone</span> <span class="pre">tocages</span> <span class="pre">count</span> <span class="pre">50</span> <span class="pre">own</span> <span class="pre">tame</span> <span class="pre">male</span> <span class="pre">not</span> <span class="pre">grazer</span></code></dt>
@@ -1998,17 +1997,17 @@ frames between runs.</td>
 you add the target race(s) to a watch list. Only tame units will be processed.</p>
 <p>Units will be ignored if they are:</p>
 <ul class="simple">
-<li>Nicknamed (for custom protection; you can use the <a class="reference internal" href="#rename"><span class="std std-ref">rename</span></a> <code class="docutils literal"><span class="pre">unit</span></code> tool
-individually, or <a class="reference internal" href="#zone"><span class="std std-ref">zone</span></a> <code class="docutils literal"><span class="pre">nick</span></code> for groups)</li>
+<li>Nicknamed (for custom protection; you can use the <a class="reference internal" href="#rename"><span>rename</span></a> <code class="docutils literal"><span class="pre">unit</span></code> tool
+individually, or <a class="reference internal" href="#zone"><span>zone</span></a> <code class="docutils literal"><span class="pre">nick</span></code> for groups)</li>
 <li>Caged, if and only if the cage is defined as a room (to protect zoos)</li>
 <li>Trained for war or hunting</li>
 </ul>
-<p>Creatures who will not reproduce (because they’re not interested in the
+<p>Creatures who will not reproduce (because they&#8217;re not interested in the
 opposite sex or have been gelded) will be butchered before those who will.
 Older adults and younger children will be butchered first if the population
 is above the target (default 1 male, 5 female kids and adults).  Note that
 you may need to set a target above 1 to have a reliable breeding population
-due to asexuality etc.  See <a class="reference internal" href="_auto/base.html#fix-ster"><span class="std std-ref">fix-ster</span></a> if this is a problem.</p>
+due to asexuality etc.  See <a class="reference internal" href="_auto/base.html#fix-ster"><span>fix-ster</span></a> if this is a problem.</p>
 <p>Options:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2025,14 +2024,14 @@ Default: X=6000, which would be every 60 seconds at 100fps.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">watch R:</th><td class="field-body">Start watching a race. R can be a valid race RAW id (ALPACA,
 BIRD_TURKEY, etc) or a list of ids seperated by spaces or
-the keyword ‘all’ which affects all races on your current
+the keyword &#8216;all&#8217; which affects all races on your current
 watchlist.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">unwatch R:</th><td class="field-body">Stop watching race(s). The current target settings will be
-remembered. R can be a list of ids or the keyword ‘all’.</td>
+remembered. R can be a list of ids or the keyword &#8216;all&#8217;.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">forget R:</th><td class="field-body">Stop watching race(s) and forget it’s/their target settings.
-R can be a list of ids or the keyword ‘all’.</td>
+<tr class="field-odd field"><th class="field-name">forget R:</th><td class="field-body">Stop watching race(s) and forget it&#8217;s/their target settings.
+R can be a list of ids or the keyword &#8216;all&#8217;.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">autowatch:</th><td class="field-body">Automatically adds all new races (animals you buy from merchants,
 tame yourself or get from migrants) to the watch list using
@@ -2046,11 +2045,11 @@ default target count.</td>
 which can be used to import them to another save (see notes).</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">target &lt;fk&gt; &lt;mk&gt; &lt;fa&gt; &lt;ma&gt; &lt;R&gt;:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Set target count for specified race(s).  The first four arguments
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Set target count for specified race(s).  The first four arguments
 are the number of female and male kids, and female and male adults.
 R can be a list of spceies ids, or the keyword <code class="docutils literal"><span class="pre">all</span></code> or <code class="docutils literal"><span class="pre">new</span></code>.
 <code class="docutils literal"><span class="pre">R</span> <span class="pre">=</span> <span class="pre">'all'</span></code>: change target count for all races on watchlist
-and set the new default for the future. <code class="docutils literal"><span class="pre">R</span> <span class="pre">=</span> <span class="pre">'new'</span></code>: don’t touch
+and set the new default for the future. <code class="docutils literal"><span class="pre">R</span> <span class="pre">=</span> <span class="pre">'new'</span></code>: don&#8217;t touch
 current settings on the watchlist, only set the new default
 for future entries.</td>
 </tr>
@@ -2073,27 +2072,27 @@ new save and run <code class="docutils literal"><span class="pre">script</span> 
 slaughtered. Excess kids will get slaughtered starting with the youngest
 to allow that the older ones grow into adults. Any unnamed cats will
 be slaughtered as soon as possible.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">autobutcher</span> <span class="n">target</span> <span class="mi">4</span> <span class="mi">3</span> <span class="mi">2</span> <span class="mi">1</span> <span class="n">ALPACA</span> <span class="n">BIRD_TURKEY</span>
-<span class="n">autobutcher</span> <span class="n">target</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="n">CAT</span>
-<span class="n">autobutcher</span> <span class="n">watch</span> <span class="n">ALPACA</span> <span class="n">BIRD_TURKEY</span> <span class="n">CAT</span>
-<span class="n">autobutcher</span> <span class="n">start</span>
+<div class="highlight-python"><div class="highlight"><pre>autobutcher target 4 3 2 1 ALPACA BIRD_TURKEY
+autobutcher target 0 0 0 0 CAT
+autobutcher watch ALPACA BIRD_TURKEY CAT
+autobutcher start
 </pre></div>
 </div>
 <p>Automatically put all new races onto the watchlist and mark unnamed tame units
 for slaughter as soon as they arrive in your fort. Settings already made
 for specific races will be left untouched.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">autobutcher</span> <span class="n">target</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="n">new</span>
-<span class="n">autobutcher</span> <span class="n">autowatch</span>
-<span class="n">autobutcher</span> <span class="n">start</span>
+<div class="highlight-python"><div class="highlight"><pre>autobutcher target 0 0 0 0 new
+autobutcher autowatch
+autobutcher start
 </pre></div>
 </div>
 <p>Stop watching the races alpaca and cat, but remember the target count
-settings so that you can use ‘unwatch’ without the need to enter the
-values again. Note: ‘autobutcher unwatch all’ works, but only makes sense
-if you want to keep the plugin running with the ‘autowatch’ feature or manually
-add some new races with ‘watch’. If you simply want to stop it completely use
-‘autobutcher stop’ instead.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">autobutcher</span> <span class="n">unwatch</span> <span class="n">ALPACA</span> <span class="n">CAT</span>
+settings so that you can use &#8216;unwatch&#8217; without the need to enter the
+values again. Note: &#8216;autobutcher unwatch all&#8217; works, but only makes sense
+if you want to keep the plugin running with the &#8216;autowatch&#8217; feature or manually
+add some new races with &#8216;watch&#8217;. If you simply want to stop it completely use
+&#8216;autobutcher stop&#8217; instead.</p>
+<div class="highlight-python"><div class="highlight"><pre>autobutcher unwatch ALPACA CAT
 </pre></div>
 </div>
 </div>
@@ -2102,12 +2101,12 @@ add some new races with ‘watch’. If you simply want to stop it completely us
 <p>Automatically manage tree cutting designation to keep available logs withing given
 quotas.</p>
 <p>Open the dashboard by running:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">enable</span> <span class="n">autochop</span>
+<div class="highlight-python"><div class="highlight"><pre>enable autochop
 </pre></div>
 </div>
 <p>The plugin must be activated (with <code class="kbd docutils literal"><span class="pre">d</span></code>-<code class="kbd docutils literal"><span class="pre">t</span></code>-<code class="kbd docutils literal"><span class="pre">c</span></code>-<code class="kbd docutils literal"><span class="pre">a</span></code>) before
 it can be used. You can then set logging quotas and restrict designations to
-specific burrows (with ‘Enter’) if desired. The plugin’s activity cycle runs
+specific burrows (with &#8216;Enter&#8217;) if desired. The plugin&#8217;s activity cycle runs
 once every in game day.</p>
 <p>If you add <code class="docutils literal"><span class="pre">enable</span> <span class="pre">autochop</span></code> to your dfhack.init there will be a hotkey to
 open the dashboard from the chop designation menu.</p>
@@ -2177,7 +2176,7 @@ Z levels. The vein distribution is based on the world seed, so running
 the command for the second time should produce no change. It is best to
 run it just once immediately after embark.</p>
 <p>This command is intended as only a cosmetic change, so it takes
-care to exactly preserve the mineral counts reported by <a class="reference internal" href="#prospect"><span class="std std-ref">prospect</span></a> <code class="docutils literal"><span class="pre">all</span></code>.
+care to exactly preserve the mineral counts reported by <a class="reference internal" href="#prospect"><span>prospect</span></a> <code class="docutils literal"><span class="pre">all</span></code>.
 The amounts of different layer stones may slightly change in some cases
 if vein mass shifts between Z layers.</p>
 <p>The only undo option is to restore your save from backup.</p>
@@ -2185,7 +2184,7 @@ if vein mass shifts between Z layers.</p>
 <div class="section" id="alltraffic">
 <span id="id67"></span><h3><a class="toc-backref" href="#id287">alltraffic</a><a class="headerlink" href="#alltraffic" title="Permalink to this headline">¶</a></h3>
 <p>Set traffic designations for every single tile of the map - useful for resetting
-traffic designations.  See also <a class="reference internal" href="#filltraffic"><span class="std std-ref">filltraffic</span></a>, <a class="reference internal" href="#restrictice"><span class="std std-ref">restrictice</span></a>, and <a class="reference internal" href="#restrictliquids"><span class="std std-ref">restrictliquids</span></a>.</p>
+traffic designations.  See also <a class="reference internal" href="#filltraffic"><span>filltraffic</span></a>, <a class="reference internal" href="#restrictice"><span>restrictice</span></a>, and <a class="reference internal" href="#restrictliquids"><span>restrictliquids</span></a>.</p>
 <p>Options:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2211,44 +2210,44 @@ expansion while digging.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name" colspan="2">enable feature …:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Enable features of the plugin.</p>
+<tr class="field-odd field"><th class="field-name" colspan="2">enable feature ...:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first">Enable features of the plugin.</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name" colspan="2">disable feature …:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">Disable features of the plugin.</p>
+<tr class="field-even field"><th class="field-name" colspan="2">disable feature ...:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first">Disable features of the plugin.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name" colspan="2">clear-unit burrow burrow …:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Remove all units from the burrows.</p>
+<tr class="field-odd field"><th class="field-name" colspan="2">clear-unit burrow burrow ...:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first">Remove all units from the burrows.</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name" colspan="2">clear-tiles burrow burrow …:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">Remove all tiles from the burrows.</p>
+<tr class="field-even field"><th class="field-name" colspan="2">clear-tiles burrow burrow ...:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first">Remove all tiles from the burrows.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name" colspan="2">set-units target-burrow src-burrow …:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Clear target, and adds units from source burrows.</p>
+<tr class="field-odd field"><th class="field-name" colspan="2">set-units target-burrow src-burrow ...:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first">Clear target, and adds units from source burrows.</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name" colspan="2">add-units target-burrow src-burrow …:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">Add units from the source burrows to the target.</p>
+<tr class="field-even field"><th class="field-name" colspan="2">add-units target-burrow src-burrow ...:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first">Add units from the source burrows to the target.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name" colspan="2">remove-units target-burrow src-burrow …:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Remove units in source burrows from the target.</p>
+<tr class="field-odd field"><th class="field-name" colspan="2">remove-units target-burrow src-burrow ...:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first">Remove units in source burrows from the target.</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name" colspan="2">set-tiles target-burrow src-burrow …:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">Clear target and adds tiles from the source burrows.</p>
+<tr class="field-even field"><th class="field-name" colspan="2">set-tiles target-burrow src-burrow ...:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first">Clear target and adds tiles from the source burrows.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name" colspan="2">add-tiles target-burrow src-burrow …:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Add tiles from the source burrows to the target.</p>
+<tr class="field-odd field"><th class="field-name" colspan="2">add-tiles target-burrow src-burrow ...:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first">Add tiles from the source burrows to the target.</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name" colspan="2">remove-tiles target-burrow src-burrow …:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">Remove tiles in source burrows from the target.</p>
+<tr class="field-even field"><th class="field-name" colspan="2">remove-tiles target-burrow src-burrow ...:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first">Remove tiles in source burrows from the target.</p>
 <p class="last">For these three options, in place of a source burrow it is
 possible to use one of the following keywords: ABOVE_GROUND,
 SUBTERRANEAN, INSIDE, OUTSIDE, LIGHT, DARK, HIDDEN, REVEALED</p>
@@ -2261,9 +2260,9 @@ SUBTERRANEAN, INSIDE, OUTSIDE, LIGHT, DARK, HIDDEN, REVEALED</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">auto-grow:</th><td class="field-body">When a wall inside a burrow with a name ending in ‘+’ is dug
+<tr class="field-odd field"><th class="field-name">auto-grow:</th><td class="field-body">When a wall inside a burrow with a name ending in &#8216;+&#8217; is dug
 out, the burrow is extended to newly-revealed adjacent walls.
-This final ‘+’ may be omitted in burrow name args of commands above.
+This final &#8216;+&#8217; may be omitted in burrow name args of commands above.
 Digging 1-wide corridors with the miner inside the burrow is SLOW.</td>
 </tr>
 </tbody>
@@ -2278,7 +2277,7 @@ changes only the layer at the cursor position. Note that one layer can stretch
 across lots of z levels. By default changes only the geology which is linked
 to the biome under the cursor. That geology might be linked to other biomes
 as well, though. Mineral veins and gem clusters will stay on the map. Use
-<a class="reference internal" href="#changevein"><span class="std std-ref">changevein</span></a> for them.</p>
+<a class="reference internal" href="#changevein"><span>changevein</span></a> for them.</p>
 <p>tl;dr: You will end up with changing quite big areas in one go, especially if
 you use it in lower z levels. Use with care.</p>
 <p>Options:</p>
@@ -2289,11 +2288,11 @@ you use it in lower z levels. Use with care.</p>
 <tr class="field-odd field"><th class="field-name">all_biomes:</th><td class="field-body">Change selected layer for all biomes on your map.
 Result may be undesirable since the same layer can AND WILL
 be on different z-levels for different biomes. Use the tool
-‘probe’ to get an idea how layers and biomes are distributed
+&#8216;probe&#8217; to get an idea how layers and biomes are distributed
 on your map.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">all_layers:</th><td class="field-body">Change all layers on your map (only for the selected biome
-unless ‘all_biomes’ is added).
+unless &#8216;all_biomes&#8217; is added).
 Candy mountain, anyone? Will make your map quite boring,
 but tidy.</td>
 </tr>
@@ -2318,7 +2317,7 @@ soil.</td>
 <dt><code class="docutils literal"><span class="pre">changelayer</span> <span class="pre">GRANITE</span></code></dt>
 <dd>Convert layer at cursor position into granite.</dd>
 <dt><code class="docutils literal"><span class="pre">changelayer</span> <span class="pre">SILTY_CLAY</span> <span class="pre">force</span></code></dt>
-<dd>Convert layer at cursor position into clay even if it’s stone.</dd>
+<dd>Convert layer at cursor position into clay even if it&#8217;s stone.</dd>
 <dt><code class="docutils literal"><span class="pre">changelayer</span> <span class="pre">MARBLE</span> <span class="pre">all_biomes</span> <span class="pre">all_layers</span></code></dt>
 <dd>Convert all layers of all biomes which are not soil into marble.</dd>
 </dl>
@@ -2327,11 +2326,11 @@ soil.</td>
 <ul class="last simple">
 <li>If you use changelayer and nothing happens, try to pause/unpause the game
 for a while and try to move the cursor to another tile. Then try again.
-If that doesn’t help try temporarily changing some other layer, undo your
+If that doesn&#8217;t help try temporarily changing some other layer, undo your
 changes and try again for the layer you want to change. Saving
 and reloading your map might also help.</li>
 <li>You should be fine if you only change single layers without the use
-of ‘force’. Still it’s advisable to save your game before messing with
+of &#8216;force&#8217;. Still it&#8217;s advisable to save your game before messing with
 the map.</li>
 <li>When you force changelayer to convert soil to stone you might experience
 weird stuff (flashing tiles, tiles changed all over place etc).
@@ -2354,20 +2353,20 @@ large clusters, you will need to use this command multiple times.</p>
 <div class="section" id="changeitem">
 <span id="id71"></span><h3><a class="toc-backref" href="#id291">changeitem</a><a class="headerlink" href="#changeitem" title="Permalink to this headline">¶</a></h3>
 <p>Allows changing item material and base quality. By default the item currently
-selected in the UI will be changed (you can select items in the ‘k’ list
+selected in the UI will be changed (you can select items in the &#8216;k&#8217; list
 or inside containers/inventory). By default change is only allowed if materials
 is of the same subtype (for example wood&lt;-&gt;wood, stone&lt;-&gt;stone etc). But since
 some transformations work pretty well and may be desired you can override this
-with ‘force’. Note that some attributes will not be touched, possibly resulting
+with &#8216;force&#8217;. Note that some attributes will not be touched, possibly resulting
 in weirdness. To get an idea how the RAW id should look like, check some items
-with ‘info’. Using ‘force’ might create items which are not touched by
+with &#8216;info&#8217;. Using &#8216;force&#8217; might create items which are not touched by
 crafters/haulers.</p>
 <p>Options:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">info:</th><td class="field-body">Don’t change anything, print some info instead.</td>
+<tr class="field-odd field"><th class="field-name">info:</th><td class="field-body">Don&#8217;t change anything, print some info instead.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">here:</th><td class="field-body">Change all items at the cursor position. Requires in-game cursor.</td>
 </tr>
@@ -2398,7 +2397,7 @@ build items to be safely deleted.  This can improve FPS in extreme situations.</
 <span id="id73"></span><h3><a class="toc-backref" href="#id293">deramp</a><a class="headerlink" href="#deramp" title="Permalink to this headline">¶</a></h3>
 <p>Removes all ramps designated for removal from the map. This is useful for
 replicating the old channel digging designation.  It also removes any and
-all ‘down ramps’ that can remain after a cave-in (you don’t have to designate
+all &#8216;down ramps&#8217; that can remain after a cave-in (you don&#8217;t have to designate
 anything for that to happen).</p>
 </div>
 <div class="section" id="dig">
@@ -2437,7 +2436,7 @@ to remove designations, for if you accidentally set 50 levels at once.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">diag5r:</th><td class="field-body">diag5 rotated 90 degrees</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">ladder:</th><td class="field-body">A ‘ladder’ pattern</td>
+<tr class="field-odd field"><th class="field-name">ladder:</th><td class="field-body">A &#8216;ladder&#8217; pattern</td>
 </tr>
 <tr class="field-even field"><th class="field-name">ladderr:</th><td class="field-body">ladder rotated 90 degrees</td>
 </tr>
@@ -2580,15 +2579,15 @@ to disable, then remove, then re-enable.</p>
 <tr class="field-odd field"><th class="field-name">digFlood 1:</th><td class="field-body">enable the plugin</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">digFlood 0 MICROCLINE COAL_BITUMINOUS 1:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">disable plugin, remove microcline and bituminous coal from monitoring, then re-enable the plugin</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">disable plugin, remove microcline and bituminous coal from monitoring, then re-enable the plugin</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">digFlood CLEAR:</th><td class="field-body">remove all inorganics from monitoring</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">digFlood digAll1:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">ignore the monitor list and dig any vein</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">ignore the monitor list and dig any vein</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">digFlood digAll0:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">disable digAll mode</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">disable digAll mode</td>
 </tr>
 </tbody>
 </table>
@@ -2596,7 +2595,7 @@ to disable, then remove, then re-enable.</p>
 <div class="section" id="filltraffic">
 <span id="id79"></span><h3><a class="toc-backref" href="#id299">filltraffic</a><a class="headerlink" href="#filltraffic" title="Permalink to this headline">¶</a></h3>
 <p>Set traffic designations using flood-fill starting at the cursor.
-See also <a class="reference internal" href="#alltraffic"><span class="std std-ref">alltraffic</span></a>, <a class="reference internal" href="#restrictice"><span class="std std-ref">restrictice</span></a>, and <a class="reference internal" href="#restrictliquids"><span class="std std-ref">restrictliquids</span></a>.  Options:</p>
+See also <a class="reference internal" href="#alltraffic"><span>alltraffic</span></a>, <a class="reference internal" href="#restrictice"><span>restrictice</span></a>, and <a class="reference internal" href="#restrictliquids"><span>restrictliquids</span></a>.  Options:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2627,20 +2626,20 @@ See also <a class="reference internal" href="#alltraffic"><span class="std std-r
 <span id="id80"></span><h3><a class="toc-backref" href="#id300">fortplan</a><a class="headerlink" href="#fortplan" title="Permalink to this headline">¶</a></h3>
 <p>Usage: <code class="docutils literal"><span class="pre">fortplan</span> <span class="pre">[filename]</span></code></p>
 <p>Designates furniture for building according to a <code class="docutils literal"><span class="pre">.csv</span></code> file with
-quickfort-style syntax. Companion to <a class="reference internal" href="_auto/base.html#digfort"><span class="std std-ref">digfort</span></a>.</p>
+quickfort-style syntax. Companion to <a class="reference internal" href="_auto/base.html#digfort"><span>digfort</span></a>.</p>
 <p>The first line of the file must contain the following:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#build start(X; Y; &lt;start location description&gt;)</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="c1">#build start(X; Y; &lt;start location description&gt;)</span>
 </pre></div>
 </div>
-<p>…where X and Y are the offset from the top-left corner of the file’s area
+<p>...where X and Y are the offset from the top-left corner of the file&#8217;s area
 where the in-game cursor should be located, and <code class="docutils literal"><span class="pre">&lt;start</span> <span class="pre">location</span> <span class="pre">description&gt;</span></code>
 is an optional description of where that is. You may also leave a description
 of the contents of the file itself following the closing parenthesis on the
 same line.</p>
-<p>The syntax of the file itself is similar to <a class="reference internal" href="_auto/base.html#digfort"><span class="std std-ref">digfort</span></a> or <a class="reference external" href="http://www.bay12forums.com/smf/index.php?topic=35931">quickfort</a>.
+<p>The syntax of the file itself is similar to <a class="reference internal" href="_auto/base.html#digfort"><span>digfort</span></a> or <a class="reference external" href="http://www.bay12forums.com/smf/index.php?topic=35931">quickfort</a>.
 At present, only buildings constructed of an item with the same name as the building
 are supported. All other characters are ignored. For example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>`,`,d,`,`
+<div class="highlight-python"><div class="highlight"><pre>`,`,d,`,`
 `,f,`,t,`
 `,s,b,c,`
 </pre></div>
@@ -2648,7 +2647,7 @@ are supported. All other characters are ignored. For example:</p>
 <p>This section of a file would designate for construction a door and some
 furniture inside a bedroom: specifically, clockwise from top left, a cabinet,
 a table, a chair, a bed, and a statue.</p>
-<p>All of the building designation uses <a class="reference internal" href="#buildingplan"><span class="std std-ref">buildingplan</span></a>, so you do not need to
+<p>All of the building designation uses <a class="reference internal" href="#buildingplan"><span>buildingplan</span></a>, so you do not need to
 have the items available to construct all the buildings when you run
 fortplan with the .csv file.</p>
 </div>
@@ -2695,19 +2694,19 @@ Saving and loading after creating new z-levels should fix the problem.</p>
 <div class="section" id="liquids">
 <span id="id83"></span><h3><a class="toc-backref" href="#id303">liquids</a><a class="headerlink" href="#liquids" title="Permalink to this headline">¶</a></h3>
 <p>Allows adding magma, water and obsidian to the game. It replaces the normal
-dfhack command line and can’t be used from a hotkey. Settings will be remembered
+dfhack command line and can&#8217;t be used from a hotkey. Settings will be remembered
 as long as dfhack runs. Intended for use in combination with the command
 <code class="docutils literal"><span class="pre">liquids-here</span></code> (which can be bound to a hotkey).  See also <a class="reference external" href="https://github.com/DFHack/dfhack/issues/80">Issue 80</a>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Spawning and deleting liquids can mess up pathing data and
-temperatures (creating heat traps). You’ve been warned.</p>
+temperatures (creating heat traps). You&#8217;ve been warned.</p>
 </div>
-<p>Settings will be remembered until you quit DF. You can call <a class="reference internal" href="#liquids-here"><span class="std std-ref">liquids-here</span></a> to execute
+<p>Settings will be remembered until you quit DF. You can call <a class="reference internal" href="#liquids-here"><span>liquids-here</span></a> to execute
 the last configured action, which is useful in combination with keybindings.</p>
 <p>Usage: point the DF cursor at a tile you want to modify and use the commands.</p>
 <p>If you only want to add or remove water or magma from one tile,
-<a class="reference internal" href="_auto/base.html#source"><span class="std std-ref">source</span></a> may be easier to use.</p>
+<a class="reference internal" href="_auto/base.html#source"><span>source</span></a> may be easier to use.</p>
 <div class="section" id="commands">
 <h4><a class="toc-backref" href="#id304">Commands</a><a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h4>
 <p>Misc commands:</p>
@@ -2757,7 +2756,7 @@ the last configured action, which is useful in combination with keybindings.</p>
 </tr>
 <tr class="field-even field"><th class="field-name">f+:</th><td class="field-body">make the spawned liquid flow</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">f.:</th><td class="field-body">don’t change flow state (read state in flow mode)</td>
+<tr class="field-odd field"><th class="field-name">f.:</th><td class="field-body">don&#8217;t change flow state (read state in flow mode)</td>
 </tr>
 <tr class="field-even field"><th class="field-name">f-:</th><td class="field-body">make the spawned liquid static</td>
 </tr>
@@ -2768,7 +2767,7 @@ the last configured action, which is useful in combination with keybindings.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">pf.:</th><td class="field-body">don’t change permaflow state</td>
+<tr class="field-odd field"><th class="field-name">pf.:</th><td class="field-body">don&#8217;t change permaflow state</td>
 </tr>
 <tr class="field-even field"><th class="field-name">pf-:</th><td class="field-body">make the spawned liquid static</td>
 </tr>
@@ -2844,17 +2843,17 @@ or every sapling on the map if the cursor is hidden.</td>
 <div class="section" id="restrictice">
 <span id="id87"></span><h3><a class="toc-backref" href="#id308">restrictice</a><a class="headerlink" href="#restrictice" title="Permalink to this headline">¶</a></h3>
 <p>Restrict traffic on all tiles on top of visible ice.
-See also <a class="reference internal" href="#alltraffic"><span class="std std-ref">alltraffic</span></a>, <a class="reference internal" href="#filltraffic"><span class="std std-ref">filltraffic</span></a>, and <a class="reference internal" href="#restrictliquids"><span class="std std-ref">restrictliquids</span></a>.</p>
+See also <a class="reference internal" href="#alltraffic"><span>alltraffic</span></a>, <a class="reference internal" href="#filltraffic"><span>filltraffic</span></a>, and <a class="reference internal" href="#restrictliquids"><span>restrictliquids</span></a>.</p>
 </div>
 <div class="section" id="restrictliquids">
 <span id="id88"></span><h3><a class="toc-backref" href="#id309">restrictliquids</a><a class="headerlink" href="#restrictliquids" title="Permalink to this headline">¶</a></h3>
 <p>Restrict traffic on all visible tiles with liquid.
-See also <a class="reference internal" href="#alltraffic"><span class="std std-ref">alltraffic</span></a>, <a class="reference internal" href="#filltraffic"><span class="std std-ref">filltraffic</span></a>, and <a class="reference internal" href="#restrictice"><span class="std std-ref">restrictice</span></a>.</p>
+See also <a class="reference internal" href="#alltraffic"><span>alltraffic</span></a>, <a class="reference internal" href="#filltraffic"><span>filltraffic</span></a>, and <a class="reference internal" href="#restrictice"><span>restrictice</span></a>.</p>
 </div>
 <div class="section" id="tiletypes">
 <span id="id89"></span><h3><a class="toc-backref" href="#id310">tiletypes</a><a class="headerlink" href="#tiletypes" title="Permalink to this headline">¶</a></h3>
 <p>Can be used for painting map tiles and is an interactive command, much like
-<a class="reference internal" href="#liquids"><span class="std std-ref">liquids</span></a>.  If something goes wrong, <a class="reference internal" href="#fixveins"><span class="std std-ref">fixveins</span></a> may help.</p>
+<a class="reference internal" href="#liquids"><span>liquids</span></a>.  If something goes wrong, <a class="reference internal" href="#fixveins"><span>fixveins</span></a> may help.</p>
 <p>The tool works with two set of options and a brush. The brush determines which
 tiles will be processed. First set of options is the filter, which can exclude
 some of the tiles from the brush by looking at the tile properties. The second
@@ -2862,24 +2861,24 @@ set of options is the paint - this determines how the selected tiles are
 changed.</p>
 <p>Both paint and filter can have many different properties including things like
 general shape (WALL, FLOOR, etc.), general material (SOIL, STONE, MINERAL,
-etc.), state of ‘designated’, ‘hidden’ and ‘light’ flags.</p>
+etc.), state of &#8216;designated&#8217;, &#8216;hidden&#8217; and &#8216;light&#8217; flags.</p>
 <p>The properties of filter and paint can be partially defined. This means that
 you can for example turn all stone fortifications into floors, preserving the
 material:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">filter</span> <span class="n">material</span> <span class="n">STONE</span>
-<span class="nb">filter</span> <span class="n">shape</span> <span class="n">FORTIFICATION</span>
-<span class="n">paint</span> <span class="n">shape</span> <span class="n">FLOOR</span>
+<div class="highlight-python"><div class="highlight"><pre>filter material STONE
+filter shape FORTIFICATION
+paint shape FLOOR
 </pre></div>
 </div>
 <p>Or turn mineral vein floors back into walls:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">filter</span> <span class="n">shape</span> <span class="n">FLOOR</span>
-<span class="nb">filter</span> <span class="n">material</span> <span class="n">MINERAL</span>
-<span class="n">paint</span> <span class="n">shape</span> <span class="n">WALL</span>
+<div class="highlight-python"><div class="highlight"><pre>filter shape FLOOR
+filter material MINERAL
+paint shape WALL
 </pre></div>
 </div>
 <p>The tool also allows tweaking some tile flags:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">paint</span> <span class="n">hidden</span> <span class="mi">1</span>
-<span class="n">paint</span> <span class="n">hidden</span> <span class="mi">0</span>
+<div class="highlight-python"><div class="highlight"><pre>paint hidden 1
+paint hidden 0
 </pre></div>
 </div>
 <p>This will hide previously revealed tiles (or show hidden with the 0 option).</p>
@@ -2887,28 +2886,28 @@ material:</p>
 an arbitrary stone from the raws, by creating new veins as required. Note
 that this mode paints under ice and constructions, instead of overwriting
 them. To enable, use:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">paint</span> <span class="n">stone</span> <span class="n">MICROCLINE</span>
+<div class="highlight-python"><div class="highlight"><pre>paint stone MICROCLINE
 </pre></div>
 </div>
 <p>This mode is incompatible with the regular <code class="docutils literal"><span class="pre">material</span></code> setting, so changing
 it cancels the specific stone selection:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">paint</span> <span class="n">material</span> <span class="n">ANY</span>
+<div class="highlight-python"><div class="highlight"><pre>paint material ANY
 </pre></div>
 </div>
 <p>Since different vein types have different drop rates, it is possible to choose
 which one to use in painting:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">paint</span> <span class="n">veintype</span> <span class="n">CLUSTER_SMALL</span>
+<div class="highlight-python"><div class="highlight"><pre>paint veintype CLUSTER_SMALL
 </pre></div>
 </div>
 <p>When the chosen type is <code class="docutils literal"><span class="pre">CLUSTER</span></code> (the default), the tool may automatically
 choose to use layer stone or lava stone instead of veins if its material matches
 the desired one.</p>
 <p>Any paint or filter option (or the entire paint or filter) can be disabled entirely by using the ANY keyword:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">paint</span> <span class="n">hidden</span> <span class="n">ANY</span>
-<span class="n">paint</span> <span class="n">shape</span> <span class="n">ANY</span>
-<span class="nb">filter</span> <span class="n">material</span> <span class="nb">any</span>
-<span class="nb">filter</span> <span class="n">shape</span> <span class="nb">any</span>
-<span class="nb">filter</span> <span class="nb">any</span>
+<div class="highlight-python"><div class="highlight"><pre>paint hidden ANY
+paint shape ANY
+filter material any
+filter shape any
+filter any
 </pre></div>
 </div>
 <p>You can use several different brushes for painting tiles:</p>
@@ -2927,7 +2926,7 @@ the desired one.</p>
 </tbody>
 </table>
 <p>Example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">range</span> <span class="mi">10</span> <span class="mi">10</span> <span class="mi">1</span>
+<div class="highlight-python"><div class="highlight"><pre>range 10 10 1
 </pre></div>
 </div>
 <p>This will change the brush to a rectangle spanning 10x10 tiles on one z-level.
@@ -2998,7 +2997,7 @@ your miner when you dig into the region that used to be hollow.</p>
 <p>This plugin makes reactions with names starting with <code class="docutils literal"><span class="pre">SPATTER_ADD_</span></code>
 produce contaminants on the items instead of improvements.  The plugin is
 intended to give some use to all those poisons that can be bought from caravans,
-so they’re immune to being washed away by water or destroyed by <a class="reference internal" href="#clean"><span class="std std-ref">clean</span></a>.</p>
+so they&#8217;re immune to being washed away by water or destroyed by <a class="reference internal" href="#clean"><span>clean</span></a>.</p>
 </div>
 <div class="section" id="adv-bodyswap">
 <span id="id96"></span><h3><a class="toc-backref" href="#id316">adv-bodyswap</a><a class="headerlink" href="#adv-bodyswap" title="Permalink to this headline">¶</a></h3>
@@ -3028,10 +3027,10 @@ specify a CREATURE:CASTE pair instead of a material token.</li>
 </ul>
 <p>Corpses, body parts, and prepared meals cannot be created using this tool.</p>
 <p>Examples:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">createitem</span> <span class="n">GLOVES</span><span class="p">:</span><span class="n">ITEM_GLOVES_GAUNTLETS</span> <span class="n">INORGANIC</span><span class="p">:</span><span class="n">STEEL</span> <span class="mi">2</span>
-        <span class="n">Create</span> <span class="mi">2</span> <span class="n">pairs</span> <span class="n">of</span> <span class="n">steel</span> <span class="n">gauntlets</span><span class="o">.</span>
-<span class="n">createitem</span> <span class="n">WOOD</span> <span class="n">PLANT_MAT</span><span class="p">:</span><span class="n">TOWER_CAP</span><span class="p">:</span><span class="n">WOOD</span>
-        <span class="n">Create</span> <span class="n">tower</span><span class="o">-</span><span class="n">cap</span> <span class="n">logs</span><span class="o">.</span>
+<div class="highlight-python"><div class="highlight"><pre>createitem GLOVES:ITEM_GLOVES_GAUNTLETS INORGANIC:STEEL 2
+        Create 2 pairs of steel gauntlets.
+createitem WOOD PLANT_MAT:TOWER_CAP:WOOD
+        Create tower-cap logs.
 </pre></div>
 </div>
 <p>For more examples, <a class="reference external" href="http://dwarffortresswiki.org/Utility:DFHack/createitem">see this wiki page</a>.</p>
@@ -3042,7 +3041,7 @@ destination type while an appropriate destination is selected.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">floor:</th><td class="field-body">Subsequent items will be placed on the floor beneath the selected unit’s feet.</td>
+<tr class="field-odd field"><th class="field-name">floor:</th><td class="field-body">Subsequent items will be placed on the floor beneath the selected unit&#8217;s feet.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">item:</th><td class="field-body">Subsequent items will be stored inside the currently selected item.</td>
 </tr>
@@ -3142,14 +3141,14 @@ even more aggressive version of speedydwarf.</td>
 </tr>
 </tbody>
 </table>
-<p>See <a class="reference internal" href="_auto/base.html#superdwarf"><span class="std std-ref">superdwarf</span></a> for a per-creature version.</p>
+<p>See <a class="reference internal" href="_auto/base.html#superdwarf"><span>superdwarf</span></a> for a per-creature version.</p>
 </div>
 <div class="section" id="forceequip">
 <span id="id100"></span><h3><a class="toc-backref" href="#id320">forceequip</a><a class="headerlink" href="#forceequip" title="Permalink to this headline">¶</a></h3>
-<p>Forceequip moves local items into a unit’s inventory.  It is typically used to
+<p>Forceequip moves local items into a unit&#8217;s inventory.  It is typically used to
 equip specific clothing/armor items onto a dwarf, but can also be used to put
 armor onto a war animal or to add unusual items (such as crowns) to any unit.</p>
-<p>For more information run <code class="docutils literal"><span class="pre">forceequip</span> <span class="pre">help</span></code>.  See also <a class="reference internal" href="_auto/modtools.html#modtools-equip-item"><span class="std std-ref">modtools/equip-item</span></a>.</p>
+<p>For more information run <code class="docutils literal"><span class="pre">forceequip</span> <span class="pre">help</span></code>.  See also <a class="reference internal" href="_auto/modtools.html#modtools-equip-item"><span>modtools/equip-item</span></a>.</p>
 </div>
 <div class="section" id="generated-creature-renamer">
 <span id="id101"></span><h3><a class="toc-backref" href="#id321">generated-creature-renamer</a><a class="headerlink" href="#generated-creature-renamer" title="Permalink to this headline">¶</a></h3>
@@ -3162,14 +3161,14 @@ to show the accompanying description.</p>
 the Dwarf Fortress root directory, to use as a start for making a graphics set
 for generated creatures using the new names that they get with this plugin.</p>
 <p>The new names are saved with the save, and the plugin, when enabled, only runs once
-per save, unless there’s an update.</p>
+per save, unless there&#8217;s an update.</p>
 </div>
 <div class="section" id="lair">
 <span id="id102"></span><h3><a class="toc-backref" href="#id322">lair</a><a class="headerlink" href="#lair" title="Permalink to this headline">¶</a></h3>
 <p>This command allows you to mark the map as a monster lair, preventing item
 scatter on abandon. When invoked as <code class="docutils literal"><span class="pre">lair</span> <span class="pre">reset</span></code>, it does the opposite.</p>
-<p>Unlike <a class="reference internal" href="#reveal"><span class="std std-ref">reveal</span></a>, this command doesn’t save the information about tiles - you
-won’t be able to restore state of real monster lairs using <code class="docutils literal"><span class="pre">lair</span> <span class="pre">reset</span></code>.</p>
+<p>Unlike <a class="reference internal" href="#reveal"><span>reveal</span></a>, this command doesn&#8217;t save the information about tiles - you
+won&#8217;t be able to restore state of real monster lairs using <code class="docutils literal"><span class="pre">lair</span> <span class="pre">reset</span></code>.</p>
 <p>Options:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3191,15 +3190,15 @@ won’t be able to restore state of real monster lairs using <code class="docuti
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">misery enable n:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">enable misery with optional magnitude n. If specified, n must
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">enable misery with optional magnitude n. If specified, n must
 be positive.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">misery n:</th><td class="field-body">same as “misery enable n”</td>
+<tr class="field-even field"><th class="field-name">misery n:</th><td class="field-body">same as &#8220;misery enable n&#8221;</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">misery enable:</th><td class="field-body">same as “misery enable 1”</td>
+<tr class="field-odd field"><th class="field-name">misery enable:</th><td class="field-body">same as &#8220;misery enable 1&#8221;</td>
 </tr>
 <tr class="field-even field"><th class="field-name">misery disable:</th><td class="field-body">stop adding new negative thoughts. This will not remove
-existing negative thoughts. Equivalent to “misery 0”.</td>
+existing negative thoughts. Equivalent to &#8220;misery 0&#8221;.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">misery clear:</th><td class="field-body">remove fake thoughts, even after saving and reloading. Does
 not change factor.</td>
@@ -3244,13 +3243,13 @@ moodable population, artifact limit not reached).</td>
 one randomly. Unit eligibility is still enforced.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">-type &lt;T&gt;:</th><td class="field-body">Force the mood to be of a particular type instead of choosing randomly based on happiness.
-Valid values for T are “fey”, “secretive”, “possessed”, “fell”, and “macabre”.</td>
+Valid values for T are &#8220;fey&#8221;, &#8220;secretive&#8221;, &#8220;possessed&#8221;, &#8220;fell&#8221;, and &#8220;macabre&#8221;.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">-skill S:</th><td class="field-body">Force the mood to use a specific skill instead of choosing the highest moodable skill.
-Valid values are “miner”, “carpenter”, “engraver”, “mason”, “tanner”, “weaver”,
-“clothier”, “weaponsmith”,  “armorsmith”, “metalsmith”, “gemcutter”, “gemsetter”,
-“woodcrafter”, “stonecrafter”, “metalcrafter”, “glassmaker”, “leatherworker”,
-“bonecarver”, “bowyer”, and “mechanic”.</td>
+Valid values are &#8220;miner&#8221;, &#8220;carpenter&#8221;, &#8220;engraver&#8221;, &#8220;mason&#8221;, &#8220;tanner&#8221;, &#8220;weaver&#8221;,
+&#8220;clothier&#8221;, &#8220;weaponsmith&#8221;,  &#8220;armorsmith&#8221;, &#8220;metalsmith&#8221;, &#8220;gemcutter&#8221;, &#8220;gemsetter&#8221;,
+&#8220;woodcrafter&#8221;, &#8220;stonecrafter&#8221;, &#8220;metalcrafter&#8221;, &#8220;glassmaker&#8221;, &#8220;leatherworker&#8221;,
+&#8220;bonecarver&#8221;, &#8220;bowyer&#8221;, and &#8220;mechanic&#8221;.</td>
 </tr>
 </tbody>
 </table>
@@ -3258,7 +3257,7 @@ Valid values are “miner”, “carpenter”, “engraver”, “mason”, “t
 </div>
 <div class="section" id="siege-engine">
 <span id="id106"></span><h3><a class="toc-backref" href="#id326">siege-engine</a><a class="headerlink" href="#siege-engine" title="Permalink to this headline">¶</a></h3>
-<p>Siege engines in DF haven’t been updated since the game was 2D, and can
+<p>Siege engines in DF haven&#8217;t been updated since the game was 2D, and can
 only aim in four directions.  To make them useful above-ground,
 this plugin allows you to:</p>
 <ul class="simple">
@@ -3267,13 +3266,13 @@ this plugin allows you to:</p>
 <li>load any object into a catapult, not just stones</li>
 <li>aim at a rectangular area in any direction, and across Z-levels</li>
 </ul>
-<p>The front-end is implemented by <a class="reference internal" href="_auto/gui.html#gui-siege-engine"><span class="std std-ref">gui/siege-engine</span></a>.</p>
+<p>The front-end is implemented by <a class="reference internal" href="_auto/gui.html#gui-siege-engine"><span>gui/siege-engine</span></a>.</p>
 </div>
 <div class="section" id="power-meter">
 <span id="id107"></span><h3><a class="toc-backref" href="#id327">power-meter</a><a class="headerlink" href="#power-meter" title="Permalink to this headline">¶</a></h3>
 <p>The power-meter plugin implements a modified pressure plate that detects power being
 supplied to gear boxes built in the four adjacent N/S/W/E tiles.</p>
-<p>The configuration front-end is implemented by <a class="reference internal" href="_auto/gui.html#gui-power-meter"><span class="std std-ref">gui/power-meter</span></a>.</p>
+<p>The configuration front-end is implemented by <a class="reference internal" href="_auto/gui.html#gui-power-meter"><span>gui/power-meter</span></a>.</p>
 </div>
 <div class="section" id="steam-engine">
 <span id="id108"></span><h3><a class="toc-backref" href="#id328">steam-engine</a><a class="headerlink" href="#steam-engine" title="Permalink to this headline">¶</a></h3>
@@ -3304,7 +3303,7 @@ axles built after both engines.</p>
 <h4><a class="toc-backref" href="#id330">Operation</a><a class="headerlink" href="#operation" title="Permalink to this headline">¶</a></h4>
 <p>In order to operate the engine, queue the Stoke Boiler job (optionally
 on repeat). A furnace operator will come, possibly bringing a bar of fuel,
-and perform it. As a result, a “boiling water” item will appear
+and perform it. As a result, a &#8220;boiling water&#8221; item will appear
 in the <code class="kbd docutils literal"><span class="pre">t</span></code> view of the workshop.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -3344,7 +3343,7 @@ tantruming dwarf.</p>
 <h4><a class="toc-backref" href="#id332">Save files</a><a class="headerlink" href="#save-files" title="Permalink to this headline">¶</a></h4>
 <p>It should be safe to load and view engine-using fortresses
 from a DF version without DFHack installed, except that in such
-case the engines won’t work. However actually making modifications
+case the engines won&#8217;t work. However actually making modifications
 to them, or machines they connect to (including by pulling levers),
 can easily result in inconsistent state once this plugin is
 available again. The effects may be as weird as negative power
@@ -3369,8 +3368,6 @@ being generated.</p>
 
 
 
-
-
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
@@ -3383,11 +3380,14 @@ being generated.</p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
   <h3><a href="../index.html">Table Of Contents</a></h3>
@@ -3553,11 +3553,11 @@ being generated.</p>
       &copy;2015, The DFHack Team.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.5</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
       
       |
-      <a href="../_sources/docs/Plugins.rst.txt"
+      <a href="../_sources/docs/Plugins.txt"
           rel="nofollow">Page source</a>
     </div>
 

@@ -1,39 +1,38 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>DFHack Core &#8212; DFHack 0.44.05-alpha1 documentation</title>
+    
+    <title>DFHack Core &mdash; DFHack 0.44.05-alpha1 documentation</title>
+    
     <link rel="stylesheet" href="../_static/dfhack.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
         VERSION:     '0.44.05-alpha1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
+        HAS_SOURCE:  true
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../_static/dfhack-icon.ico"/>
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="DFHack 0.44.05-alpha1 documentation" href="../index.html" />
     <link rel="next" title="DFHack Plugins" href="Plugins.html" />
     <link rel="prev" title="Introduction and Overview" href="Introduction.html" />
    
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body>
-  
+  <body role="document">  
 
     <div class="document">
       <div class="documentwrapper">
@@ -72,7 +71,7 @@ same version of DFHack.  They are less flexible than scripts,
 but used for complex or ongoing tasks becasue they run faster.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">scripts:</th><td class="field-body">are Ruby or Lua scripts stored in <code class="docutils literal"><span class="pre">hack/scripts/</span></code>.
-Because they don’t need to be compiled, scripts are
+Because they don&#8217;t need to be compiled, scripts are
 more flexible about versions, and easier to distribute.
 Most third-party DFHack addons are scripts.</td>
 </tr>
@@ -85,42 +84,42 @@ Most third-party DFHack addons are scripts.</td>
 <ol class="arabic simple">
 <li>Typing the command into the DFHack console (see below)</li>
 <li>From the OS terminal (see below)</li>
-<li>Pressing a key combination set up with <a class="reference internal" href="#keybinding"><span class="std std-ref">keybinding</span></a></li>
-<li>From one of several <a class="reference internal" href="#init-files"><span class="std std-ref">Init Files</span></a>, automatically</li>
-<li>Using <a class="reference internal" href="#script"><span class="std std-ref">script</span></a> to run a batch of commands from a file</li>
+<li>Pressing a key combination set up with <a class="reference internal" href="#keybinding"><span>keybinding</span></a></li>
+<li>From one of several <a class="reference internal" href="#init-files"><span>Init Files</span></a>, automatically</li>
+<li>Using <a class="reference internal" href="#script"><span>script</span></a> to run a batch of commands from a file</li>
 </ol>
 <div class="section" id="the-dfhack-console">
 <h3>The DFHack Console<a class="headerlink" href="#the-dfhack-console" title="Permalink to this headline">¶</a></h3>
 <p>The command line has some nice line editing capabilities, including history
-that’s preserved between different runs of DF - use <code class="kbd docutils literal"><span class="pre">↑</span></code> and <code class="kbd docutils literal"><span class="pre">↓</span></code>
+that&#8217;s preserved between different runs of DF - use <code class="kbd docutils literal"><span class="pre">↑</span></code> and <code class="kbd docutils literal"><span class="pre">↓</span></code>
 to go through the history.</p>
 <p>To include whitespace in the argument/s to some command, quote it in
 double quotes.  To include a double quote character, use <code class="docutils literal"><span class="pre">\&quot;</span></code>.</p>
 <p>If the first non-whitespace character is <code class="docutils literal"><span class="pre">:</span></code>, the command is parsed in
 an alternative mode.  The non-whitespace characters following the <code class="docutils literal"><span class="pre">:</span></code> are
 the command name, and the remaining part of the line is used verbatim as
-the first argument.  This is very useful for the <a class="reference internal" href="_auto/base.html#lua"><span class="std std-ref">lua</span></a> and <a class="reference internal" href="Plugins.html#rb"><span class="std std-ref">ruby</span></a> commands.
+the first argument.  This is very useful for the <a class="reference internal" href="_auto/base.html#lua"><span>lua</span></a> and <a class="reference internal" href="Plugins.html#rb"><span>ruby</span></a> commands.
 As an example, the following two command lines are exactly equivalent:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">foo</span> <span class="n">a</span> <span class="n">b</span> <span class="s2">&quot;c d&quot;</span> <span class="n">e</span> <span class="n">f</span>
-<span class="n">foo</span> <span class="s2">&quot;a b </span><span class="se">\&quot;</span><span class="s2">c d</span><span class="se">\&quot;</span><span class="s2"> e f&quot;</span>
+<div class="highlight-python"><div class="highlight"><pre>:foo a b &quot;c d&quot; e f
+foo &quot;a b \&quot;c d\&quot; e f&quot;
 </pre></div>
 </div>
 </div>
 <div class="section" id="using-an-os-terminal">
 <h3>Using an OS terminal<a class="headerlink" href="#using-an-os-terminal" title="Permalink to this headline">¶</a></h3>
-<p>DFHack commands can be run from an OS terminal at startup, using ‘+ args’,
+<p>DFHack commands can be run from an OS terminal at startup, using &#8216;+ args&#8217;,
 or at any other time using the <code class="docutils literal"><span class="pre">dfhack-run</span></code> executable.</p>
 <p>If DF/DFHack is started with arguments beginning with <code class="docutils literal"><span class="pre">+</span></code>, the remaining
 text is treated as a command in the DFHack console.  It is possible to use
 multiple such commands, which are split on <code class="docutils literal"><span class="pre">+</span></code>.  For example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>./dfhack +load-save region1
+<div class="highlight-python"><div class="highlight"><pre>./dfhack +load-save region1
 &quot;Dwarf Fortress.exe&quot; +devel/print-args Hello! +enable workflow
 </pre></div>
 </div>
-<p>The first example (*nix), <a class="reference internal" href="_auto/base.html#load-save"><span class="std std-ref">load-save</span></a>, skips the main menu and loads
+<p>The first example (*nix), <a class="reference internal" href="_auto/base.html#load-save"><span>load-save</span></a>, skips the main menu and loads
 <code class="docutils literal"><span class="pre">region1</span></code> immediately.  The second (Windows) example prints
-<span class="guilabel">Hello!</span> in the DFHack console, and <a class="reference internal" href="#enable"><span class="std std-ref">enables</span></a> <a class="reference internal" href="Plugins.html#workflow"><span class="std std-ref">workflow</span></a>.
-Note that the <code class="docutils literal"><span class="pre">:foo</span></code> syntax for whitespace in arguments is not compatible with ‘+ args’.</p>
+<span class="guilabel">Hello!</span> in the DFHack console, and <a class="reference internal" href="#enable"><span>enables</span></a> <a class="reference internal" href="Plugins.html#workflow"><span>workflow</span></a>.
+Note that the <code class="docutils literal"><span class="pre">:foo</span></code> syntax for whitespace in arguments is not compatible with &#8216;+ args&#8217;.</p>
 <p>If DF and DFHack are already running, calling <code class="docutils literal"><span class="pre">dfhack-run</span> <span class="pre">my</span> <span class="pre">command</span></code>
 in an external terminal is equivalent to calling <code class="docutils literal"><span class="pre">my</span> <span class="pre">command</span></code> in the
 DFHack console.  Direct use of the DFhack console is generally easier,
@@ -128,24 +127,24 @@ but <code class="docutils literal"><span class="pre">dfhack-run</span></code> ca
 <ul class="simple">
 <li>if the console is unavailable<ul>
 <li>with the init setting <code class="docutils literal"><span class="pre">PRINT_MODE:TEXT</span></code></li>
-<li>while running an interactive command (eg. <a class="reference internal" href="Plugins.html#liquids"><span class="std std-ref">liquids</span></a> or <a class="reference internal" href="Plugins.html#tiletypes"><span class="std std-ref">tiletypes</span></a>)</li>
+<li>while running an interactive command (eg. <a class="reference internal" href="Plugins.html#liquids"><span>liquids</span></a> or <a class="reference internal" href="Plugins.html#tiletypes"><span>tiletypes</span></a>)</li>
 </ul>
 </li>
 <li>from external programs or scripts</li>
 <li>if DF or DFHack are not responding</li>
 </ul>
 <p>Examples:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">dfhack</span><span class="o">-</span><span class="n">run</span> <span class="n">cursecheck</span>
-<span class="n">dfhack</span><span class="o">-</span><span class="n">run</span> <span class="n">multicmd</span> <span class="n">kill</span><span class="o">-</span><span class="n">lua</span><span class="p">;</span> <span class="n">die</span>
+<div class="highlight-python"><div class="highlight"><pre>./dfhack-run cursecheck
+dfhack-run multicmd kill-lua; die
 </pre></div>
 </div>
-<p>The first (*nix) example <a class="reference internal" href="Plugins.html#cursecheck"><span class="std std-ref">checks for vampires</span></a>; the
-second (Windows) example uses <a class="reference internal" href="#kill-lua"><span class="std std-ref">kill-lua</span></a> to cancel a script and exits.</p>
+<p>The first (*nix) example <a class="reference internal" href="Plugins.html#cursecheck"><span>checks for vampires</span></a>; the
+second (Windows) example uses <a class="reference internal" href="#kill-lua"><span>kill-lua</span></a> to cancel a script and exits.</p>
 </div>
 </div>
 <div class="section" id="built-in-commands">
 <h2><a class="toc-backref" href="#id28">Built-in Commands</a><a class="headerlink" href="#built-in-commands" title="Permalink to this headline">¶</a></h2>
-<p>The following commands are provided by the ‘core’ components
+<p>The following commands are provided by the &#8216;core&#8217; components
 of DFhack, rather than plugins or scripts.</p>
 <div class="contents local topic" id="id2">
 <ul class="simple">
@@ -182,20 +181,20 @@ by a plugin or script.</p>
 <tr class="field-odd field"><th class="field-name"><code class="docutils literal"><span class="pre">alias</span> <span class="pre">list</span></code>:</th><td class="field-body">lists all configured aliases</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2"><code class="docutils literal"><span class="pre">alias</span> <span class="pre">add</span> <span class="pre">&lt;name&gt;</span> <span class="pre">&lt;command&gt;</span> <span class="pre">[arguments...]</span></code>:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">adds an alias</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">adds an alias</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2"><code class="docutils literal"><span class="pre">alias</span> <span class="pre">replace</span> <span class="pre">&lt;name&gt;</span> <span class="pre">&lt;command&gt;</span> <span class="pre">[arguments...]</span></code>:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">replaces an existing
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">replaces an existing
 alias with a new command, or adds the alias if it does not already exist</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2"><code class="docutils literal"><span class="pre">alias</span> <span class="pre">delete</span> <span class="pre">&lt;name&gt;</span></code>:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">removes the specified alias</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">removes the specified alias</td>
 </tr>
 </tbody>
 </table>
 <p>Aliases can be given additional arguments when created and invoked, which will
-be passed to the underlying command in order. An example with <a class="reference internal" href="_auto/devel.html#devel-print-args"><span class="std std-ref">devel/print-args</span></a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">DFHack</span><span class="p">]</span><span class="c1"># alias add pargs devel/print-args example</span>
+be passed to the underlying command in order. An example with <a class="reference internal" href="_auto/devel.html#devel-print-args"><span>devel/print-args</span></a>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="n">DFHack</span><span class="p">]</span><span class="c1"># alias add pargs devel/print-args example</span>
 <span class="p">[</span><span class="n">DFHack</span><span class="p">]</span><span class="c1"># pargs text</span>
 <span class="n">example</span>
 <span class="n">text</span>
@@ -223,7 +222,7 @@ of enabled and disabled plugins, and shows whether that can be changed
 through the same commands.</p>
 <p>To enable or disable plugins that support this, use their names as
 arguments for the command:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">enable</span> <span class="n">manipulator</span> <span class="n">search</span>
+<div class="highlight-python"><div class="highlight"><pre>enable manipulator search
 </pre></div>
 </div>
 </div>
@@ -248,7 +247,7 @@ as an option on their command line - ie <code class="docutils literal"><span cla
 <span id="id10"></span><h3><a class="toc-backref" href="#id38">keybinding</a><a class="headerlink" href="#keybinding" title="Permalink to this headline">¶</a></h3>
 <p>To set keybindings, use the built-in <code class="docutils literal"><span class="pre">keybinding</span></code> command. Like any other
 command it can be used at any time from the console, but bindings are not
-remembered between runs of the game unless re-created in <a class="reference internal" href="#dfhack-init"><span class="std std-ref">dfhack*.init</span></a>.</p>
+remembered between runs of the game unless re-created in <a class="reference internal" href="#dfhack-init"><span>dfhack*.init</span></a>.</p>
 <p>Currently, any combinations of Ctrl/Alt/Shift with A-Z, 0-9, or F1-F12 are supported.</p>
 <p>Possible ways to call the command:</p>
 <dl class="docutils">
@@ -262,7 +261,7 @@ remembered between runs of the game unless re-created in <a class="reference int
 <dd>Clear, and then add bindings for the specified key.</dd>
 </dl>
 <p>The <code class="docutils literal"><span class="pre">&lt;key&gt;</span></code> parameter above has the following <em>case-sensitive</em> syntax:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Ctrl</span><span class="o">-</span><span class="p">][</span><span class="n">Alt</span><span class="o">-</span><span class="p">][</span><span class="n">Shift</span><span class="o">-</span><span class="p">]</span><span class="n">KEY</span><span class="p">[</span><span class="nd">@context</span><span class="p">[</span><span class="o">|</span><span class="n">context</span><span class="o">...</span><span class="p">]]</span>
+<div class="highlight-python"><div class="highlight"><pre>[Ctrl-][Alt-][Shift-]KEY[@context[|context...]]
 </pre></div>
 </div>
 <p>where the <em>KEY</em> part can be any recognized key and [] denote optional parts.</p>
@@ -280,7 +279,7 @@ when in context <code class="docutils literal"><span class="pre">foo/bar/baz</sp
 <p>Multiple contexts can be specified by separating them with a
 pipe (<code class="docutils literal"><span class="pre">|</span></code>) - for example, <code class="docutils literal"><span class="pre">&#64;foo|bar|baz/foo</span></code> would match
 anything under <code class="docutils literal"><span class="pre">&#64;foo</span></code>, <code class="docutils literal"><span class="pre">&#64;bar</span></code>, or <code class="docutils literal"><span class="pre">&#64;baz/foo</span></code>.</p>
-<p>Interactive commands like <a class="reference internal" href="Plugins.html#liquids"><span class="std std-ref">liquids</span></a> cannot be used as hotkeys.</p>
+<p>Interactive commands like <a class="reference internal" href="Plugins.html#liquids"><span>liquids</span></a> cannot be used as hotkeys.</p>
 </div>
 <div class="section" id="kill-lua">
 <span id="id11"></span><h3><a class="toc-backref" href="#id39">kill-lua</a><a class="headerlink" href="#kill-lua" title="Permalink to this headline">¶</a></h3>
@@ -293,7 +292,7 @@ to interrupt the next instruction.</p>
 <p><code class="docutils literal"><span class="pre">load</span></code>, <code class="docutils literal"><span class="pre">unload</span></code>, and <code class="docutils literal"><span class="pre">reload</span></code> control whether a plugin is loaded
 into memory - note that plugins are loaded but disabled unless you do
 something.  Usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">load</span><span class="o">|</span><span class="n">unload</span><span class="o">|</span><span class="n">reload</span> <span class="n">PLUGIN</span><span class="o">|</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">|--</span><span class="nb">all</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre>load|unload|reload PLUGIN|(-a|--all)
 </pre></div>
 </div>
 <p>Allows dealing with plugins individually by name, or all at once.</p>
@@ -335,16 +334,16 @@ including commands implemented by the plugin.</dd>
 <span id="id16"></span><h3><a class="toc-backref" href="#id44">script</a><a class="headerlink" href="#script" title="Permalink to this headline">¶</a></h3>
 <p>Reads a text file, and runs each line as a DFHack command
 as if it had been typed in by the user - treating the
-input like <a class="reference internal" href="#init-files"><span class="std std-ref">an init file</span></a>.</p>
-<p>Some other tools, such as <a class="reference internal" href="Plugins.html#autobutcher"><span class="std std-ref">autobutcher</span></a> and <a class="reference internal" href="Plugins.html#workflow"><span class="std std-ref">workflow</span></a>, export
+input like <a class="reference internal" href="#init-files"><span>an init file</span></a>.</p>
+<p>Some other tools, such as <a class="reference internal" href="Plugins.html#autobutcher"><span>autobutcher</span></a> and <a class="reference internal" href="Plugins.html#workflow"><span>workflow</span></a>, export
 their settings as the commands to create them - which are later
 loaded with <code class="docutils literal"><span class="pre">script</span></code></p>
 </div>
 <div class="section" id="show">
 <span id="id17"></span><h3><a class="toc-backref" href="#id45">show</a><a class="headerlink" href="#show" title="Permalink to this headline">¶</a></h3>
-<p>Shows the terminal window after it has been <a class="reference internal" href="#hide"><span class="std std-ref">hidden</span></a>.
-Only available on Windows.  You’ll need to use it from a
-<a class="reference internal" href="#keybinding"><span class="std std-ref">keybinding</span></a> set beforehand, or the in-game <a class="reference internal" href="Plugins.html#command-prompt"><span class="std std-ref">command-prompt</span></a>.</p>
+<p>Shows the terminal window after it has been <a class="reference internal" href="#hide"><span>hidden</span></a>.
+Only available on Windows.  You&#8217;ll need to use it from a
+<a class="reference internal" href="#keybinding"><span>keybinding</span></a> set beforehand, or the in-game <a class="reference internal" href="Plugins.html#command-prompt"><span>command-prompt</span></a>.</p>
 </div>
 <div class="section" id="type">
 <span id="id18"></span><h3><a class="toc-backref" href="#id46">type</a><a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
@@ -354,14 +353,14 @@ Only available on Windows.  You’ll need to use it from a
 <h3><a class="toc-backref" href="#id47">Other Commands</a><a class="headerlink" href="#other-commands" title="Permalink to this headline">¶</a></h3>
 <p>The following commands are <em>not</em> built-in, but offer similarly useful functions.</p>
 <ul class="simple">
-<li><a class="reference internal" href="Plugins.html#command-prompt"><span class="std std-ref">command-prompt</span></a></li>
-<li><a class="reference internal" href="Plugins.html#hotkeys"><span class="std std-ref">hotkeys</span></a></li>
-<li><a class="reference internal" href="_auto/base.html#lua"><span class="std std-ref">lua</span></a></li>
-<li><a class="reference internal" href="_auto/base.html#multicmd"><span class="std std-ref">multicmd</span></a></li>
-<li><a class="reference internal" href="Plugins.html#nopause"><span class="std std-ref">nopause</span></a></li>
-<li><a class="reference internal" href="_auto/base.html#quicksave"><span class="std std-ref">quicksave</span></a></li>
-<li><a class="reference internal" href="Plugins.html#rb"><span class="std std-ref">ruby</span></a></li>
-<li><a class="reference internal" href="_auto/base.html#repeat"><span class="std std-ref">repeat</span></a></li>
+<li><a class="reference internal" href="Plugins.html#command-prompt"><span>command-prompt</span></a></li>
+<li><a class="reference internal" href="Plugins.html#hotkeys"><span>hotkeys</span></a></li>
+<li><a class="reference internal" href="_auto/base.html#lua"><span>lua</span></a></li>
+<li><a class="reference internal" href="_auto/base.html#multicmd"><span>multicmd</span></a></li>
+<li><a class="reference internal" href="Plugins.html#nopause"><span>nopause</span></a></li>
+<li><a class="reference internal" href="_auto/base.html#quicksave"><span>quicksave</span></a></li>
+<li><a class="reference internal" href="Plugins.html#rb"><span>ruby</span></a></li>
+<li><a class="reference internal" href="_auto/base.html#repeat"><span>repeat</span></a></li>
 </ul>
 </div>
 </div>
@@ -388,7 +387,7 @@ save-specific init files in the save folders.</p>
 <li><code class="file docutils literal"><span class="pre">data/save/</span><em><span class="pre">world</span></em><span class="pre">/raw</span></code>, where <code class="docutils literal"><span class="pre">world</span></code> is the current save, and</li>
 <li><code class="file docutils literal"><span class="pre">data/save/</span><em><span class="pre">world</span></em><span class="pre">/raw/objects</span></code></li>
 </ol>
-<p>When reading commands from dfhack.init or with the <a class="reference internal" href="#script"><span class="std std-ref">script</span></a> command, if the final
+<p>When reading commands from dfhack.init or with the <a class="reference internal" href="#script"><span>script</span></a> command, if the final
 character on a line is a backslash then the next uncommented line is considered a
 continuation of that line, with the backslash deleted.  Commented lines are skipped,
 so it is possible to comment out parts of a command with the <code class="docutils literal"><span class="pre">#</span></code> character.</p>
@@ -399,7 +398,7 @@ so it is possible to comment out parts of a command with the <code class="docuti
 are executed in alphabetical order when DF is first started.</p>
 <p>DFHack is distributed with <a class="reference download internal" href="../_downloads/dfhack.init-example" download=""><code class="xref download docutils literal"><span class="pre">/dfhack.init-example</span></code></a> as an example
 with an up-to-date collection of basic commands; mostly setting standard
-keybindings and <a class="reference internal" href="#enable"><span class="std std-ref">enabling</span></a> plugins.  You are encouraged to look
+keybindings and <a class="reference internal" href="#enable"><span>enabling</span></a> plugins.  You are encouraged to look
 through this file to learn which features it makes available under which
 key combinations.  You may also customise it and rename it to <code class="docutils literal"><span class="pre">dfhack.init</span></code>.</p>
 <p>If your DF folder does not contain any <code class="docutils literal"><span class="pre">dfhack*.init</span></code> files, the example
@@ -414,7 +413,7 @@ where <code class="docutils literal"><span class="pre">*</span></code> can be an
 <p>All matching init files will be executed in alphebetical order.
 A world being loaded can mean a fortress, an adventurer, or legends mode.</p>
 <p>These files are best used for non-persistent commands, such as setting
-a <a class="reference internal" href="_auto/fix.html#fix"><span class="std std-ref">fix</span></a> script to run on <a class="reference internal" href="_auto/base.html#repeat"><span class="std std-ref">repeat</span></a>.</p>
+a <a class="reference internal" href="_auto/fix.html#fix"><span>fix</span></a> script to run on <a class="reference internal" href="_auto/base.html#repeat"><span>repeat</span></a>.</p>
 </div>
 <div class="section" id="onunload-init">
 <span id="id23"></span><h3><a class="toc-backref" href="#id50">onUnload*.init</a><a class="headerlink" href="#onunload-init" title="Permalink to this headline">¶</a></h3>
@@ -429,7 +428,7 @@ an unmodded save.</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">onMapLoad*.init</span></code> and <code class="docutils literal"><span class="pre">onMapUnload*.init</span></code> are run when a map,
 distinct from a world, is loaded.  This is good for map-affecting
-commands (eg <a class="reference internal" href="Plugins.html#clean"><span class="std std-ref">clean</span></a>), or avoiding issues in Legends mode.</li>
+commands (eg <a class="reference internal" href="Plugins.html#clean"><span>clean</span></a>), or avoiding issues in Legends mode.</li>
 <li>Any lua script named <code class="docutils literal"><span class="pre">raw/init.d/*.lua</span></code>, in the save or main DF
 directory, will be run when any world or that save is loaded.</li>
 </ul>
@@ -437,7 +436,7 @@ directory, will be run when any world or that save is loaded.</li>
 </div>
 <div class="section" id="miscellaneous-notes">
 <h2><a class="toc-backref" href="#id30">Miscellaneous Notes</a><a class="headerlink" href="#miscellaneous-notes" title="Permalink to this headline">¶</a></h2>
-<p>This section is for odd but important notes that don’t fit anywhere else.</p>
+<p>This section is for odd but important notes that don&#8217;t fit anywhere else.</p>
 <ul class="simple">
 <li>If a DF <code class="kbd docutils literal"><span class="pre">H</span></code> hotkey is named with a DFHack command, pressing
 the corresponding <code class="kbd docutils literal"><span class="pre">Fx</span></code> button will run that command, instead of
@@ -465,8 +464,6 @@ Older versions are available <a class="reference external" href="http://dethware
 
 
 
-
-
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
@@ -479,11 +476,14 @@ Older versions are available <a class="reference external" href="http://dethware
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
   <h3><a href="../index.html">Table Of Contents</a></h3>
@@ -535,11 +535,11 @@ Older versions are available <a class="reference external" href="http://dethware
       &copy;2015, The DFHack Team.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.5</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
       
       |
-      <a href="../_sources/docs/Core.rst.txt"
+      <a href="../_sources/docs/Core.txt"
           rel="nofollow">Page source</a>
     </div>
 

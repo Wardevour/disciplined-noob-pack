@@ -1,39 +1,39 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Basic Scripts &#8212; DFHack 0.44.05-alpha1 documentation</title>
+    
+    <title>Basic Scripts &mdash; DFHack 0.44.05-alpha1 documentation</title>
+    
     <link rel="stylesheet" href="../../_static/dfhack.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
         VERSION:     '0.44.05-alpha1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
+        HAS_SOURCE:  true
       };
     </script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../../_static/dfhack-icon.ico"/>
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="DFHack 0.44.05-alpha1 documentation" href="../../index.html" />
+    <link rel="up" title="DFHack Scripts" href="../Scripts.html" />
     <link rel="next" title="Development Scripts" href="devel.html" />
     <link rel="prev" title="DFHack Scripts" href="../Scripts.html" />
    
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
-  
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body>
-  
+  <body role="document">  
 
     <div class="document">
       <div class="documentwrapper">
@@ -157,12 +157,12 @@ attributes to their maximum level.</p>
 </div>
 <div class="section" id="adv-rumors">
 <span id="id4"></span><h2><a class="toc-backref" href="#id92">adv-rumors</a><a class="headerlink" href="#adv-rumors" title="Permalink to this headline">¶</a></h2>
-<p>Improves the “Bring up specific incident or rumor” menu in Adventure mode.</p>
+<p>Improves the &#8220;Bring up specific incident or rumor&#8221; menu in Adventure mode.</p>
 </div>
 <div class="section" id="armoks-blessing">
 <span id="id5"></span><h2><a class="toc-backref" href="#id93">armoks-blessing</a><a class="headerlink" href="#armoks-blessing" title="Permalink to this headline">¶</a></h2>
-<p>Runs the equivalent of <a class="reference internal" href="#rejuvenate"><span class="std std-ref">rejuvenate</span></a>, <a class="reference internal" href="#elevate-physical"><span class="std std-ref">elevate-physical</span></a>, <a class="reference internal" href="#elevate-mental"><span class="std std-ref">elevate-mental</span></a>, and
-<a class="reference internal" href="#brainwash"><span class="std std-ref">brainwash</span></a> on all dwarves currently on the map.  This is an extreme change,
+<p>Runs the equivalent of <a class="reference internal" href="#rejuvenate"><span>rejuvenate</span></a>, <a class="reference internal" href="#elevate-physical"><span>elevate-physical</span></a>, <a class="reference internal" href="#elevate-mental"><span>elevate-mental</span></a>, and
+<a class="reference internal" href="#brainwash"><span>brainwash</span></a> on all dwarves currently on the map.  This is an extreme change,
 which sets every stat to an ideal - legendary skills, great traits, and
 easy-to-satisfy preferences.</p>
 <p>Without arguments, all attributes, age &amp; personalities are adjusted.
@@ -174,18 +174,18 @@ Arguments allow for skills to be adjusted as well.</p>
 Selects a crop for planting if current stock is below a threshold.
 Selected crops are dispatched on all farmplots.</p>
 <p>Usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">autofarm</span> <span class="n">start</span>
-<span class="n">autofarm</span> <span class="n">default</span> <span class="mi">30</span>
-<span class="n">autofarm</span> <span class="n">threshold</span> <span class="mi">150</span> <span class="n">helmet_plump</span> <span class="n">tail_pig</span>
+<div class="highlight-python"><div class="highlight"><pre>autofarm start
+autofarm default 30
+autofarm threshold 150 helmet_plump tail_pig
 </pre></div>
 </div>
 </div>
 <div class="section" id="autolabor-artisans">
 <span id="id7"></span><h2><a class="toc-backref" href="#id95">autolabor-artisans</a><a class="headerlink" href="#autolabor-artisans" title="Permalink to this headline">¶</a></h2>
-<p>Runs an <a class="reference internal" href="../Plugins.html#autolabor"><span class="std std-ref">autolabor</span></a> command, for all labors where skill level
+<p>Runs an <a class="reference internal" href="../Plugins.html#autolabor"><span>autolabor</span></a> command, for all labors where skill level
 influences output quality.  Examples:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">autolabor</span><span class="o">-</span><span class="n">artisans</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">3</span>
-<span class="n">autolabor</span><span class="o">-</span><span class="n">artisans</span> <span class="n">disable</span>
+<div class="highlight-python"><div class="highlight"><pre>autolabor-artisans 0 2 3
+autolabor-artisans disable
 </pre></div>
 </div>
 </div>
@@ -193,7 +193,7 @@ influences output quality.  Examples:</p>
 <span id="id8"></span><h2><a class="toc-backref" href="#id96">autounsuspend</a><a class="headerlink" href="#autounsuspend" title="Permalink to this headline">¶</a></h2>
 <p>Automatically unsuspend construction jobs, on a recurring basis.</p>
 <p>Will not unsuspend jobs where water flow &gt; 1.</p>
-<p>See <a class="reference internal" href="#unsuspend"><span class="std std-ref">unsuspend</span></a> for one-off use, or <a class="reference internal" href="../Plugins.html#resume"><span class="std std-ref">resume</span></a> <code class="docutils literal"><span class="pre">all</span></code>.</p>
+<p>See <a class="reference internal" href="#unsuspend"><span>unsuspend</span></a> for one-off use, or <a class="reference internal" href="../Plugins.html#resume"><span>resume</span></a> <code class="docutils literal"><span class="pre">all</span></code>.</p>
 </div>
 <div class="section" id="ban-cooking">
 <span id="id9"></span><h2><a class="toc-backref" href="#id97">ban-cooking</a><a class="headerlink" href="#ban-cooking" title="Permalink to this headline">¶</a></h2>
@@ -204,7 +204,7 @@ kitchen interface.  Usage:  <code class="docutils literal"><span class="pre">ban
 </div>
 <div class="section" id="binpatch">
 <span id="id10"></span><h2><a class="toc-backref" href="#id98">binpatch</a><a class="headerlink" href="#binpatch" title="Permalink to this headline">¶</a></h2>
-<p>Implements functions for in-memory binpatches.  See <a class="reference internal" href="../Binpatches.html#binpatches"><span class="std std-ref">Patching the DF binary</span></a>.</p>
+<p>Implements functions for in-memory binpatches.  See <a class="reference internal" href="../Binpatches.html#binpatches"><span>Patching the DF binary</span></a>.</p>
 </div>
 <div class="section" id="brainwash">
 <span id="id11"></span><h2><a class="toc-backref" href="#id99">brainwash</a><a class="headerlink" href="#brainwash" title="Permalink to this headline">¶</a></h2>
@@ -244,10 +244,10 @@ more than once or twice.</p>
 <tr class="field-odd field"><th class="field-name">catsplosion:</th><td class="field-body">Make all cats pregnant</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">catsplosion list:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">List IDs of all animals on the map</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">List IDs of all animals on the map</td>
 </tr>
-<tr class="field-odd field"><th class="field-name" colspan="2">catsplosion ID …:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Make animals with given ID(s) pregnant</td>
+<tr class="field-odd field"><th class="field-name" colspan="2">catsplosion ID ...:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Make animals with given ID(s) pregnant</td>
 </tr>
 </tbody>
 </table>
@@ -271,7 +271,7 @@ to honey bees.  Usage:</p>
 <tr class="field-even field"><th class="field-name">colonies place:</th><td class="field-body">Place a honey bee colony under the cursor.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">colonies convert:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Convert all existing colonies to honey bees.</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Convert all existing colonies to honey bees.</td>
 </tr>
 </tbody>
 </table>
@@ -300,14 +300,14 @@ and the optionnal third gives the number of items to create (defaults to 20).</p
 <p>The <code class="docutils literal"><span class="pre">web</span></code> item category will create an uncollected cobweb on the floor.</p>
 <p>Note that the script does not enforce anything, and will let you create
 boulders of toad blood and stuff like that.
-However the <code class="docutils literal"><span class="pre">list</span></code> mode will only show ‘normal’ materials.</p>
+However the <code class="docutils literal"><span class="pre">list</span></code> mode will only show &#8216;normal&#8217; materials.</p>
 <p>Examples:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">create</span><span class="o">-</span><span class="n">items</span> <span class="n">boulders</span> <span class="n">COAL_BITUMINOUS</span> <span class="mi">12</span>
-<span class="n">create</span><span class="o">-</span><span class="n">items</span> <span class="n">plant</span> <span class="n">tail_pig</span>
-<span class="n">create</span><span class="o">-</span><span class="n">items</span> <span class="n">log</span> <span class="nb">list</span>
-<span class="n">create</span><span class="o">-</span><span class="n">items</span> <span class="n">web</span> <span class="n">CREATURE</span><span class="p">:</span><span class="n">SPIDER_CAVE_GIANT</span><span class="p">:</span><span class="n">SILK</span>
-<span class="n">create</span><span class="o">-</span><span class="n">items</span> <span class="n">bar</span> <span class="n">CREATURE</span><span class="p">:</span><span class="n">CAT</span><span class="p">:</span><span class="n">SOAP</span>
-<span class="n">create</span><span class="o">-</span><span class="n">items</span> <span class="n">bar</span> <span class="n">adamantine</span>
+<div class="highlight-python"><div class="highlight"><pre>create-items boulders COAL_BITUMINOUS 12
+create-items plant tail_pig
+create-items log list
+create-items web CREATURE:SPIDER_CAVE_GIANT:SILK
+create-items bar CREATURE:CAT:SOAP
+create-items bar adamantine
 </pre></div>
 </div>
 </div>
@@ -318,7 +318,7 @@ script will display the cause of death of the creature.</p>
 </div>
 <div class="section" id="deteriorateclothes">
 <span id="id20"></span><h2><a class="toc-backref" href="#id108">deteriorateclothes</a><a class="headerlink" href="#deteriorateclothes" title="Permalink to this headline">¶</a></h2>
-<p>Somewhere between a “mod” and a “fps booster”, with a small impact on
+<p>Somewhere between a &#8220;mod&#8221; and a &#8220;fps booster&#8221;, with a small impact on
 vanilla gameplay. All of those slightly worn wool shoes that dwarves
 scatter all over the place will deteriorate at a greatly increased rate,
 and eventually just crumble into nothing. As warm and fuzzy as a dining
@@ -327,7 +327,7 @@ room full of used socks makes your dwarves feel, your FPS does not like it.</p>
 </div>
 <div class="section" id="deterioratecorpses">
 <span id="id21"></span><h2><a class="toc-backref" href="#id109">deterioratecorpses</a><a class="headerlink" href="#deterioratecorpses" title="Permalink to this headline">¶</a></h2>
-<p>Somewhere between a “mod” and a “fps booster”, with a small impact on
+<p>Somewhere between a &#8220;mod&#8221; and a &#8220;fps booster&#8221;, with a small impact on
 vanilla gameplay.</p>
 <p>In long running forts, especially evil biomes, you end up with a lot
 of toes, teeth, fingers, and limbs scattered all over the place.
@@ -346,20 +346,20 @@ several months.</p>
 </div>
 <div class="section" id="deterioratefood">
 <span id="id22"></span><h2><a class="toc-backref" href="#id110">deterioratefood</a><a class="headerlink" href="#deterioratefood" title="Permalink to this headline">¶</a></h2>
-<p>Somewhere between a “mod” and a “fps booster”, with a small impact on
+<p>Somewhere between a &#8220;mod&#8221; and a &#8220;fps booster&#8221;, with a small impact on
 vanilla gameplay.</p>
 <p>With this script running, all food and plants wear out and disappear
 after several months. Barrels and stockpiles will keep them from
-rotting, but it won’t keep them from decaying. No more sitting on a
+rotting, but it won&#8217;t keep them from decaying. No more sitting on a
 hundred years worth of food. No more keeping barrels of pig tails
 sitting around until you decide to use them. Either use it, eat it,
-or lose it. Seeds, are excluded from this, if you aren’t planning on
+or lose it. Seeds, are excluded from this, if you aren&#8217;t planning on
 using your pig tails, hold onto the seeds for a rainy day.</p>
-<p>This script is…pretty far reaching. However, almost all long
-running forts I’ve had end up sitting on thousands and thousands of
+<p>This script is...pretty far reaching. However, almost all long
+running forts I&#8217;ve had end up sitting on thousands and thousands of
 food items. Several thousand cooked meals, three thousand plump
 helmets, just as many fish and meat. It gets pretty absurd. And your
-FPS doesn’t like it.</p>
+FPS doesn&#8217;t like it.</p>
 <p>Usage: <code class="docutils literal"><span class="pre">deterioratefood</span> <span class="pre">(start|stop)</span></code></p>
 </div>
 <div class="section" id="digfort">
@@ -367,15 +367,15 @@ FPS doesn’t like it.</p>
 <p>A script to designate an area for digging according to a plan in csv format.</p>
 <p>This script, inspired from quickfort, can designate an area for digging.
 Your plan should be stored in a .csv file like this:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># this is a comment</span>
-<span class="n">d</span><span class="p">;</span><span class="n">d</span><span class="p">;</span><span class="n">u</span><span class="p">;</span><span class="n">d</span><span class="p">;</span><span class="n">d</span><span class="p">;</span><span class="n">skip</span> <span class="n">this</span> <span class="n">tile</span><span class="p">;</span><span class="n">d</span>
-<span class="n">d</span><span class="p">;</span><span class="n">d</span><span class="p">;</span><span class="n">d</span><span class="p">;</span><span class="n">i</span>
+<div class="highlight-python"><div class="highlight"><pre># this is a comment
+d;d;u;d;d;skip this tile;d
+d;d;d;i
 </pre></div>
 </div>
-<p>Available tile shapes are named after the ‘dig’ menu shortcuts:
+<p>Available tile shapes are named after the &#8216;dig&#8217; menu shortcuts:
 <code class="docutils literal"><span class="pre">d</span></code> for dig, <code class="docutils literal"><span class="pre">u</span></code> for upstairs, <code class="docutils literal"><span class="pre">j</span></code> downstairs, <code class="docutils literal"><span class="pre">i</span></code> updown,
 <code class="docutils literal"><span class="pre">h</span></code> channel, <code class="docutils literal"><span class="pre">r</span></code> upward ramp, <code class="docutils literal"><span class="pre">x</span></code> remove designation.
-Unrecognized characters are ignored (eg the ‘skip this tile’ in the sample).</p>
+Unrecognized characters are ignored (eg the &#8216;skip this tile&#8217; in the sample).</p>
 <p>Empty lines and data after a <code class="docutils literal"><span class="pre">#</span></code> are ignored as comments.
 To skip a row in your design, use a single <code class="docutils literal"><span class="pre">;</span></code>.</p>
 <p>One comment in the file may contain the phrase <code class="docutils literal"><span class="pre">start(3,5)</span></code>. It is interpreted
@@ -387,7 +387,7 @@ as an offset for the pattern: instead of starting at the cursor, it will start
 </div>
 <div class="section" id="drain-aquifer">
 <span id="id24"></span><h2><a class="toc-backref" href="#id112">drain-aquifer</a><a class="headerlink" href="#drain-aquifer" title="Permalink to this headline">¶</a></h2>
-<p>Remove all ‘aquifer’ tags from the map blocks. Irreversible.</p>
+<p>Remove all &#8216;aquifer&#8217; tags from the map blocks. Irreversible.</p>
 </div>
 <div class="section" id="elevate-mental">
 <span id="id25"></span><h2><a class="toc-backref" href="#id113">elevate-mental</a><a class="headerlink" href="#elevate-mental" title="Permalink to this headline">¶</a></h2>
@@ -399,11 +399,11 @@ any number numbers between 0 and 5000 passed as an argument:
 <span id="id26"></span><h2><a class="toc-backref" href="#id114">elevate-physical</a><a class="headerlink" href="#elevate-physical" title="Permalink to this headline">¶</a></h2>
 <p>Set all physical attributes of the selected dwarf to the maximum possible, or
 any number numbers between 0 and 5000 passed as an argument.  Higher is
-usually better, but an ineffective hammerer can be useful too…</p>
+usually better, but an ineffective hammerer can be useful too...</p>
 </div>
 <div class="section" id="embark-skills">
 <span id="id27"></span><h2><a class="toc-backref" href="#id115">embark-skills</a><a class="headerlink" href="#embark-skills" title="Permalink to this headline">¶</a></h2>
-<p>Adjusts dwarves’ skills when embarking.</p>
+<p>Adjusts dwarves&#8217; skills when embarking.</p>
 <p>Note that already-used skill points are not taken into account or reset.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -413,13 +413,13 @@ usually better, but an ineffective hammerer can be useful too…</p>
 </tr>
 <tr class="field-even field"><th class="field-name">points N all:</th><td class="field-body">Sets the skill points remaining of all dwarves to <code class="docutils literal"><span class="pre">N</span></code>.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">max:</th><td class="field-body">Sets all skills of the selected dwarf to “Proficient”.</td>
+<tr class="field-odd field"><th class="field-name">max:</th><td class="field-body">Sets all skills of the selected dwarf to &#8220;Proficient&#8221;.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">max all:</th><td class="field-body">Sets all skills of all dwarves to “Proficient”.</td>
+<tr class="field-even field"><th class="field-name">max all:</th><td class="field-body">Sets all skills of all dwarves to &#8220;Proficient&#8221;.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">legendary:</th><td class="field-body">Sets all skills of the selected dwarf to “Legendary”.</td>
+<tr class="field-odd field"><th class="field-name">legendary:</th><td class="field-body">Sets all skills of the selected dwarf to &#8220;Legendary&#8221;.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">legendary all:</th><td class="field-body">Sets all skills of all dwarves to “Legendary”.</td>
+<tr class="field-even field"><th class="field-name">legendary all:</th><td class="field-body">Sets all skills of all dwarves to &#8220;Legendary&#8221;.</td>
 </tr>
 </tbody>
 </table>
@@ -442,7 +442,7 @@ The check is made monthly.</p>
 <span id="id30"></span><h2><a class="toc-backref" href="#id118">exportlegends</a><a class="headerlink" href="#exportlegends" title="Permalink to this headline">¶</a></h2>
 <p>Controls legends mode to export data - especially useful to set-and-forget large
 worlds, or when you want a map of every site when there are several hundred.</p>
-<p>The ‘info’ option exports more data than is possible in vanilla, to a
+<p>The &#8216;info&#8217; option exports more data than is possible in vanilla, to a
 <code class="file docutils literal"><span class="pre">region-date-legends_plus.xml</span></code> file developed to extend
 <a class="reference external" href="http://www.bay12forums.com/smf/index.php?topic=128932">World Viewer</a> and other legends utilities.</p>
 <p>Options:</p>
@@ -484,16 +484,16 @@ is <code class="docutils literal"><span class="pre">butcher</span></code>, which
 <p>Will target any unit on a revealed tile of the map, including ambushers,
 but ignore caged/chained creatures.</p>
 <p>Ex:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">exterminate</span> <span class="n">gob</span>
-<span class="n">exterminate</span> <span class="n">gob</span><span class="p">:</span><span class="n">male</span>
+<div class="highlight-python"><div class="highlight"><pre>exterminate gob
+exterminate gob:male
 </pre></div>
 </div>
-<p>To kill a single creature, select the unit with the ‘v’ cursor and:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">exterminate</span> <span class="n">him</span>
+<p>To kill a single creature, select the unit with the &#8216;v&#8217; cursor and:</p>
+<div class="highlight-python"><div class="highlight"><pre>exterminate him
 </pre></div>
 </div>
 <p>To purify all elves on the map with fire (may have side-effects):</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">exterminate</span> <span class="n">elve</span> <span class="n">magma</span>
+<div class="highlight-python"><div class="highlight"><pre>exterminate elve magma
 </pre></div>
 </div>
 </div>
@@ -526,7 +526,7 @@ that cavern to grow within your fortress.</li>
 <span id="id33"></span><h2><a class="toc-backref" href="#id121">fix-ster</a><a class="headerlink" href="#fix-ster" title="Permalink to this headline">¶</a></h2>
 <p>Utilizes the orientation tag to either fix infertile creatures or inflict
 infertility on creatures that you do not want to breed.  Usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">fix</span><span class="o">-</span><span class="n">ster</span> <span class="p">[</span><span class="n">fert</span><span class="o">|</span><span class="n">ster</span><span class="p">]</span> <span class="p">[</span><span class="nb">all</span><span class="o">|</span><span class="n">animals</span><span class="o">|</span><span class="n">only</span><span class="p">:</span><span class="o">&lt;</span><span class="n">creature</span><span class="o">&gt;</span><span class="p">]</span>
+<div class="highlight-python"><div class="highlight"><pre>fix-ster [fert|ster] [all|animals|only:&lt;creature&gt;]
 </pre></div>
 </div>
 <p><code class="docutils literal"><span class="pre">fert</span></code> or <code class="docutils literal"><span class="pre">ster</span></code> is a required argument; whether to make the target fertile
@@ -540,39 +540,39 @@ creatures, or <code class="docutils literal"><span class="pre">only:&lt;creature
 </div>
 <div class="section" id="force">
 <span id="id35"></span><h2><a class="toc-backref" href="#id123">force</a><a class="headerlink" href="#force" title="Permalink to this headline">¶</a></h2>
-<p>A simpler wrapper around the <a class="reference internal" href="modtools.html#modtools-force"><span class="std std-ref">modtools/force</span></a> script.</p>
+<p>A simpler wrapper around the <a class="reference internal" href="modtools.html#modtools-force"><span>modtools/force</span></a> script.</p>
 <p>Usage:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">force</span> <span class="pre">event_type</span></code></li>
 <li><code class="docutils literal"><span class="pre">force</span> <span class="pre">event_type</span> <span class="pre">civ_id</span></code> - civ ID required for <code class="docutils literal"><span class="pre">Diplomat</span></code> and <code class="docutils literal"><span class="pre">Caravan</span></code>
 events</li>
 </ul>
-<p>See <a class="reference internal" href="modtools.html#modtools-force"><span class="std std-ref">modtools/force</span></a> for a complete list of event types.</p>
+<p>See <a class="reference internal" href="modtools.html#modtools-force"><span>modtools/force</span></a> for a complete list of event types.</p>
 </div>
 <div class="section" id="forum-dwarves">
 <span id="id36"></span><h2><a class="toc-backref" href="#id124">forum-dwarves</a><a class="headerlink" href="#forum-dwarves" title="Permalink to this headline">¶</a></h2>
 <p>Saves a copy of a text screen, formatted in bbcode for posting to the
-Bay12 Forums.  See <a class="reference internal" href="#markdown"><span class="std std-ref">markdown</span></a> to export for Reddit etc.</p>
+Bay12 Forums.  See <a class="reference internal" href="#markdown"><span>markdown</span></a> to export for Reddit etc.</p>
 <p>This script will attempt to read the current df-screen, and if it is a
-text-viewscreen (such as the dwarf ‘thoughts’ screen or an item
-‘description’) then append a marked-up version of this text to the
+text-viewscreen (such as the dwarf &#8216;thoughts&#8217; screen or an item
+&#8216;description&#8217;) then append a marked-up version of this text to the
 target file. Previous entries in the file are not overwritten, so you
-may use the ‘forumdwarves’ command multiple times to create a single
+may use the &#8216;forumdwarves&#8217; command multiple times to create a single
 document containing the text from multiple screens (eg: text screens
 from several dwarves, or text screens from multiple artifacts/items,
 or some combination).</p>
 <p>The screens which have been tested and known to function properly with
 this script are:</p>
 <ol class="arabic simple">
-<li>dwarf/unit ‘thoughts’ screen</li>
-<li>item/art ‘description’ screen</li>
-<li>individual ‘historical item/figure’ screens</li>
+<li>dwarf/unit &#8216;thoughts&#8217; screen</li>
+<li>item/art &#8216;description&#8217; screen</li>
+<li>individual &#8216;historical item/figure&#8217; screens</li>
 </ol>
 <p>There may be other screens to which the script applies.  It should be
 safe to attempt running the script with any screen active, with an
 error message to inform you when the selected screen is not appropriate
 for this script.</p>
-<p>The target file’s name is ‘forumdwarves.txt’.  A reminder to this effect
+<p>The target file&#8217;s name is &#8216;forumdwarves.txt&#8217;.  A reminder to this effect
 will be displayed if the script is successful.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -595,10 +595,10 @@ including death.  Usage:</p>
 <tr class="field-odd field"><th class="field-name">full-heal:</th><td class="field-body">Completely heal the currently selected unit.</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">full-heal -unit [unitId]:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Apply command to the unit with the given ID, instead of selected unit.</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Apply command to the unit with the given ID, instead of selected unit.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">full-heal -r [-keep_corpse]:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Heal the unit, raising from the dead if needed.
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Heal the unit, raising from the dead if needed.
 Add <code class="docutils literal"><span class="pre">-keep_corpse</span></code> to avoid removing their corpse.</td>
 </tr>
 </tbody>
@@ -651,7 +651,7 @@ the viability of livestock breeding programs.</p>
 use in your farming plots. With a seed type, the script will grow 100 of
 these seeds, ready to be harvested. Set the number with a 2nd argument.</p>
 <p>For example, to grow 40 plump helmet spawn:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">growcrops</span> <span class="n">plump</span> <span class="mi">40</span>
+<div class="highlight-python"><div class="highlight"><pre>growcrops plump 40
 </pre></div>
 </div>
 </div>
@@ -665,15 +665,15 @@ or anything else to leave them open.  The third parameter is 1 to add stairs.
 Stairs are buggy; they will not reveal the bottom until you dig somewhere,
 but underworld creatures will path in.</p>
 <p>Examples:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">hfs</span><span class="o">-</span><span class="n">pit</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span>
-    <span class="n">A</span> <span class="n">single</span><span class="o">-</span><span class="n">tile</span> <span class="n">wide</span> <span class="n">pit</span> <span class="k">with</span> <span class="n">no</span> <span class="n">walls</span> <span class="ow">or</span> <span class="n">stairs</span><span class="o">.</span>
-    <span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">default</span> <span class="k">if</span> <span class="n">no</span> <span class="n">numbers</span> <span class="n">are</span> <span class="n">given</span><span class="o">.</span>
+<div class="highlight-python"><div class="highlight"><pre>hfs-pit 1 0 0
+    A single-tile wide pit with no walls or stairs.
+    This is the default if no numbers are given.
 
-<span class="n">hfs</span><span class="o">-</span><span class="n">pit</span> <span class="mi">4</span> <span class="mi">0</span> <span class="mi">1</span>
-    <span class="n">A</span> <span class="n">four</span><span class="o">-</span><span class="n">across</span> <span class="n">pit</span> <span class="k">with</span> <span class="n">no</span> <span class="n">stairs</span> <span class="n">but</span> <span class="n">adding</span> <span class="n">walls</span><span class="o">.</span>
+hfs-pit 4 0 1
+    A four-across pit with no stairs but adding walls.
 
-<span class="n">hfs</span><span class="o">-</span><span class="n">pit</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">0</span>
-    <span class="n">A</span> <span class="n">two</span><span class="o">-</span><span class="n">across</span> <span class="n">pit</span> <span class="k">with</span> <span class="n">stairs</span> <span class="n">but</span> <span class="n">no</span> <span class="n">walls</span><span class="o">.</span>
+hfs-pit 2 1 0
+    A two-across pit with stairs but no walls.
 </pre></div>
 </div>
 </div>
@@ -689,7 +689,7 @@ in the current DF folder. Useful for bug reports.</p>
 <div class="section" id="item-descriptions">
 <span id="id43"></span><h2><a class="toc-backref" href="#id131">item-descriptions</a><a class="headerlink" href="#item-descriptions" title="Permalink to this headline">¶</a></h2>
 <p>Exports a table with custom description text for every item in the game.
-Used by <a class="reference internal" href="#view-item-info"><span class="std std-ref">view-item-info</span></a>; see instructions there for how to override
+Used by <a class="reference internal" href="#view-item-info"><span>view-item-info</span></a>; see instructions there for how to override
 for mods.</p>
 </div>
 <div class="section" id="launch">
@@ -701,27 +701,27 @@ something first to send them there.</p>
 <span id="id45"></span><h2><a class="toc-backref" href="#id133">lever</a><a class="headerlink" href="#lever" title="Permalink to this headline">¶</a></h2>
 <p>Allow manipulation of in-game levers from the dfhack console.</p>
 <p>Can list levers, including state and links, with:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">lever</span> <span class="nb">list</span>
+<div class="highlight-python"><div class="highlight"><pre>lever list
 </pre></div>
 </div>
 <p>To queue a job so that a dwarf will pull the lever 42, use <code class="docutils literal"><span class="pre">lever</span> <span class="pre">pull</span> <span class="pre">42</span></code>.
 This is the same as <code class="kbd docutils literal"><span class="pre">q</span></code> querying the building and queue a <code class="kbd docutils literal"><span class="pre">P</span></code> pull request.</p>
 <p>To queue a job at high priority, add <code class="docutils literal"><span class="pre">--high</span></code> or <code class="docutils literal"><span class="pre">--priority</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">lever</span> <span class="n">pull</span> <span class="mi">42</span> <span class="o">--</span><span class="n">high</span>
+<div class="highlight-python"><div class="highlight"><pre>lever pull 42 --high
 </pre></div>
 </div>
 <p>To magically toggle the lever immediately, add <code class="docutils literal"><span class="pre">--now</span></code> or <code class="docutils literal"><span class="pre">--cheat</span></code>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">lever</span> <span class="n">pull</span> <span class="mi">42</span> <span class="o">--</span><span class="n">now</span>
+<div class="highlight-python"><div class="highlight"><pre>lever pull 42 --now
 </pre></div>
 </div>
 </div>
 <div class="section" id="load-save">
 <span id="id46"></span><h2><a class="toc-backref" href="#id134">load-save</a><a class="headerlink" href="#load-save" title="Permalink to this headline">¶</a></h2>
-<p>When run on the title screen or “load game” screen, loads the save with the
+<p>When run on the title screen or &#8220;load game&#8221; screen, loads the save with the
 given folder name without requiring interaction.</p>
 <p>Example: <code class="docutils literal"><span class="pre">load-save</span> <span class="pre">region</span></code></p>
 <p>This can also be run when starting DFHack from the command line:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">dfhack</span> <span class="o">+</span><span class="n">load</span><span class="o">-</span><span class="n">game</span> <span class="n">region1</span>
+<div class="highlight-python"><div class="highlight"><pre>./dfhack +load-game region1
 </pre></div>
 </div>
 <p>(This is currently untested on Windows)</p>
@@ -733,9 +733,9 @@ given folder name without requiring interaction.</p>
 Only works for native metal ores, does not handle reaction stuff (eg STEEL).</p>
 <p>When invoked with the <code class="docutils literal"><span class="pre">list</span></code> argument, lists metal ores available on the map.</p>
 <p>Examples:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">locate</span><span class="o">-</span><span class="n">ore</span> <span class="nb">list</span>
-<span class="n">locate</span><span class="o">-</span><span class="n">ore</span> <span class="n">hematite</span>
-<span class="n">locate</span><span class="o">-</span><span class="n">ore</span> <span class="n">iron</span>
+<div class="highlight-python"><div class="highlight"><pre>locate-ore list
+locate-ore hematite
+locate-ore iron
 </pre></div>
 </div>
 </div>
@@ -751,9 +751,9 @@ Only works for native metal ores, does not handle reaction stuff (eg STEEL).</p>
 </li>
 <li><p class="first"><code class="docutils literal"><span class="pre">lua</span> <span class="pre">-s</span> <span class="pre">[&quot;filename&quot;]</span></code> or <code class="docutils literal"><span class="pre">lua</span> <span class="pre">--save</span> <span class="pre">[&quot;filename&quot;]</span></code></p>
 <p>This loads and runs the file indicated by filename from the save
-directory. If the filename is not supplied, it loads “dfhack.lua”.</p>
+directory. If the filename is not supplied, it loads &#8220;dfhack.lua&#8221;.</p>
 </li>
-<li><p class="first"><code class="docutils literal"><span class="pre">:lua</span></code> <em>lua statement…</em></p>
+<li><p class="first"><code class="docutils literal"><span class="pre">:lua</span></code> <em>lua statement...</em></p>
 <p>Parses and executes the lua statement like the interactive interpreter would.</p>
 </li>
 </ol>
@@ -772,10 +772,10 @@ dug up, or <code class="docutils literal"><span class="pre">make-legendary</span
 <div class="section" id="markdown">
 <span id="id51"></span><h2><a class="toc-backref" href="#id139">markdown</a><a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h2>
 <p>Save a copy of a text screen in markdown (for reddit among others).
-See <a class="reference internal" href="#forum-dwarves"><span class="std std-ref">forum-dwarves</span></a> for BBCode export (for eg. the Bay12 Forums).</p>
+See <a class="reference internal" href="#forum-dwarves"><span>forum-dwarves</span></a> for BBCode export (for eg. the Bay12 Forums).</p>
 <p>This script will attempt to read the current df-screen, and if it is a
-text-viewscreen (such as the dwarf ‘thoughts’ screen or an item / creature
-‘description’) or an announcement list screen (such as announcements and
+text-viewscreen (such as the dwarf &#8216;thoughts&#8217; screen or an item / creature
+&#8216;description&#8217;) or an announcement list screen (such as announcements and
 combat reports) then append a marked-down version of this text to the
 target file (for easy pasting on reddit for example).
 Previous entries in the file are not overwritten, so you
@@ -798,9 +798,9 @@ of the default <code class="file docutils literal"><span class="pre">md_export.m
 <p>The screens which have been tested and known to function properly with
 this script are:</p>
 <ol class="arabic simple">
-<li>dwarf/unit ‘thoughts’ screen</li>
-<li>item/art ‘description’ screen</li>
-<li>individual ‘historical item/figure’ screens</li>
+<li>dwarf/unit &#8216;thoughts&#8217; screen</li>
+<li>item/art &#8216;description&#8217; screen</li>
+<li>individual &#8216;historical item/figure&#8217; screens</li>
 <li>manual</li>
 <li>announements screen</li>
 <li>combat reports screen</li>
@@ -821,7 +821,7 @@ or with the game cursor on top of the area.</p>
 <div class="section" id="migrants-now">
 <span id="id53"></span><h2><a class="toc-backref" href="#id141">migrants-now</a><a class="headerlink" href="#migrants-now" title="Permalink to this headline">¶</a></h2>
 <p>Forces an immediate migrant wave.  Only works after migrants have
-arrived naturally.  Equivalent to <a class="reference internal" href="modtools.html#modtools-force"><span class="std std-ref">modtools/force</span></a> <code class="docutils literal"><span class="pre">-eventType</span> <span class="pre">migrants</span></code></p>
+arrived naturally.  Equivalent to <a class="reference internal" href="modtools.html#modtools-force"><span>modtools/force</span></a> <code class="docutils literal"><span class="pre">-eventType</span> <span class="pre">migrants</span></code></p>
 </div>
 <div class="section" id="multicmd">
 <span id="id54"></span><h2><a class="toc-backref" href="#id142">multicmd</a><a class="headerlink" href="#multicmd" title="Permalink to this headline">¶</a></h2>
@@ -829,7 +829,7 @@ arrived naturally.  Equivalent to <a class="reference internal" href="modtools.h
 character ; and all parts are run sequentially as independent
 dfhack commands. Useful for hotkeys.</p>
 <p>Example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">multicmd</span> <span class="n">locate</span><span class="o">-</span><span class="n">ore</span> <span class="n">IRON</span> <span class="p">;</span> <span class="n">digv</span> <span class="p">;</span> <span class="n">digcircle</span> <span class="mi">16</span>
+<div class="highlight-python"><div class="highlight"><pre>multicmd locate-ore IRON ; digv ; digcircle 16
 </pre></div>
 </div>
 </div>
@@ -846,8 +846,8 @@ dfhack commands. Useful for hotkeys.</p>
 </tr>
 <tr class="field-odd field"><th class="field-name">-unit:</th><td class="field-body">if viewing a unit</td>
 </tr>
-<tr class="field-even field"><th class="field-name" colspan="2">-first [Somename | “Some Names like This”:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">if a first name is desired, leave blank to clear current first name</td>
+<tr class="field-even field"><th class="field-name" colspan="2">-first [Somename | &#8220;Some Names like This&#8221;:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">if a first name is desired, leave blank to clear current first name</td>
 </tr>
 </tbody>
 </table>
@@ -855,7 +855,7 @@ dfhack commands. Useful for hotkeys.</p>
 <div class="section" id="open-legends">
 <span id="id56"></span><h2><a class="toc-backref" href="#id144">open-legends</a><a class="headerlink" href="#open-legends" title="Permalink to this headline">¶</a></h2>
 <p>Open a legends screen when in fortress mode.
-Compatible with <a class="reference internal" href="#exportlegends"><span class="std std-ref">exportlegends</span></a>.</p>
+Compatible with <a class="reference internal" href="#exportlegends"><span>exportlegends</span></a>.</p>
 </div>
 <div class="section" id="points">
 <span id="id57"></span><h2><a class="toc-backref" href="#id145">points</a><a class="headerlink" href="#points" title="Permalink to this headline">¶</a></h2>
@@ -871,14 +871,14 @@ location:  z-level, cursor position, window size, and mouse location.</p>
 <div class="section" id="pref-adjust">
 <span id="id59"></span><h2><a class="toc-backref" href="#id147">pref-adjust</a><a class="headerlink" href="#pref-adjust" title="Permalink to this headline">¶</a></h2>
 <p>A two-stage script:  <code class="docutils literal"><span class="pre">pref-adjust</span> <span class="pre">clear</span></code> removes preferences from all dwarves,
-and <code class="docutils literal"><span class="pre">pref-adjust</span></code> inserts an ‘ideal’ set which is easy to satisfy:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Feb</span> <span class="n">Idashzefon</span> <span class="n">likes</span> <span class="n">wild</span> <span class="n">strawberries</span> <span class="k">for</span> <span class="n">their</span> <span class="n">vivid</span> <span class="n">red</span> <span class="n">color</span><span class="p">,</span>
-<span class="n">fisher</span> <span class="n">berries</span> <span class="k">for</span> <span class="n">their</span> <span class="nb">round</span> <span class="n">shape</span><span class="p">,</span> <span class="n">prickle</span> <span class="n">berries</span> <span class="k">for</span> <span class="n">their</span>
-<span class="n">precise</span> <span class="n">thorns</span><span class="p">,</span> <span class="n">plump</span> <span class="n">helmets</span> <span class="k">for</span> <span class="n">their</span> <span class="n">rounded</span> <span class="n">tops</span><span class="p">,</span> <span class="n">prepared</span> <span class="n">meals</span><span class="p">,</span>
-<span class="n">plants</span><span class="p">,</span> <span class="n">drinks</span><span class="p">,</span> <span class="n">doors</span><span class="p">,</span> <span class="n">thrones</span><span class="p">,</span> <span class="n">tables</span> <span class="ow">and</span> <span class="n">beds</span><span class="o">.</span> <span class="n">When</span> <span class="n">possible</span><span class="p">,</span> <span class="n">she</span>
-<span class="n">prefers</span> <span class="n">to</span> <span class="n">consume</span> <span class="n">wild</span> <span class="n">strawberries</span><span class="p">,</span> <span class="n">fisher</span> <span class="n">berries</span><span class="p">,</span> <span class="n">prickle</span>
-<span class="n">berries</span><span class="p">,</span> <span class="n">plump</span> <span class="n">helmets</span><span class="p">,</span> <span class="n">strawberry</span> <span class="n">wine</span><span class="p">,</span> <span class="n">fisher</span> <span class="n">berry</span> <span class="n">wine</span><span class="p">,</span> <span class="n">prickle</span>
-<span class="n">berry</span> <span class="n">wine</span><span class="p">,</span> <span class="ow">and</span> <span class="n">dwarven</span> <span class="n">wine</span><span class="o">.</span>
+and <code class="docutils literal"><span class="pre">pref-adjust</span></code> inserts an &#8216;ideal&#8217; set which is easy to satisfy:</p>
+<div class="highlight-python"><div class="highlight"><pre>Feb Idashzefon likes wild strawberries for their vivid red color,
+fisher berries for their round shape, prickle berries for their
+precise thorns, plump helmets for their rounded tops, prepared meals,
+plants, drinks, doors, thrones, tables and beds. When possible, she
+prefers to consume wild strawberries, fisher berries, prickle
+berries, plump helmets, strawberry wine, fisher berry wine, prickle
+berry wine, and dwarven wine.
 </pre></div>
 </div>
 </div>
@@ -886,7 +886,7 @@ and <code class="docutils literal"><span class="pre">pref-adjust</span></code> i
 <span id="id60"></span><h2><a class="toc-backref" href="#id148">prefchange</a><a class="headerlink" href="#prefchange" title="Permalink to this headline">¶</a></h2>
 <p>Sets preferences for mooding to include a weapon type, equipment type,
 and material.  If you also wish to trigger a mood, see
-<a class="reference internal" href="../Plugins.html#strangemood"><span class="std std-ref">strangemood</span></a>.</p>
+<a class="reference internal" href="../Plugins.html#strangemood"><span>strangemood</span></a>.</p>
 <p>Valid options:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -941,24 +941,24 @@ normally used in seasonal auto-save.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">region-pops list [pattern]:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Lists encountered populations of the region, possibly restricted by pattern.</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Lists encountered populations of the region, possibly restricted by pattern.</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">region-pops list-all [pattern]:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Lists all populations of the region.</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Lists all populations of the region.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">region-pops boost &lt;TOKEN&gt; &lt;factor&gt;:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Multiply all populations of TOKEN by factor.
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Multiply all populations of TOKEN by factor.
 If the factor is greater than one, increases the
 population, otherwise decreases it.</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">region-pops boost-all &lt;pattern&gt; &lt;factor&gt;:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Same as above, but match using a pattern acceptable to list.</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Same as above, but match using a pattern acceptable to list.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">region-pops incr &lt;TOKEN&gt; &lt;factor&gt;:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Augment (or diminish) all populations of TOKEN by factor (additive).</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Augment (or diminish) all populations of TOKEN by factor (additive).</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">region-pops incr-all &lt;pattern&gt; &lt;factor&gt;:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Same as above, but match using a pattern acceptable to list.</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Same as above, but match using a pattern acceptable to list.</td>
 </tr>
 </tbody>
 </table>
@@ -966,7 +966,7 @@ population, otherwise decreases it.</td>
 <div class="section" id="rejuvenate">
 <span id="id64"></span><h2><a class="toc-backref" href="#id152">rejuvenate</a><a class="headerlink" href="#rejuvenate" title="Permalink to this headline">¶</a></h2>
 <p>Set the age of the selected dwarf to 20 years.  Useful if valuable citizens are
-getting old, or there are too many babies around…</p>
+getting old, or there are too many babies around...</p>
 </div>
 <div class="section" id="remove-stress">
 <span id="id65"></span><h2><a class="toc-backref" href="#id153">remove-stress</a><a class="headerlink" href="#remove-stress" title="Permalink to this headline">¶</a></h2>
@@ -982,10 +982,10 @@ Applies to the selected unit, or use <code class="docutils literal"><span class=
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">remove-wear all:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">Removes wear from all items in your fort.</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Removes wear from all items in your fort.</td>
 </tr>
-<tr class="field-even field"><th class="field-name" colspan="2">remove-wear ID1 ID2 …:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Removes wear from items with the given ID numbers.</td>
+<tr class="field-even field"><th class="field-name" colspan="2">remove-wear ID1 ID2 ...:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Removes wear from items with the given ID numbers.</td>
 </tr>
 </tbody>
 </table>
@@ -996,8 +996,8 @@ Applies to the selected unit, or use <code class="docutils literal"><span class=
 init files. Note that any time units other than <code class="docutils literal"><span class="pre">frames</span></code> are unsupported when
 a world is not loaded (see <code class="docutils literal"><span class="pre">dfhack.timeout()</span></code>).</p>
 <p>Usage examples:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">repeat</span> <span class="o">-</span><span class="n">name</span> <span class="n">jim</span> <span class="o">-</span><span class="n">time</span> <span class="n">delay</span> <span class="o">-</span><span class="n">timeUnits</span> <span class="n">units</span> <span class="o">-</span><span class="n">command</span> <span class="p">[</span> <span class="n">printArgs</span> <span class="mi">3</span> <span class="mi">1</span> <span class="mi">2</span> <span class="p">]</span>
-<span class="n">repeat</span> <span class="o">-</span><span class="n">time</span> <span class="mi">1</span> <span class="o">-</span><span class="n">timeUnits</span> <span class="n">months</span> <span class="o">-</span><span class="n">command</span> <span class="p">[</span> <span class="n">multicmd</span> <span class="n">cleanowned</span> <span class="n">scattered</span> <span class="n">x</span><span class="p">;</span> <span class="n">clean</span> <span class="nb">all</span> <span class="p">]</span> <span class="o">-</span><span class="n">name</span> <span class="n">clean</span>
+<div class="highlight-python"><div class="highlight"><pre>repeat -name jim -time delay -timeUnits units -command [ printArgs 3 1 2 ]
+repeat -time 1 -timeUnits months -command [ multicmd cleanowned scattered x; clean all ] -name clean
 </pre></div>
 </div>
 <p>The first example is abstract; the second will regularly remove all contaminants
@@ -1006,13 +1006,13 @@ and worn items from the game.</p>
 <dl class="docutils">
 <dt><code class="docutils literal"><span class="pre">-name</span></code></dt>
 <dd>sets the name for the purposes of cancelling and making sure you
-don’t schedule the same repeating event twice.  If not specified,
-it’s set to the first argument after <code class="docutils literal"><span class="pre">-command</span></code>.</dd>
+don&#8217;t schedule the same repeating event twice.  If not specified,
+it&#8217;s set to the first argument after <code class="docutils literal"><span class="pre">-command</span></code>.</dd>
 <dt><code class="docutils literal"><span class="pre">-time</span> <span class="pre">DELAY</span> <span class="pre">-timeUnits</span> <span class="pre">UNITS</span></code></dt>
 <dd>DELAY is some positive integer, and UNITS is some valid time
-unit for <code class="docutils literal"><span class="pre">dfhack.timeout</span></code> (default “ticks”).  Units can be
-in simulation-time “frames” (raw FPS) or “ticks” (only while
-unpaused), while “days”, “months”, and “years” are by in-world time.</dd>
+unit for <code class="docutils literal"><span class="pre">dfhack.timeout</span></code> (default &#8220;ticks&#8221;).  Units can be
+in simulation-time &#8220;frames&#8221; (raw FPS) or &#8220;ticks&#8221; (only while
+unpaused), while &#8220;days&#8221;, &#8220;months&#8221;, and &#8220;years&#8221; are by in-world time.</dd>
 <dt><code class="docutils literal"><span class="pre">-command</span> <span class="pre">[</span> <span class="pre">...</span> <span class="pre">]</span></code></dt>
 <dd><code class="docutils literal"><span class="pre">...</span></code> specifies the command to be run</dd>
 <dt><code class="docutils literal"><span class="pre">-cancel</span> <span class="pre">NAME</span></code></dt>
@@ -1026,18 +1026,18 @@ unpaused), while “days”, “months”, and “years” are by in-world time.
 your save raw directory.</p>
 <dl class="docutils">
 <dt>Palette file names:</dt>
-<dd>“colors.txt”: The world “default” (worldgen and replacement) palette.
-“colors_spring.txt”: The palette displayed during spring.
-“colors_summer.txt”: The palette displayed during summer.
-“colors_autumn.txt”: The palette displayed during autumn.
-“colors_winter.txt”: The palette displayed during winter.</dd>
+<dd>&#8220;colors.txt&#8221;: The world &#8220;default&#8221; (worldgen and replacement) palette.
+&#8220;colors_spring.txt&#8221;: The palette displayed during spring.
+&#8220;colors_summer.txt&#8221;: The palette displayed during summer.
+&#8220;colors_autumn.txt&#8221;: The palette displayed during autumn.
+&#8220;colors_winter.txt&#8221;: The palette displayed during winter.</dd>
 </dl>
 <p>If you do not provide a world default palette, palette switching will be
 disabled for the current world. The seasonal palettes are optional, the default
 palette is not! The default palette will be used to replace any missing
 seasonal palettes and during worldgen.</p>
 <p>When the world is unloaded or this script is disabled, the system default color
-palette (“/data/init/colors.txt”) will be loaded. The system default palette
+palette (&#8220;/data/init/colors.txt&#8221;) will be loaded. The system default palette
 will always be used in the main menu, but your custom palettes should be used
 everywhere else.</p>
 <p>Usage:</p>
@@ -1054,8 +1054,8 @@ palette.</dd>
 <blockquote>
 <div><dl class="docutils">
 <dt><code class="docutils literal"><span class="pre">LoadPalette(path)</span></code>:</dt>
-<dd>Load a color palette from the text file at “path”. This file must be in
-the same format as “/data/init/colors.txt”. If there is an error any
+<dd>Load a color palette from the text file at &#8220;path&#8221;. This file must be in
+the same format as &#8220;/data/init/colors.txt&#8221;. If there is an error any
 changes will be reverted and this function will return false (returns
 true normally).</dd>
 </dl>
@@ -1082,7 +1082,7 @@ with (optionally) substantial detail on the effects.</p>
 <tr class="field-odd field"><th class="field-name">showeffects:</th><td class="field-body">Show detailed effects of each syndrome</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">showdisplayeffects:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">Show effects that only change the look of the unit</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Show effects that only change the look of the unit</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">selected:</th><td class="field-body">Show selected unit</td>
 </tr>
@@ -1113,12 +1113,12 @@ emergencies, e.g. when a siege appears, and all your military is partying.</p>
 <div class="section" id="source">
 <span id="id72"></span><h2><a class="toc-backref" href="#id160">source</a><a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
 <p>Create an infinite magma or water source or drain on a tile.
-For more complex commands, try the <a class="reference internal" href="../Plugins.html#liquids"><span class="std std-ref">liquids</span></a> plugin.</p>
+For more complex commands, try the <a class="reference internal" href="../Plugins.html#liquids"><span>liquids</span></a> plugin.</p>
 <p>This script registers a map tile as a liquid source, and every 12 game ticks
 that tile receives or remove 1 new unit of flow based on the configuration.</p>
 <p>Place the game cursor where you want to create the source (must be a
 flow-passable tile, and not too high in the sky) and call:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">add</span> <span class="p">[</span><span class="n">magma</span><span class="o">|</span><span class="n">water</span><span class="p">]</span> <span class="p">[</span><span class="mi">0</span><span class="o">-</span><span class="mi">7</span><span class="p">]</span>
+<div class="highlight-python"><div class="highlight"><pre>source add [magma|water] [0-7]
 </pre></div>
 </div>
 <p>The number argument is the target liquid level (0 = drain, 7 = source).</p>
@@ -1127,20 +1127,20 @@ flow-passable tile, and not too high in the sky) and call:</p>
 To remove all existing sources, call <code class="docutils literal"><span class="pre">source</span> <span class="pre">clear</span></code>.</p>
 <p>The <code class="docutils literal"><span class="pre">list</span></code> argument shows all existing sources.</p>
 <p>Examples:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">add</span> <span class="n">water</span>     <span class="o">-</span> <span class="n">water</span> <span class="n">source</span>
-<span class="n">source</span> <span class="n">add</span> <span class="n">magma</span> <span class="mi">7</span>   <span class="o">-</span> <span class="n">magma</span> <span class="n">source</span>
-<span class="n">source</span> <span class="n">add</span> <span class="n">water</span> <span class="mi">0</span>   <span class="o">-</span> <span class="n">water</span> <span class="n">drain</span>
+<div class="highlight-python"><div class="highlight"><pre>source add water     - water source
+source add magma 7   - magma source
+source add water 0   - water drain
 </pre></div>
 </div>
 </div>
 <div class="section" id="spawnunit">
 <span id="id73"></span><h2><a class="toc-backref" href="#id161">spawnunit</a><a class="headerlink" href="#spawnunit" title="Permalink to this headline">¶</a></h2>
-<p>Provides a simpler interface to <a class="reference internal" href="modtools.html#modtools-create-unit"><span class="std std-ref">modtools/create-unit</span></a>, for creating units.</p>
+<p>Provides a simpler interface to <a class="reference internal" href="modtools.html#modtools-create-unit"><span>modtools/create-unit</span></a>, for creating units.</p>
 <p>Usage:  <code class="docutils literal"><span class="pre">spawnunit</span> <span class="pre">[-command]</span> <span class="pre">RACE</span> <span class="pre">CASTE</span> <span class="pre">[NAME]</span> <span class="pre">[x</span> <span class="pre">y</span> <span class="pre">z]</span> <span class="pre">[...]</span></code></p>
-<p>The <code class="docutils literal"><span class="pre">-command</span></code> flag prints the generated <a class="reference internal" href="modtools.html#modtools-create-unit"><span class="std std-ref">modtools/create-unit</span></a> command
+<p>The <code class="docutils literal"><span class="pre">-command</span></code> flag prints the generated <a class="reference internal" href="modtools.html#modtools-create-unit"><span>modtools/create-unit</span></a> command
 instead of running it.  <code class="docutils literal"><span class="pre">RACE</span></code> and <code class="docutils literal"><span class="pre">CASTE</span></code> specify the race and caste
 of the unit to be created.  The name and coordinates of the unit are optional.
-Any further arguments are simply passed on to <a class="reference internal" href="modtools.html#modtools-create-unit"><span class="std std-ref">modtools/create-unit</span></a>.</p>
+Any further arguments are simply passed on to <a class="reference internal" href="modtools.html#modtools-create-unit"><span>modtools/create-unit</span></a>.</p>
 </div>
 <div class="section" id="startdwarf">
 <span id="id74"></span><h2><a class="toc-backref" href="#id162">startdwarf</a><a class="headerlink" href="#startdwarf" title="Permalink to this headline">¶</a></h2>
@@ -1151,7 +1151,7 @@ The number must be 7 or greater.</p>
 </div>
 <div class="section" id="starvingdead">
 <span id="id75"></span><h2><a class="toc-backref" href="#id163">starvingdead</a><a class="headerlink" href="#starvingdead" title="Permalink to this headline">¶</a></h2>
-<p>Somewhere between a “mod” and a “fps booster”, with a small impact on
+<p>Somewhere between a &#8220;mod&#8221; and a &#8220;fps booster&#8221;, with a small impact on
 vanilla gameplay. It mostly helps prevent undead cascades in the caverns,
 where constant combat leads to hundreds of undead roaming the
 caverns and destroying your FPS.</p>
@@ -1163,7 +1163,7 @@ After six months, they collapse upon themselves, never to be reanimated.</p>
 <div class="section" id="stripcaged">
 <span id="id76"></span><h2><a class="toc-backref" href="#id164">stripcaged</a><a class="headerlink" href="#stripcaged" title="Permalink to this headline">¶</a></h2>
 <p>For dumping items inside cages. Will mark selected items for dumping, then
-a dwarf may come and actually dump them (or you can use <a class="reference internal" href="../Plugins.html#autodump"><span class="std std-ref">autodump</span></a>).</p>
+a dwarf may come and actually dump them (or you can use <a class="reference internal" href="../Plugins.html#autodump"><span>autodump</span></a>).</p>
 <p>Arguments:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1185,19 +1185,19 @@ a dwarf may come and actually dump them (or you can use <a class="reference inte
 the map. With the <code class="docutils literal"><span class="pre">here</span></code> argument, considers only the in-game selected cage
 (or the cage under the game cursor). To target only specific cages, you can
 alternatively pass cage IDs as arguments:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">stripcaged</span> <span class="n">weapons</span> <span class="mi">25321</span> <span class="mi">34228</span>
+<div class="highlight-python"><div class="highlight"><pre>stripcaged weapons 25321 34228
 </pre></div>
 </div>
 </div>
 <div class="section" id="superdwarf">
 <span id="id77"></span><h2><a class="toc-backref" href="#id165">superdwarf</a><a class="headerlink" href="#superdwarf" title="Permalink to this headline">¶</a></h2>
-<p>Similar to <a class="reference internal" href="../Plugins.html#fastdwarf"><span class="std std-ref">fastdwarf</span></a>, per-creature.</p>
-<p>To make any creature superfast, target it ingame using ‘v’ and:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">superdwarf</span> <span class="n">add</span>
+<p>Similar to <a class="reference internal" href="../Plugins.html#fastdwarf"><span>fastdwarf</span></a>, per-creature.</p>
+<p>To make any creature superfast, target it ingame using &#8216;v&#8217; and:</p>
+<div class="highlight-python"><div class="highlight"><pre>superdwarf add
 </pre></div>
 </div>
 <p>Other options available: <code class="docutils literal"><span class="pre">del</span></code>, <code class="docutils literal"><span class="pre">clear</span></code>, <code class="docutils literal"><span class="pre">list</span></code>.</p>
-<p>This script also shortens the ‘sleeping’ and ‘on break’ periods of targets.</p>
+<p>This script also shortens the &#8216;sleeping&#8217; and &#8216;on break&#8217; periods of targets.</p>
 </div>
 <div class="section" id="teleport">
 <span id="id78"></span><h2><a class="toc-backref" href="#id166">teleport</a><a class="headerlink" href="#teleport" title="Permalink to this headline">¶</a></h2>
@@ -1207,17 +1207,17 @@ alternatively pass cage IDs as arguments:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">teleport -showunitid:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">prints ID of unit beneath cursor</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">prints ID of unit beneath cursor</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">teleport -showpos:</th></tr>
-<tr class="field-even field"><td>&#160;</td><td class="field-body">prints coordinates beneath cursor</td>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">prints coordinates beneath cursor</td>
 </tr>
 <tr class="field-odd field"><th class="field-name" colspan="2">teleport -unit 1234 -x 56 -y 115 -z 26:</th></tr>
-<tr class="field-odd field"><td>&#160;</td><td class="field-body">teleports unit 1234 to 56,115,26</td>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">teleports unit 1234 to 56,115,26</td>
 </tr>
 </tbody>
 </table>
-<p>See <a class="reference internal" href="gui.html#gui-teleport"><span class="std std-ref">gui/teleport</span></a> for an in-game UI.</p>
+<p>See <a class="reference internal" href="gui.html#gui-teleport"><span>gui/teleport</span></a> for an in-game UI.</p>
 </div>
 <div class="section" id="tidlers">
 <span id="id79"></span><h2><a class="toc-backref" href="#id167">tidlers</a><a class="headerlink" href="#tidlers" title="Permalink to this headline">¶</a></h2>
@@ -1246,7 +1246,7 @@ alternatively pass cage IDs as arguments:</p>
 </div>
 <div class="section" id="unsuspend">
 <span id="id84"></span><h2><a class="toc-backref" href="#id172">unsuspend</a><a class="headerlink" href="#unsuspend" title="Permalink to this headline">¶</a></h2>
-<p>Unsuspend construction jobs, on a one-off basis.  See <a class="reference internal" href="#autounsuspend"><span class="std std-ref">autounsuspend</span></a>
+<p>Unsuspend construction jobs, on a one-off basis.  See <a class="reference internal" href="#autounsuspend"><span>autounsuspend</span></a>
 for regular use.</p>
 </div>
 <div class="section" id="view-item-info">
@@ -1254,7 +1254,7 @@ for regular use.</p>
 <p>A script to extend the item or unit viewscreen with additional information
 including a custom description of each item (when available), and properties
 such as material statistics, weapon attacks, armor effectiveness, and more.</p>
-<p>The associated script <a class="reference internal" href="#item-descriptions"><span class="std std-ref">item-descriptions</span></a>.lua supplies custom descriptions
+<p>The associated script <a class="reference internal" href="#item-descriptions"><span>item-descriptions</span></a>.lua supplies custom descriptions
 of items.  Individual descriptions can be added or overridden by a similar
 script <code class="file docutils literal"><span class="pre">raw/scripts/more-item-descriptions.lua</span></code>.  Both work as sparse lists,
 so missing items simply go undescribed if not defined in the fallback.</p>
@@ -1263,7 +1263,7 @@ so missing items simply go undescribed if not defined in the fallback.</p>
 <span id="id86"></span><h2><a class="toc-backref" href="#id174">warn-starving</a><a class="headerlink" href="#warn-starving" title="Permalink to this headline">¶</a></h2>
 <p>If any (live) units are starving, very thirsty, or very drowsy, the game will
 be paused and a warning shown and logged to the console.  Use with the
-<a class="reference internal" href="#repeat"><span class="std std-ref">repeat</span></a> command for regular checks.</p>
+<a class="reference internal" href="#repeat"><span>repeat</span></a> command for regular checks.</p>
 <p>Use <code class="docutils literal"><span class="pre">warn-starving</span> <span class="pre">all</span></code> to display a list of all problematic units.</p>
 </div>
 <div class="section" id="weather">
@@ -1288,8 +1288,6 @@ be paused and a warning shown and logged to the console.  Use with the
 
 
 
-
-
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
@@ -1304,11 +1302,14 @@ be paused and a warning shown and logged to the console.  Use with the
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
   <h3><a href="../../index.html">Table Of Contents</a></h3>
@@ -1413,11 +1414,11 @@ be paused and a warning shown and logged to the console.  Use with the
       &copy;2015, The DFHack Team.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.5</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
       
       |
-      <a href="../../_sources/docs/_auto/base.rst.txt"
+      <a href="../../_sources/docs/_auto/base.txt"
           rel="nofollow">Page source</a>
     </div>
 

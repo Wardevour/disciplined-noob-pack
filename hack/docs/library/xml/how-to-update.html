@@ -1,39 +1,38 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Updating DF-structures for a new DF version &#8212; DFHack 0.44.05-alpha1 documentation</title>
+    
+    <title>Updating DF-structures for a new DF version &mdash; DFHack 0.44.05-alpha1 documentation</title>
+    
     <link rel="stylesheet" href="../../_static/dfhack.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
         VERSION:     '0.44.05-alpha1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
+        HAS_SOURCE:  true
       };
     </script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../../_static/dfhack-icon.ico"/>
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="DFHack 0.44.05-alpha1 documentation" href="../../index.html" />
     <link rel="next" title="Patching the DF binary" href="../../docs/Binpatches.html" />
     <link rel="prev" title="Data Structure Definition Syntax" href="SYNTAX.html" />
    
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
-  
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body>
-  
+  <body role="document">  
 
     <div class="document">
       <div class="documentwrapper">
@@ -63,23 +62,23 @@
 <h2><a class="toc-backref" href="#id2">General Process</a><a class="headerlink" href="#general-process" title="Permalink to this headline">¶</a></h2>
 <p>Download the new versions. The scripts expect the following
 directory layout:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">~</span><span class="n">userhome</span><span class="o">/</span>
-    <span class="n">Games</span><span class="o">/</span>
-        <span class="n">DF</span><span class="o">/</span>
-            <span class="n">df_linux</span><span class="o">/</span>    <span class="o">-</span> <span class="n">Current</span> <span class="n">DF</span> <span class="k">for</span> <span class="n">linux</span>
-            <span class="n">df_windows</span><span class="o">/</span>  <span class="o">-</span> <span class="n">Current</span> <span class="n">DF</span> <span class="k">for</span> <span class="n">windows</span>
-            <span class="n">df_osx</span><span class="o">/</span>      <span class="o">-</span> <span class="n">Current</span> <span class="n">DF</span> <span class="k">for</span> <span class="n">osx</span>
+<div class="highlight-python"><div class="highlight"><pre>~userhome/
+    Games/
+        DF/
+            df_linux/    - Current DF for linux
+            df_windows/  - Current DF for windows
+            df_osx/      - Current DF for osx
 
-            <span class="n">metasm</span><span class="o">/</span>      <span class="o">-</span> <span class="n">Checkout</span> <span class="n">of</span> <span class="n">the</span> <span class="n">library</span> <span class="k">for</span> <span class="n">ruby</span> <span class="n">scripts</span>
-                           <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">jjyg</span><span class="o">/</span><span class="n">metasm</span>
-            <span class="n">df_misc</span><span class="o">/</span>     <span class="o">-</span> <span class="n">Checkout</span> <span class="n">of</span> <span class="n">the</span> <span class="n">ruby</span> <span class="n">scripts</span>
-                           <span class="kn">from</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">jjyg</span><span class="o">/</span><span class="n">df_misc</span>
-            <span class="n">dfhack</span><span class="o">/</span>      <span class="o">-</span> <span class="n">DFHack</span> <span class="n">checkout</span>
+            metasm/      - Checkout of the library for ruby scripts
+                           from https://github.com/jjyg/metasm
+            df_misc/     - Checkout of the ruby scripts
+                           from https://github.com/jjyg/df_misc
+            dfhack/      - DFHack checkout
 </pre></div>
 </div>
 <ul class="simple">
-<li>Use “new-release.pl v0.??.??” to automatically perform a number of
-steps. If you get a mismatch error from match-ctors.pl, see “STAGE 1”.</li>
+<li>Use &#8220;new-release.pl v0.??.??&#8221; to automatically perform a number of
+steps. If you get a mismatch error from match-ctors.pl, see &#8220;STAGE 1&#8221;.</li>
 <li>Start the linux DF version, and launch the tool.</li>
 <li>Execute (reset-state-annotation)</li>
 <li>Commit.</li>
@@ -105,12 +104,12 @@ objects ALIGNED.</li>
 <p>The lisp tool expects that the game is started in a mode where all
 allocated memory is automatically filled with a certain byte value.</p>
 <p>On linux this is achieved by simply starting the game like this:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MALLOC_PERTURB_</span><span class="o">=</span><span class="mi">45</span> <span class="o">./</span><span class="n">df</span>
+<div class="highlight-python"><div class="highlight"><pre>MALLOC_PERTURB_=45 ./df
 </pre></div>
 </div>
 <p>Windows requires applying a patch to a copy of the executable like this:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">-</span><span class="n">f</span> <span class="s1">&#39;Dwarf Fortress.exe&#39;</span> <span class="s1">&#39;Dwarf_Fortress_malloc.exe&#39;</span>
-<span class="n">ruby</span> <span class="o">-</span><span class="n">I</span> <span class="o">~/</span><span class="n">Games</span><span class="o">/</span><span class="n">DF</span><span class="o">/</span><span class="n">metasm</span> <span class="o">~/</span><span class="n">Games</span><span class="o">/</span><span class="n">DF</span><span class="o">/</span><span class="n">df_patchmalloc</span><span class="o">.</span><span class="n">rb</span> <span class="s1">&#39;Dwarf_Fortress_malloc.exe&#39;</span>
+<div class="highlight-python"><div class="highlight"><pre>cp -f &#39;Dwarf Fortress.exe&#39; &#39;Dwarf_Fortress_malloc.exe&#39;
+ruby -I ~/Games/DF/metasm ~/Games/DF/df_patchmalloc.rb &#39;Dwarf_Fortress_malloc.exe&#39;
 </pre></div>
 </div>
 </div>
@@ -195,7 +194,7 @@ in (browse &#64;global.*).</p>
 and immediately compare it to the old version from source control.
 The order of the globals is quite stable, so if sizes look similar,
 they can be guessed immediately.</p>
-<p>The .bss compound section should be done except for ‘announcements’.</p>
+<p>The .bss compound section should be done except for &#8216;announcements&#8217;.</p>
 <p>Run (browse-dataseg). The first three -30000 are cursor. Following
 group of 6 are selection_rect. After that, at 16-aligned addresses
 are control_mode and game_mode. Tab the game ui to the most common
@@ -211,7 +210,7 @@ symbols.xml.</p>
 <p>The fields can be found either by a straight memory search, or by
 looking in the area they are expected to be.</p>
 <div class="section" id="a-the-cur-year-area">
-<h3>[A] The ‘cur_year’ area.<a class="headerlink" href="#a-the-cur-year-area" title="Permalink to this headline">¶</a></h3>
+<h3>[A] The &#8216;cur_year&#8217; area.<a class="headerlink" href="#a-the-cur-year-area" title="Permalink to this headline">¶</a></h3>
 <p>Located just before ui_building_assign_type.</p>
 <ol class="arabic">
 <li><p class="first">cur_year / cur_year_tick</p>
@@ -258,7 +257,7 @@ cursor down; +; cursor down; +; done</p>
 </li>
 <li><p class="first">ui_selected_unit</p>
 <p>Find a place with many nearby units; (find-changes); v; Enter; v; new;
-…; when returned to origin, 0; 1; 2…; done</p>
+...; when returned to origin, 0; 1; 2...; done</p>
 <p>Expected to be before ui_look_cursor.</p>
 </li>
 <li><p class="first">ui_unit_view_mode</p>
@@ -288,7 +287,7 @@ Shift-RightDown; + 10; done</p>
 <h3>[D] Random positions.<a class="headerlink" href="#d-random-positions" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic">
 <li><p class="first">announcements</p>
-<p>Immediately follows d_init; starts 25 25 31 31 24 …</p>
+<p>Immediately follows d_init; starts 25 25 31 31 24 ...</p>
 </li>
 </ol>
 </div>
@@ -303,7 +302,7 @@ Then trace back to the unit vector, and subtract its offset.</p>
 </div>
 <div class="section" id="ui">
 <h3>2. ui<a class="headerlink" href="#ui" title="Permalink to this headline">¶</a></h3>
-<p>Open the ‘s’quad sidebar page. Navigate to a squad in world.squads.all,
+<p>Open the &#8216;s&#8217;quad sidebar page. Navigate to a squad in world.squads.all,
 then backtrace and subtract the offset of ui.squads.list.</p>
 </div>
 <div class="section" id="ui-build-selector">
@@ -313,19 +312,19 @@ Find the material item through world and backtrack references until .bss.</p>
 </div>
 <div class="section" id="ui-sidebar-menus">
 <h3>4. ui_sidebar_menus<a class="headerlink" href="#ui-sidebar-menus" title="Permalink to this headline">¶</a></h3>
-<p>Select a unit in ‘v’, open inventory page, backtrack from
+<p>Select a unit in &#8216;v&#8217;, open inventory page, backtrack from
 unit_inventory_item, subtract offset of unit.inv_items.</p>
 </div>
 <div class="section" id="ui-look-list">
 <h3>5. ui_look_list<a class="headerlink" href="#ui-look-list" title="Permalink to this headline">¶</a></h3>
-<p>Put a ‘k’ cursor over a unit, backtrack to a 0x10 bytes object
+<p>Put a &#8216;k&#8217; cursor over a unit, backtrack to a 0x10 bytes object
 with pointer at offset 0xC, then to the global vector.</p>
 </div>
 <div class="section" id="ui-advmode">
 <h3>6. ui_advmode<a class="headerlink" href="#ui-advmode" title="Permalink to this headline">¶</a></h3>
-<p>In adventure mode, open the ‘c’ompanions menu, then backtrack from
+<p>In adventure mode, open the &#8216;c&#8217;ompanions menu, then backtrack from
 world.units.active[0] (i.e. the player) via ui_advmode.companions.unit</p>
-<p>Alternatively, look before ui_look_list for “0, 15” coming from the string.</p>
+<p>Alternatively, look before ui_look_list for &#8220;0, 15&#8221; coming from the string.</p>
 </div>
 <div class="section" id="enabler">
 <h3>7. enabler<a class="headerlink" href="#enabler" title="Permalink to this headline">¶</a></h3>
@@ -336,13 +335,13 @@ heap object and backtrack to enabler.renderer.</p>
 </div>
 <div class="section" id="map-renderer">
 <h3>8. map_renderer<a class="headerlink" href="#map-renderer" title="Permalink to this headline">¶</a></h3>
-<p>Put a ‘v’ cursor exactly above a unit; backtrack from the unit object.</p>
+<p>Put a &#8216;v&#8217; cursor exactly above a unit; backtrack from the unit object.</p>
 <p>Alternatively, look before ui_advmode for the unit pointer list.</p>
 </div>
 <div class="section" id="texture">
 <h3>9. texture<a class="headerlink" href="#texture" title="Permalink to this headline">¶</a></h3>
 <p>Load the game with [GRAPHICS:YES] in init.txt, and example set.
-Then search for string “example/dwarves.bmp” and backtrack.</p>
+Then search for string &#8220;example/dwarves.bmp&#8221; and backtrack.</p>
 <p>Alternatively, look between ui_build_selector and init.</p>
 </div>
 </div>
@@ -418,7 +417,7 @@ instructions see linux primitive globals.</p>
 <p>[A] formation_next_id</p>
 <blockquote>
 <div>Followed by ui_building_item_cursor, cur_year.</div></blockquote>
-<p>[B] interaction_instance_next_id…hist_figure_next_id</p>
+<p>[B] interaction_instance_next_id...hist_figure_next_id</p>
 <blockquote>
 <div>Contains window_x, ui_workshop_in_add.</div></blockquote>
 <p>[C] machine_next_id</p>
@@ -463,7 +462,7 @@ instructions see linux primitive globals.</p>
 <li>announcements</li>
 </ol>
 <blockquote>
-<div>Immediately follows d_init; starts 25 25 31 31 24 …</div></blockquote>
+<div>Immediately follows d_init; starts 25 25 31 31 24 ...</div></blockquote>
 </div></blockquote>
 </div>
 </div>
@@ -475,8 +474,6 @@ instructions see linux primitive globals.</p>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <h1 class="logo"><a href="../../index.html">DFHack</a></h1>
-
-
 
 
 
@@ -497,11 +494,14 @@ instructions see linux primitive globals.</p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
   <h3><a href="../../index.html">Table Of Contents</a></h3>
@@ -522,7 +522,7 @@ instructions see linux primitive globals.</p>
 <li><a class="reference internal" href="#stage-1-linux-compound-globals">STAGE 1. Linux compound globals</a></li>
 <li><a class="reference internal" href="#stage-2-old-way-to-find-linux-compound-globals">STAGE 2. Old way to find Linux compound globals</a></li>
 <li><a class="reference internal" href="#stage-3-linux-primitive-globals">STAGE 3. Linux primitive globals</a><ul>
-<li><a class="reference internal" href="#a-the-cur-year-area">[A] The ‘cur_year’ area.</a></li>
+<li><a class="reference internal" href="#a-the-cur-year-area">[A] The &#8216;cur_year&#8217; area.</a></li>
 <li><a class="reference internal" href="#b-the-ui-look-cursor-area">[B] The ui_look_cursor area.</a></li>
 <li><a class="reference internal" href="#c-the-window-x-y-z-area">[C] The window_x/y/z area.</a></li>
 <li><a class="reference internal" href="#d-random-positions">[D] Random positions.</a></li>
@@ -562,11 +562,11 @@ instructions see linux primitive globals.</p>
       &copy;2015, The DFHack Team.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.5</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
       
       |
-      <a href="../../_sources/library/xml/how-to-update.rst.txt"
+      <a href="../../_sources/library/xml/how-to-update.txt"
           rel="nofollow">Page source</a>
     </div>
 
